@@ -1,0 +1,5 @@
+MindmapTrainer/obj/**
+MindmapTrainer/bin/Release/**
+MindmapTrainer/bin/Debug/**
+*.user
+*.suo
