@@ -120,7 +120,7 @@ namespace MindmapTrainer
             _rnd = new Random(((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
             _rnd2 = new Random((((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
-            hiddenAcceptButton.Location = new Point(-hiddenAcceptButton.Size.Width, -hiddenAcceptButton.Size.Height);
+            m_btnHiddenAcceptButton.Location = new Point(-m_btnHiddenAcceptButton.Size.Width, -m_btnHiddenAcceptButton.Size.Height);
 
             EnableDisableMenu();
         }
@@ -133,20 +133,20 @@ namespace MindmapTrainer
 
         private void neueMindmapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            if (m_dlgSaveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 _mindMap = new SortedDictionary<string,Dictionary<string,bool>>();
                 _training = new SortedDictionary<string, string>();
                 _correctAnswers = new SortedDictionary<string, int>();
 
-                _root = saveFileDialog1.FileName.Substring(saveFileDialog1.FileName.LastIndexOf('\\')+1).Replace(".MindMap.xml","");
-                _fileName = saveFileDialog1.FileName;
+                _root = m_dlgSaveFileDialog1.FileName.Substring(m_dlgSaveFileDialog1.FileName.LastIndexOf('\\')+1).Replace(".MindMap.xml","");
+                _fileName = m_dlgSaveFileDialog1.FileName;
                 _mindMap[_root] = new Dictionary<string, bool>();
                 _training[_root] = "111011";
                 _totalErrors = 1;
                 _correctAnswers[_root] = 0;
-                mindmapNodeView1.Node = new MindMapNode(this, _root);
-                mindmapNodeView1.Show();
+                m_ctlMindmapNodeView.Node = new MindMapNode(this, _root);
+                m_ctlMindmapNodeView.Show();
 
                 EnableDisableMenu();
             }
@@ -154,15 +154,15 @@ namespace MindmapTrainer
 
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (m_dlgOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 _mindMap = new SortedDictionary<string, Dictionary<string, bool>>();
                 _training = new SortedDictionary<string, string>();
                 _correctAnswers = new SortedDictionary<string, int>();
 
-                _fileName = openFileDialog1.FileName;
+                _fileName = m_dlgOpenFileDialog1.FileName;
                 System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
-                doc.Load(openFileDialog1.FileName);
+                doc.Load(m_dlgOpenFileDialog1.FileName);
                 foreach (System.Xml.XmlElement e5 in doc.SelectNodes("/mindmap/start"))
                 {
                     _root = e5.InnerText;
@@ -210,8 +210,8 @@ namespace MindmapTrainer
                 }
 
 
-                mindmapNodeView1.Node = new MindMapNode(this, _root);
-                mindmapNodeView1.Show();
+                m_ctlMindmapNodeView.Node = new MindMapNode(this, _root);
+                m_ctlMindmapNodeView.Show();
 
                 EnableDisableMenu();
 
@@ -298,7 +298,7 @@ namespace MindmapTrainer
         {
             try
             {
-                mindmapNodeView1.Hide();
+                m_ctlMindmapNodeView.Hide();
 
                 bool bRepeat = true;
                 while (bRepeat)
@@ -333,7 +333,7 @@ namespace MindmapTrainer
             }
             finally
             {
-                mindmapNodeView1.Show();
+                m_ctlMindmapNodeView.Show();
             }
         }
 
@@ -341,7 +341,7 @@ namespace MindmapTrainer
         {
             try
             {
-                mindmapNodeView1.Hide();
+                m_ctlMindmapNodeView.Hide();
 
                 bool bRepeat = true;
                 while (bRepeat)
@@ -427,7 +427,7 @@ namespace MindmapTrainer
             }
             finally
             {
-                mindmapNodeView1.Show();
+                m_ctlMindmapNodeView.Show();
             }
 
         }
@@ -463,7 +463,7 @@ namespace MindmapTrainer
                     {
                         test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MindmapTrainerForm_MouseMove);
 
-                        test.label1.Text = subject + ":";
+                        test.m_lblSubject.Text = subject + ":";
                         StringBuilder b = new StringBuilder();
                         foreach (string s in _mindMap[pair.Key].Keys)
                             if (b.Length>0)
@@ -471,7 +471,7 @@ namespace MindmapTrainer
                             else
                                 b.AppendFormat("> {0}",s);
 
-                        test.label2.Text = b.ToString();
+                        test.m_lblElements.Text = b.ToString();
 
                         switch (test.ShowDialog())
                         {
@@ -512,12 +512,12 @@ namespace MindmapTrainer
 
         private void EnableDisableMenu()
         {
-            trainierenToolStripMenuItem.Enabled = intensivToolStripMenuItem.Enabled = _mindMap != null && _mindMap.Count > 0;
+            m_ctlTrainingToolStripMenuItem.Enabled = m_ctlIntensiveToolStripMenuItem.Enabled = _mindMap != null && _mindMap.Count > 0;
         }
 
         private void aboutMenuItem_Click(object sender, EventArgs e)
         {
-            using (About form = new About())
+            using (AboutForm form = new AboutForm())
             {
                 form.ShowDialog(this);
             }

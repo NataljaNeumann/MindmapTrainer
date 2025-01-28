@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,89 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>Показать</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>Правильно</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>493, 259</value>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>Неправильно</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>MindMapTrainer v1.0
-Copyright (C) 2024-2025 NataljaNeumann@gmx.de
-
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>517, 277</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAQEACAAEAAQAwBAAAFgAAACgAAABAAAAAgAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAgFx4AAAAAAP///////////////////////////////////////////r/////////4B//wD/////AH
-        //AD/6L/4AP/4AH/AH/gA//gAP+AP8AB/8AA/gAf4AP/4AD+AD/AAf/AAPwAH+AA/8AA/gA/wAB/gAH8
-        AB/gAP+AAf4AP8AAfwAB/AAf4AD+gAP+AD/wAHwAAfwAH/AAPgAD/AA/8AAQAAf8AD/4AAAAD/gAP/gA
-        AAAH8AA/+AAAAA/wAD/8AAAAH/AAf/wAAAA/4AD//AAAAH/AAH/+AAAAf+AA//4AAAB/AAB//4AAAP+A
-        AP//AAAB/wAB//+AAA/+AAP//wAAF/AAAf//gAA/+AAD///AAB/wAAf//+AAH+AAB///4AAHwAAH///o
-        AA/AAA////AABQAAH///+AAAAAA////8AAAAAD////4AAAAA/////gAAAAH/////AAAAA/////8AAAAH
-        /////4AAAA//////wAAAH//////gAAA//////8AAAH//////+AAA///////4AAB///////4AAH//////
-        /AAAP//////+AAA///////8AAB///////4AAP///////wAAf///////4AD////////AAH///////+gA/
-        ///////+AH////////+A/////////8X/////////////////////////////////////////////////
-        ///////////////////+v/////////gH//AP////8Af/8AP/ov/gA//gAf8Af+AD/+AA/4A/wAH/wAD+
-        AB/gA//gAP4AP8AB/8AA/AAf4AD/wAD+AD/AAH+AAfwAH+AA/4AB/gA/wAB/AAH8AB/gAP6AA/4AP/AA
-        fAAB/AAf8AA+AAP8AD/wABAAB/wAP/gAAAAP+AA/+AAAAAfwAD/4AAAAD/AAP/wAAAAf8AB//AAAAD/g
-        AP/8AAAAf8AAf/4AAAB/4AD//gAAAH8AAH//gAAA/4AA//8AAAH/AAH//4AAD/4AA///AAAX8AAB//+A
-        AD/4AAP//8AAH/AAB///4AAf4AAH///gAAfAAAf//+gAD8AAD///8AAFAAAf///4AAAAAD////wAAAAA
-        P////gAAAAD////+AAAAAf////8AAAAD/////wAAAAf/////gAAAD//////AAAAf/////+AAAD//////
-        wAAAf//////4AAD///////gAAH///////gAAf//////8AAA///////4AAD///////wAAH///////gAA/
-        ///////AAB////////gAP///////8AAf///////6AD////////4Af////////4D/////////xf//////
-        //////////////////8=
-</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>Отмена</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>About Mindmap Trainer</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AboutForm</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Тема экзамена</value>
   </data>
 </root>

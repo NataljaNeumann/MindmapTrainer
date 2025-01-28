@@ -36,20 +36,20 @@ namespace MindmapTrainer
 
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            label2.Show();
-            buttonCorrect.Show();
-            buttonWrong.Show();
-            buttonShow.Hide();
+            m_lblElements.Show();
+            m_btnCorrectResult.Show();
+            m_btnWrongResult.Show();
+            m_btnShow.Hide();
             //AcceptButton = buttonCorrect;
-            buttonCorrect.Focus();
+            m_btnCorrectResult.Focus();
         }
 
         private void label2_SizeChanged(object sender, EventArgs e)
         {
-            if (!label2.Text.Equals("points"))
+            if (!m_lblElements.Text.Equals("points"))
             {
-                label2.Location = new Point((Size.Width - label2.Size.Width) / 2, label2.Location.Y);
-                Size = new Size(Size.Width, label2.Location.Y + label2.Size.Height + label1.Location.Y*2 + buttonCancel.Size.Height + (label2.Location.Y - (label1.Size.Height + label1.Location.Y)) * 3);
+                m_lblElements.Location = new Point((Size.Width - m_lblElements.Size.Width) / 2, m_lblElements.Location.Y);
+                Size = new Size(Size.Width, m_lblElements.Location.Y + m_lblElements.Size.Height + m_lblSubject.Location.Y*2 + m_btnCanel.Size.Height + (m_lblElements.Location.Y - (m_lblSubject.Size.Height + m_lblSubject.Location.Y)) * 3);
             }
         }
 

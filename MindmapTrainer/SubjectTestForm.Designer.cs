@@ -46,108 +46,92 @@ namespace MindmapTrainer
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonShow = new System.Windows.Forms.Button();
-            this.buttonCorrect = new System.Windows.Forms.Button();
-            this.buttonWrong = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubjectTestForm));
+            this.m_lblSubject = new System.Windows.Forms.Label();
+            this.m_lblElements = new System.Windows.Forms.Label();
+            this.m_btnShow = new System.Windows.Forms.Button();
+            this.m_btnCorrectResult = new System.Windows.Forms.Button();
+            this.m_btnWrongResult = new System.Windows.Forms.Button();
+            this.m_btnCanel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // m_lblSubject
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(665, 81);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Subject";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.m_lblSubject.AccessibleDescription = null;
+            this.m_lblSubject.AccessibleName = null;
+            resources.ApplyResources(this.m_lblSubject, "m_lblSubject");
+            this.m_lblSubject.Name = "m_lblSubject";
             // 
-            // label2
+            // m_lblElements
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "points";
-            this.label2.Visible = false;
-            this.label2.SizeChanged += new System.EventHandler(this.label2_SizeChanged);
+            this.m_lblElements.AccessibleDescription = null;
+            this.m_lblElements.AccessibleName = null;
+            resources.ApplyResources(this.m_lblElements, "m_lblElements");
+            this.m_lblElements.Name = "m_lblElements";
+            this.m_lblElements.SizeChanged += new System.EventHandler(this.label2_SizeChanged);
             // 
-            // buttonShow
+            // m_btnShow
             // 
-            this.buttonShow.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonShow.Location = new System.Drawing.Point(171, 302);
-            this.buttonShow.Name = "buttonShow";
-            this.buttonShow.Size = new System.Drawing.Size(120, 39);
-            this.buttonShow.TabIndex = 2;
-            this.buttonShow.Text = "Zeigen";
-            this.buttonShow.UseVisualStyleBackColor = true;
-            this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
+            this.m_btnShow.AccessibleDescription = null;
+            this.m_btnShow.AccessibleName = null;
+            resources.ApplyResources(this.m_btnShow, "m_btnShow");
+            this.m_btnShow.BackgroundImage = null;
+            this.m_btnShow.Name = "m_btnShow";
+            this.m_btnShow.UseVisualStyleBackColor = true;
+            this.m_btnShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
-            // buttonCorrect
+            // m_btnCorrectResult
             // 
-            this.buttonCorrect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCorrect.Location = new System.Drawing.Point(18, 302);
-            this.buttonCorrect.Name = "buttonCorrect";
-            this.buttonCorrect.Size = new System.Drawing.Size(120, 39);
-            this.buttonCorrect.TabIndex = 3;
-            this.buttonCorrect.Text = "Richtig";
-            this.buttonCorrect.UseVisualStyleBackColor = true;
-            this.buttonCorrect.Visible = false;
-            this.buttonCorrect.Click += new System.EventHandler(this.buttonCorrect_Click);
+            this.m_btnCorrectResult.AccessibleDescription = null;
+            this.m_btnCorrectResult.AccessibleName = null;
+            resources.ApplyResources(this.m_btnCorrectResult, "m_btnCorrectResult");
+            this.m_btnCorrectResult.BackgroundImage = null;
+            this.m_btnCorrectResult.Name = "m_btnCorrectResult";
+            this.m_btnCorrectResult.UseVisualStyleBackColor = true;
+            this.m_btnCorrectResult.Click += new System.EventHandler(this.buttonCorrect_Click);
             // 
-            // buttonWrong
+            // m_btnWrongResult
             // 
-            this.buttonWrong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonWrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonWrong.Location = new System.Drawing.Point(325, 302);
-            this.buttonWrong.Name = "buttonWrong";
-            this.buttonWrong.Size = new System.Drawing.Size(120, 39);
-            this.buttonWrong.TabIndex = 4;
-            this.buttonWrong.Text = "Falsch";
-            this.buttonWrong.UseVisualStyleBackColor = true;
-            this.buttonWrong.Visible = false;
-            this.buttonWrong.Click += new System.EventHandler(this.buttonWrong_Click);
+            this.m_btnWrongResult.AccessibleDescription = null;
+            this.m_btnWrongResult.AccessibleName = null;
+            resources.ApplyResources(this.m_btnWrongResult, "m_btnWrongResult");
+            this.m_btnWrongResult.BackgroundImage = null;
+            this.m_btnWrongResult.Name = "m_btnWrongResult";
+            this.m_btnWrongResult.UseVisualStyleBackColor = true;
+            this.m_btnWrongResult.Click += new System.EventHandler(this.buttonWrong_Click);
             // 
-            // buttonCancel
+            // m_btnCanel
             // 
-            this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(557, 302);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(120, 39);
-            this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Abbrechen";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.m_btnCanel.AccessibleDescription = null;
+            this.m_btnCanel.AccessibleName = null;
+            resources.ApplyResources(this.m_btnCanel, "m_btnCanel");
+            this.m_btnCanel.BackgroundImage = null;
+            this.m_btnCanel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.m_btnCanel.Name = "m_btnCanel";
+            this.m_btnCanel.UseVisualStyleBackColor = true;
+            this.m_btnCanel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // SubjectTestForm
             // 
-            this.AcceptButton = this.buttonShow;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.m_btnShow;
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(689, 353);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonWrong);
-            this.Controls.Add(this.buttonCorrect);
-            this.Controls.Add(this.buttonShow);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = null;
+            this.CancelButton = this.m_btnCanel;
+            this.Controls.Add(this.m_btnCanel);
+            this.Controls.Add(this.m_btnWrongResult);
+            this.Controls.Add(this.m_btnCorrectResult);
+            this.Controls.Add(this.m_btnShow);
+            this.Controls.Add(this.m_lblElements);
+            this.Controls.Add(this.m_lblSubject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = null;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SubjectTestForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thema-Prüfung";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,11 +139,11 @@ namespace MindmapTrainer
 
         #endregion
 
-        private System.Windows.Forms.Button buttonShow;
-        private System.Windows.Forms.Button buttonCorrect;
-        private System.Windows.Forms.Button buttonWrong;
-        private System.Windows.Forms.Button buttonCancel;
-        public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button m_btnShow;
+        private System.Windows.Forms.Button m_btnCorrectResult;
+        private System.Windows.Forms.Button m_btnWrongResult;
+        private System.Windows.Forms.Button m_btnCanel;
+        public System.Windows.Forms.Label m_lblSubject;
+        public System.Windows.Forms.Label m_lblElements;
     }
 }

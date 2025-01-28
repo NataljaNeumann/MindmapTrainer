@@ -23,12 +23,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("Mindmap-Trainer")]
+[assembly: AssemblyTitle("MindmapTrainer")]
 [assembly: AssemblyDescription("Diese Anwendung hilft, Mindmaps zu erstellen und zu üben")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Mindmap-Trainer")]
-[assembly: AssemblyCopyright("Copyright ©  2024 NataljaNeumann@gmx.de")]
+[assembly: AssemblyProduct("MindmapTrainer")]
+[assembly: AssemblyCopyright("Copyright ©  2024-2025 NataljaNeumann@gmx.de")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

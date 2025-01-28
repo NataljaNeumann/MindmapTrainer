@@ -46,163 +46,167 @@ namespace MindmapTrainer
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.neueMindmapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.öffnenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trainierenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.intensivToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.hiddenAcceptButton = new System.Windows.Forms.Button();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.mindmapNodeView1 = new MindmapTrainer.MindmapNodeView();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.licenseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.licenseInUserLanguageMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MindmapTrainerForm));
+            this.m_oMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.m_ctlNewMindmapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlTrainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlIntensiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlAboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlAboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlLicenseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlPanel = new System.Windows.Forms.Panel();
+            this.m_btnHiddenAcceptButton = new System.Windows.Forms.Button();
+            this.m_ctlMindmapNodeView = new MindmapTrainer.MindmapNodeView();
+            this.m_dlgSaveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.m_dlgOpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.m_oMenuStrip.SuspendLayout();
+            this.m_ctlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // m_oMenuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.neueMindmapToolStripMenuItem,
-            this.öffnenToolStripMenuItem,
-            this.trainierenToolStripMenuItem,
-            this.intensivToolStripMenuItem,
-            this.infoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(707, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.m_oMenuStrip.AccessibleDescription = null;
+            this.m_oMenuStrip.AccessibleName = null;
+            resources.ApplyResources(this.m_oMenuStrip, "m_oMenuStrip");
+            this.m_oMenuStrip.BackgroundImage = null;
+            this.m_oMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.m_ctlNewMindmapToolStripMenuItem,
+            this.m_ctlOpenToolStripMenuItem,
+            this.m_ctlTrainingToolStripMenuItem,
+            this.m_ctlIntensiveToolStripMenuItem,
+            this.m_ctlAboutToolStripMenuItem});
+            this.m_oMenuStrip.Name = "m_oMenuStrip";
             // 
-            // neueMindmapToolStripMenuItem
+            // m_ctlNewMindmapToolStripMenuItem
             // 
-            this.neueMindmapToolStripMenuItem.Name = "neueMindmapToolStripMenuItem";
-            this.neueMindmapToolStripMenuItem.ShortcutKeyDisplayString = "Strg+N";
-            this.neueMindmapToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.neueMindmapToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.neueMindmapToolStripMenuItem.Text = "&Neu";
-            this.neueMindmapToolStripMenuItem.Click += new System.EventHandler(this.neueMindmapToolStripMenuItem_Click);
+            this.m_ctlNewMindmapToolStripMenuItem.AccessibleDescription = null;
+            this.m_ctlNewMindmapToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlNewMindmapToolStripMenuItem, "m_ctlNewMindmapToolStripMenuItem");
+            this.m_ctlNewMindmapToolStripMenuItem.BackgroundImage = null;
+            this.m_ctlNewMindmapToolStripMenuItem.Name = "m_ctlNewMindmapToolStripMenuItem";
+            this.m_ctlNewMindmapToolStripMenuItem.Click += new System.EventHandler(this.neueMindmapToolStripMenuItem_Click);
             // 
-            // öffnenToolStripMenuItem
+            // m_ctlOpenToolStripMenuItem
             // 
-            this.öffnenToolStripMenuItem.Name = "öffnenToolStripMenuItem";
-            this.öffnenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.öffnenToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.öffnenToolStripMenuItem.Text = "&Öffnen";
-            this.öffnenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
+            this.m_ctlOpenToolStripMenuItem.AccessibleDescription = null;
+            this.m_ctlOpenToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlOpenToolStripMenuItem, "m_ctlOpenToolStripMenuItem");
+            this.m_ctlOpenToolStripMenuItem.BackgroundImage = null;
+            this.m_ctlOpenToolStripMenuItem.Name = "m_ctlOpenToolStripMenuItem";
+            this.m_ctlOpenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
-            // trainierenToolStripMenuItem
+            // m_ctlTrainingToolStripMenuItem
             // 
-            this.trainierenToolStripMenuItem.Name = "trainierenToolStripMenuItem";
-            this.trainierenToolStripMenuItem.ShortcutKeyDisplayString = "Strg+T";
-            this.trainierenToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.trainierenToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.trainierenToolStripMenuItem.Text = "&Trainieren";
-            this.trainierenToolStripMenuItem.Click += new System.EventHandler(this.trainierenToolStripMenuItem_Click);
+            this.m_ctlTrainingToolStripMenuItem.AccessibleDescription = null;
+            this.m_ctlTrainingToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlTrainingToolStripMenuItem, "m_ctlTrainingToolStripMenuItem");
+            this.m_ctlTrainingToolStripMenuItem.BackgroundImage = null;
+            this.m_ctlTrainingToolStripMenuItem.Name = "m_ctlTrainingToolStripMenuItem";
+            this.m_ctlTrainingToolStripMenuItem.Click += new System.EventHandler(this.trainierenToolStripMenuItem_Click);
             // 
-            // intensivToolStripMenuItem
+            // m_ctlIntensiveToolStripMenuItem
             // 
-            this.intensivToolStripMenuItem.Name = "intensivToolStripMenuItem";
-            this.intensivToolStripMenuItem.ShortcutKeyDisplayString = "Strg+I";
-            this.intensivToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.intensivToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.intensivToolStripMenuItem.Text = "&Intensiv";
-            this.intensivToolStripMenuItem.Click += new System.EventHandler(this.intensivToolStripMenuItem_Click);
+            this.m_ctlIntensiveToolStripMenuItem.AccessibleDescription = null;
+            this.m_ctlIntensiveToolStripMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlIntensiveToolStripMenuItem, "m_ctlIntensiveToolStripMenuItem");
+            this.m_ctlIntensiveToolStripMenuItem.BackgroundImage = null;
+            this.m_ctlIntensiveToolStripMenuItem.Name = "m_ctlIntensiveToolStripMenuItem";
+            this.m_ctlIntensiveToolStripMenuItem.Click += new System.EventHandler(this.intensivToolStripMenuItem_Click);
             // 
-            // panel1
+            // m_ctlAboutToolStripMenuItem
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.hiddenAcceptButton);
-            this.panel1.Controls.Add(this.mindmapNodeView1);
-            this.panel1.Location = new System.Drawing.Point(0, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 432);
-            this.panel1.TabIndex = 2;
+            this.m_ctlAboutToolStripMenuItem.AccessibleDescription = null;
+            this.m_ctlAboutToolStripMenuItem.AccessibleName = null;
+            this.m_ctlAboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.m_ctlAboutToolStripMenuItem, "m_ctlAboutToolStripMenuItem");
+            this.m_ctlAboutToolStripMenuItem.BackgroundImage = null;
+            this.m_ctlAboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.m_ctlAboutMenuItem,
+            this.m_ctlLicenseMenuItem});
+            this.m_ctlAboutToolStripMenuItem.Name = "m_ctlAboutToolStripMenuItem";
+            this.m_ctlAboutToolStripMenuItem.ShortcutKeyDisplayString = null;
             // 
-            // hiddenAcceptButton
+            // m_ctlAboutMenuItem
             // 
-            this.hiddenAcceptButton.Location = new System.Drawing.Point(663, 201);
-            this.hiddenAcceptButton.Name = "hiddenAcceptButton";
-            this.hiddenAcceptButton.Size = new System.Drawing.Size(32, 23);
-            this.hiddenAcceptButton.TabIndex = 2;
-            this.hiddenAcceptButton.Text = "...";
-            this.hiddenAcceptButton.UseVisualStyleBackColor = true;
-            this.hiddenAcceptButton.Click += new System.EventHandler(this.hiddenAcceptButton_Click);
+            this.m_ctlAboutMenuItem.AccessibleDescription = null;
+            this.m_ctlAboutMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlAboutMenuItem, "m_ctlAboutMenuItem");
+            this.m_ctlAboutMenuItem.BackgroundImage = null;
+            this.m_ctlAboutMenuItem.Name = "m_ctlAboutMenuItem";
+            this.m_ctlAboutMenuItem.ShortcutKeyDisplayString = null;
+            this.m_ctlAboutMenuItem.Click += new System.EventHandler(this.aboutMenuItem_Click);
             // 
-            // saveFileDialog1
+            // m_ctlLicenseMenuItem
             // 
-            this.saveFileDialog1.DefaultExt = "MindMap.xml";
-            this.saveFileDialog1.Filter = "Mind Map Dateien|*.MindMap.xml";
+            this.m_ctlLicenseMenuItem.AccessibleDescription = null;
+            this.m_ctlLicenseMenuItem.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlLicenseMenuItem, "m_ctlLicenseMenuItem");
+            this.m_ctlLicenseMenuItem.BackgroundImage = null;
+            this.m_ctlLicenseMenuItem.Name = "m_ctlLicenseMenuItem";
+            this.m_ctlLicenseMenuItem.ShortcutKeyDisplayString = null;
+            this.m_ctlLicenseMenuItem.Click += new System.EventHandler(this.licenseMenuItem_Click);
             // 
-            // openFileDialog1
+            // m_ctlPanel
             // 
-            this.openFileDialog1.DefaultExt = "MindMap.xml";
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Mind Map Dateien|*.MindMap.xml";
+            this.m_ctlPanel.AccessibleDescription = null;
+            this.m_ctlPanel.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlPanel, "m_ctlPanel");
+            this.m_ctlPanel.BackgroundImage = null;
+            this.m_ctlPanel.Controls.Add(this.m_btnHiddenAcceptButton);
+            this.m_ctlPanel.Controls.Add(this.m_ctlMindmapNodeView);
+            this.m_ctlPanel.Font = null;
+            this.m_ctlPanel.Name = "m_ctlPanel";
             // 
-            // mindmapNodeView1
+            // m_btnHiddenAcceptButton
             // 
-            this.mindmapNodeView1.Location = new System.Drawing.Point(3, 3);
-            this.mindmapNodeView1.Name = "mindmapNodeView1";
-            this.mindmapNodeView1.Node = null;
-            this.mindmapNodeView1.Size = new System.Drawing.Size(97, 31);
-            this.mindmapNodeView1.TabIndex = 1;
-            this.mindmapNodeView1.Visible = false;
+            this.m_btnHiddenAcceptButton.AccessibleDescription = null;
+            this.m_btnHiddenAcceptButton.AccessibleName = null;
+            resources.ApplyResources(this.m_btnHiddenAcceptButton, "m_btnHiddenAcceptButton");
+            this.m_btnHiddenAcceptButton.BackgroundImage = null;
+            this.m_btnHiddenAcceptButton.Font = null;
+            this.m_btnHiddenAcceptButton.Name = "m_btnHiddenAcceptButton";
+            this.m_btnHiddenAcceptButton.UseVisualStyleBackColor = true;
+            this.m_btnHiddenAcceptButton.Click += new System.EventHandler(this.hiddenAcceptButton_Click);
             // 
-            // infoToolStripMenuItem
+            // m_ctlMindmapNodeView
             // 
-            this.infoToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutMenuItem,
-            this.licenseMenuItem,
-            this.licenseInUserLanguageMenuItem});
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
+            this.m_ctlMindmapNodeView.AccessibleDescription = null;
+            this.m_ctlMindmapNodeView.AccessibleName = null;
+            resources.ApplyResources(this.m_ctlMindmapNodeView, "m_ctlMindmapNodeView");
+            this.m_ctlMindmapNodeView.BackgroundImage = null;
+            this.m_ctlMindmapNodeView.Font = null;
+            this.m_ctlMindmapNodeView.Name = "m_ctlMindmapNodeView";
+            this.m_ctlMindmapNodeView.Node = null;
             // 
-            // aboutMenuItem
+            // m_dlgSaveFileDialog1
             // 
-            this.aboutMenuItem.Name = "aboutMenuItem";
-            this.aboutMenuItem.Size = new System.Drawing.Size(277, 22);
-            this.aboutMenuItem.Text = "Über Mindmap-Trainer";
-            this.aboutMenuItem.Click += new System.EventHandler(this.aboutMenuItem_Click);
+            this.m_dlgSaveFileDialog1.DefaultExt = "MindMap.xml";
+            resources.ApplyResources(this.m_dlgSaveFileDialog1, "m_dlgSaveFileDialog1");
             // 
-            // licenseMenuItem
+            // m_dlgOpenFileDialog1
             // 
-            this.licenseMenuItem.Name = "licenseMenuItem";
-            this.licenseMenuItem.Size = new System.Drawing.Size(277, 22);
-            this.licenseMenuItem.Text = "Lizenz (GPL 2, bindend)";
-            this.licenseMenuItem.Click += new System.EventHandler(this.licenseMenuItem_Click);
-            // 
-            // licenseInUserLanguageMenuItem
-            // 
-            this.licenseInUserLanguageMenuItem.Name = "licenseInUserLanguageMenuItem";
-            this.licenseInUserLanguageMenuItem.Size = new System.Drawing.Size(277, 22);
-            this.licenseInUserLanguageMenuItem.Text = "Lizenztext auf Deutsch (nicht bindend)";
-            this.licenseInUserLanguageMenuItem.Click += new System.EventHandler(this.licenseInUserLanguageMenuItem_Click);
+            this.m_dlgOpenFileDialog1.DefaultExt = "MindMap.xml";
+            this.m_dlgOpenFileDialog1.FileName = "openFileDialog1";
+            resources.ApplyResources(this.m_dlgOpenFileDialog1, "m_dlgOpenFileDialog1");
             // 
             // MindmapTrainerForm
             // 
-            this.AcceptButton = this.hiddenAcceptButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 460);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.AcceptButton = this.m_btnHiddenAcceptButton;
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = null;
+            this.Controls.Add(this.m_ctlPanel);
+            this.Controls.Add(this.m_oMenuStrip);
+            this.Icon = null;
+            this.MainMenuStrip = this.m_oMenuStrip;
             this.Name = "MindmapTrainerForm";
-            this.Text = "Mindmap-Trainer";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MindmapTrainerForm_MouseMove);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.m_oMenuStrip.ResumeLayout(false);
+            this.m_oMenuStrip.PerformLayout();
+            this.m_ctlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,20 +214,19 @@ namespace MindmapTrainer
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem neueMindmapToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem öffnenToolStripMenuItem;
-        private MindmapNodeView mindmapNodeView1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem trainierenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem intensivToolStripMenuItem;
-        private System.Windows.Forms.Button hiddenAcceptButton;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem licenseMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem licenseInUserLanguageMenuItem;
+        private System.Windows.Forms.MenuStrip m_oMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlNewMindmapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlOpenToolStripMenuItem;
+        private MindmapNodeView m_ctlMindmapNodeView;
+        private System.Windows.Forms.Panel m_ctlPanel;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlTrainingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlIntensiveToolStripMenuItem;
+        private System.Windows.Forms.Button m_btnHiddenAcceptButton;
+        private System.Windows.Forms.SaveFileDialog m_dlgSaveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog m_dlgOpenFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlAboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlAboutMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlLicenseMenuItem;
     }
 }
 
