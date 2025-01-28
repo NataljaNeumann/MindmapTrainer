@@ -117,19 +117,109 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Tópico do exame</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 11</value>
   </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Cancelar!</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_lblSubject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>64, 0, 64, 0</value>
   </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Correto!</value>
+  <data name="m_lblSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>887, 100</value>
+  </data>
+  <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 123</value>
+  </data>
+  <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>64, 0, 64, 0</value>
+  </data>
+  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 20</value>
+  </data>
+  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="m_btnShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 372</value>
+  </data>
+  <data name="m_btnShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>64, 27, 64, 27</value>
+  </data>
+  <data name="m_btnShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 48</value>
   </data>
   <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Mostrar!</value>
+    <value>يعرض</value>
+  </data>
+  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="m_btnCorrectResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 372</value>
+  </data>
+  <data name="m_btnCorrectResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>64, 27, 64, 27</value>
+  </data>
+  <data name="m_btnCorrectResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 48</value>
+  </data>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>صحيح</value>
+  </data>
+  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="m_btnWrongResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>433, 372</value>
+  </data>
+  <data name="m_btnWrongResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>64, 27, 64, 27</value>
+  </data>
+  <data name="m_btnWrongResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 48</value>
   </data>
   <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Incorreto! </value>
+    <value>غير صحيح</value>
+  </data>
+  <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>741, 372</value>
+  </data>
+  <data name="m_btnCanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>64, 27, 64, 27</value>
+  </data>
+  <data name="m_btnCanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 48</value>
+  </data>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>يلغي</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>919, 434</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1024, 199, 1024, 199</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>موضوع الامتحان</value>
   </data>
 </root>

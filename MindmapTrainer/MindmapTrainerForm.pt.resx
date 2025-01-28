@@ -117,50 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Treinador de mapas mentais</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>Sobre o Treinador de mapas mentais</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Informações</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+I</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intensivo</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Licença (GPL v2)</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+N</value>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Novo</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+O</value>
+  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>Abrir</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+T</value>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Trem</value>
   </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Arquivos de mapa mental|*.MindMap.xml</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Intensivo</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 22</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>Sobre o Treinador de mapas mentais</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>265, 22</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Licença (GPL v2)</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 20</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Informações</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
     <value>Arquivos de mapa mental|*.MindMap.xml</value>
+  </data>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>Arquivos de mapa mental|*.MindMap.xml</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Treinador de mapas mentais</value>
   </data>
 </root>

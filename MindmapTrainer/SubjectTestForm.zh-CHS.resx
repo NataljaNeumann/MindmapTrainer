@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Tópico do exame</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Cancelar!</value>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>展示</value>
   </data>
   <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Correto!</value>
-  </data>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Mostrar!</value>
+    <value>正确的</value>
   </data>
   <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Incorreto! </value>
+    <value>不正确</value>
+  </data>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>考试题目</value>
   </data>
 </root>

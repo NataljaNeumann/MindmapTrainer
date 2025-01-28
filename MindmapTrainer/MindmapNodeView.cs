@@ -45,16 +45,16 @@ namespace MindmapTrainer
                 ClearSubElements();
                 if (_node!=null)
                 {
-                    label1.Text = _node.Text;
+                    m_lblText.Text = _node.Text;
 
                     if (_node.HasElements)
-                        button1.Text = "+";
+                        m_btnExpand.Text = "+";
                     else
-                        button1.Text = ">";
+                        m_btnExpand.Text = ">";
                 }
                 else
                 {
-                    button1.Text = ">";
+                    m_btnExpand.Text = ">";
                 }
                 CalcNewSize();
                 
@@ -77,7 +77,7 @@ namespace MindmapTrainer
         public MindmapNodeView()
         {
             InitializeComponent();
-            button1.TabIndex = 1;
+            m_btnExpand.TabIndex = 1;
         }
 
         private void label1_SizeChanged(object sender, EventArgs e)
@@ -97,17 +97,17 @@ namespace MindmapTrainer
 
             if (_bExpanded)
             {
-                button1.Text = "-";
-                Controls.Remove(textBox1);
-                Controls.Add(textBox1);
-                textBox1.TabIndex = 1000;
+                m_btnExpand.Text = "-";
+                Controls.Remove(m_tbxNextItemInput);
+                Controls.Add(m_tbxNextItemInput);
+                m_tbxNextItemInput.TabIndex = 1000;
             }
             else
             {
                 if (_node != null && _node.HasElements)
-                    button1.Text = "+";
+                    m_btnExpand.Text = "+";
                 else
-                    button1.Text = ">";
+                    m_btnExpand.Text = ">";
             }
         }
 
@@ -116,7 +116,7 @@ namespace MindmapTrainer
             Size newSize;
             if (_bExpanded)
             {
-                newSize = new Size(Math.Max(label1.Location.X + label1.Size.Width + button1.Location.X,100), label1.Location.Y + label1.Size.Height + textBox1.Size.Height + button1.Location.Y * 3);
+                newSize = new Size(Math.Max(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X,100), m_lblText.Location.Y + m_lblText.Size.Height + m_tbxNextItemInput.Size.Height + m_btnExpand.Location.Y * 3);
                 if (_subElements == null)
                     _subElements = new List<MindmapNodeView>();
                 if (_node != null)
@@ -124,12 +124,12 @@ namespace MindmapTrainer
                     if (_subElements.Count == 0)
                     {
 
-                        int currentY = Math.Max(label1.Size.Height + label1.Location.Y + button1.Location.Y, button1.Location.Y * 2 + button1.Size.Height);
+                        int currentY = Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height);
                         int tabIndex = 2;
                         foreach (IMindmapNode n in _node.Elements)
                         {
                             MindmapNodeView v = new MindmapNodeView();
-                            v.Location = new Point(button1.Location.X * 2 + button1.Size.Width, currentY);
+                            v.Location = new Point(m_btnExpand.Location.X * 2 + m_btnExpand.Size.Width, currentY);
                             v.Node = n;
                             _subElements.Add(v);
                             this.Controls.Add(v);
@@ -140,9 +140,9 @@ namespace MindmapTrainer
                         foreach (MindmapNodeView v in _subElements)
                         {
                             v.SizeChanged += new EventHandler(v_SizeChanged);
-                            v.Location = new Point(button1.Location.X * 2 + button1.Size.Width, currentY);
-                            currentY = v.Location.Y + v.Size.Height + button1.Location.Y;
-                            newSize.Height = newSize.Height + v.Size.Height + button1.Location.Y;
+                            v.Location = new Point(m_btnExpand.Location.X * 2 + m_btnExpand.Size.Width, currentY);
+                            currentY = v.Location.Y + v.Size.Height + m_btnExpand.Location.Y;
+                            newSize.Height = newSize.Height + v.Size.Height + m_btnExpand.Location.Y;
                             if (newSize.Width<v.Location.X+v.Size.Width)
                                 newSize.Width = v.Location.X+v.Size.Width;
                         }
@@ -151,32 +151,32 @@ namespace MindmapTrainer
 
                     } else
                     {
-                        int currentY = Math.Max(label1.Size.Height + label1.Location.Y + button1.Location.Y, button1.Location.Y * 2 + button1.Size.Height);
+                        int currentY = Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height);
                         foreach (MindmapNodeView v in _subElements)
                         {
-                            v.Location = new Point(button1.Location.X * 2 + button1.Size.Width, currentY);
-                            currentY = v.Location.Y + v.Size.Height + button1.Location.Y;
-                            newSize.Height = newSize.Height + v.Size.Height + button1.Location.Y;
+                            v.Location = new Point(m_btnExpand.Location.X * 2 + m_btnExpand.Size.Width, currentY);
+                            currentY = v.Location.Y + v.Size.Height + m_btnExpand.Location.Y;
+                            newSize.Height = newSize.Height + v.Size.Height + m_btnExpand.Location.Y;
                             if (newSize.Width < v.Location.X + v.Size.Width)
                                 newSize.Width = v.Location.X + v.Size.Width;
                         }
                         Size = newSize;
                     }
-                    textBox1.Show();
+                    m_tbxNextItemInput.Show();
                 }
                 else
                 {
-                    textBox1.Hide();
+                    m_tbxNextItemInput.Hide();
 
                 }
                 // search the elements to show inside
             }
             else
             {
-                newSize = new Size(label1.Location.X + label1.Size.Width + button1.Location.X, Math.Max(label1.Size.Height + label1.Location.Y + button1.Location.Y, button1.Location.Y * 2 + button1.Size.Height));
+                newSize = new Size(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X, Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height));
                 Size = newSize;
                 ClearSubElements();
-                textBox1.Hide();
+                m_tbxNextItemInput.Hide();
             }
         }
 
@@ -191,20 +191,20 @@ namespace MindmapTrainer
             {
                 if (e.Control || e.Shift)
                 {
-                    textBox1.Text = textBox1.Text + "\r\n";
+                    m_tbxNextItemInput.Text = m_tbxNextItemInput.Text + "\r\n";
                 }
                 else
                 {
                     e.IsInputKey = false;
                     if (_node != null)
                     {
-                        _node.AddElement(textBox1.Text);
-                        textBox1.Text = "";
+                        _node.AddElement(m_tbxNextItemInput.Text);
+                        m_tbxNextItemInput.Text = "";
                         ClearSubElements();
                         CalcNewSize();
                         Focus();
-                        textBox1.TabIndex = 1000;
-                        textBox1.Focus();
+                        m_tbxNextItemInput.TabIndex = 1000;
+                        m_tbxNextItemInput.Focus();
                     }
                 }
             }

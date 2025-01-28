@@ -117,19 +117,74 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 24</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
+    <value>새로운</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 24</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>열려 있는</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>기차</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>강한</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>마인드맵 트레이너 소개</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 24</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>라이센스(GPL v2)</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 28</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 39</value>
+  </data>
+  <data name="m_ctlPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 428</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>마인드맵 파일|*.MindMap.xml</value>
+  </data>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>마인드맵 파일|*.MindMap.xml</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Tópico do exame</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Cancelar!</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Correto!</value>
-  </data>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Mostrar!</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Incorreto! </value>
+    <value>마인드맵 트레이너</value>
   </data>
 </root>

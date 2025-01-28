@@ -117,19 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>السيطرة + ن</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 25</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>السيطرة + O</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 25</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>يفتح</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>السيطرة + T</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 25</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>يدرب</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>السيطرة + أنا</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 25</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>كثيف</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 26</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>نبذة عن مدرب الخرائط الذهنية</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 26</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>الترخيص (GPL v2)</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 25</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>معلومة</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 29</value>
+  </data>
+  <data name="m_btnHiddenAcceptButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>663, 242</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 39</value>
+  </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 427</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>ملفات الخريطة الذهنية|*.MindMap.xml</value>
+  </data>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>ملفات الخريطة الذهنية|*.MindMap.xml</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Tópico do exame</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Cancelar!</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Correto!</value>
-  </data>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Mostrar!</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Incorreto! </value>
+    <value>مدرب الخرائط الذهنية</value>
   </data>
 </root>
