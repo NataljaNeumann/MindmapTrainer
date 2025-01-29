@@ -126,7 +126,6 @@ namespace MindmapTrainer
             this.Controls.Add(this.m_btnShow);
             this.Controls.Add(this.m_lblElements);
             this.Controls.Add(this.m_lblSubject);
-            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = null;
             this.MaximizeBox = false;
