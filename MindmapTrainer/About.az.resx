@@ -128,4 +128,7 @@ Bu proqram faydalı olacağı ümidi ilə yayılır, lakin heç bir ZƏMANƏT OL
 Siz bu proqramla birlikdə GNU Ümumi İctimai Lisenziyasının surətini almalısınız; deyilsə,  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 </value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Ağıl xəritəsi məşqçi haqqında</value>
+  </data>
 </root>
