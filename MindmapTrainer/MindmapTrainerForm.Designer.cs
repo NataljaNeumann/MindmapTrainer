@@ -70,6 +70,7 @@ namespace MindmapTrainer
             this.m_oMenuStrip.AccessibleName = null;
             resources.ApplyResources(this.m_oMenuStrip, "m_oMenuStrip");
             this.m_oMenuStrip.BackgroundImage = null;
+            this.m_oMenuStrip.Font = null;
             this.m_oMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.m_ctlNewMindmapToolStripMenuItem,
             this.m_ctlOpenToolStripMenuItem,
@@ -201,6 +202,7 @@ namespace MindmapTrainer
             this.BackgroundImage = null;
             this.Controls.Add(this.m_ctlPanel);
             this.Controls.Add(this.m_oMenuStrip);
+            this.Font = null;
             this.Icon = null;
             this.MainMenuStrip = this.m_oMenuStrip;
             this.Name = "MindmapTrainerForm";
