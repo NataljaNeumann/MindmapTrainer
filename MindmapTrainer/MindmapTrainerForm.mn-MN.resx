@@ -119,54 +119,54 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+    <value>50, 20</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>Baharu</value>
+    <value>Шинэ</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>46, 20</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Buka</value>
+    <value>Нээх</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+    <value>63, 20</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>La&amp;tihan</value>
+    <value>Сургалт</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+    <value>74, 20</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intensif</value>
+    <value>Эрчимтэй</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>343, 22</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>Perihal Jurulatih Peta Minda</value>
+    <value>Оюуны газрын зургийн дасгалжуулагчийн тухай</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>343, 22</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Lesen (GPL v2)</value>
+    <value>Лиценз (GPL v2)</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
+    <value>72, 20</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>maklumat</value>
+    <value>мэдээлэл</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Fail Peta Minda|*.MindMap.xml</value>
+    <value>Оюуны газрын зургийн|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Fail Peta Minda|*.MindMap.xml</value>
+    <value>Оюуны газрын зургийн|*.MindMap.xml</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Pelatih peta minda</value>
+    <value>Оюуны газрын зургийн дасгалжуулагч</value>
   </data>
 </root>

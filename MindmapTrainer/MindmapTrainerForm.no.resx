@@ -119,54 +119,54 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+    <value>34, 20</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>Baharu</value>
+    <value>&amp;Ny</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>47, 20</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Buka</value>
+    <value>Åpne</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+    <value>76, 20</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>La&amp;tihan</value>
+    <value>Opplæring</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
+    <value>60, 20</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intensif</value>
+    <value>&amp;Intensiv</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>182, 22</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>Perihal Jurulatih Peta Minda</value>
+    <value>Om tankekart-trener</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
+    <value>182, 22</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Lesen (GPL v2)</value>
+    <value>Lisens (GPL v2)</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
+    <value>83, 20</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>maklumat</value>
+    <value>informasjon</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Fail Peta Minda|*.MindMap.xml</value>
+    <value>Tankekartfiler|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Fail Peta Minda|*.MindMap.xml</value>
+    <value>Tankekartfiler|*.MindMap.xml</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Pelatih peta minda</value>
+    <value>Tankekart trener</value>
   </data>
 </root>

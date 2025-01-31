@@ -412,7 +412,27 @@
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.mk.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.mn-MN.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MindmapTrainerForm.ms.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.nl.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.no.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.ps-AF.resx">
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -561,7 +581,27 @@
       <DependentUpon>SubjectTestForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.mk.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.mn-MN.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectTestForm.ms.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.nl.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.no.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.ps-AF.resx">
       <DependentUpon>SubjectTestForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

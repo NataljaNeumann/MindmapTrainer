@@ -117,56 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>Прикажи</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>Baharu</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>Точно</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>Неточно</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Buka</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>La&amp;tihan</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 20</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intensif</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>Perihal Jurulatih Peta Minda</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 22</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Lesen (GPL v2)</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 20</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>maklumat</value>
-  </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Fail Peta Minda|*.MindMap.xml</value>
-  </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Fail Peta Minda|*.MindMap.xml</value>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>Откажи</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Pelatih peta minda</value>
+    <value>Тема на испитот</value>
   </data>
 </root>
