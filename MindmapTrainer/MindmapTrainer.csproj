@@ -380,6 +380,10 @@
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.it.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MindmapTrainerForm.ja.resx">
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -546,6 +550,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectTestForm.is.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.it.resx">
       <DependentUpon>SubjectTestForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
