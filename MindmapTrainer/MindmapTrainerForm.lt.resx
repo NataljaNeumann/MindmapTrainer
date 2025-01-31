@@ -117,56 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + N</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>55, 20</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>Жаңы</value>
+    <value>&amp;Naujas</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + O</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 20</value>
+    <value>64, 20</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Ачык</value>
+    <value>Atidaryti</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + T</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
+    <value>71, 20</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>Иштеп чыгуу</value>
+    <value>Mokymas</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl + I</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Күчтүү</value>
+    <value>&amp;Intensyvus</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 22</value>
+    <value>237, 22</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>Акыл картасы тренери жөнүндө</value>
+    <value>Apie minčių žemėlapių treneris</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 22</value>
+    <value>237, 22</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Лицензия (GPL v2)</value>
+    <value>Licencija (GPL v2)</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>79, 20</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>маалымат</value>
+    <value>informacija</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Акыл картасы файлдары|*.MindMap.xml</value>
+    <value>Minčių žemėlapių failai|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Акыл картасы файлдары|*.MindMap.xml</value>
+    <value>Minčių žemėlapių failai|*.MindMap.xml</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Акыл картасы тренери</value>
+    <value>Minčių žemėlapių treneris</value>
   </data>
 </root>
