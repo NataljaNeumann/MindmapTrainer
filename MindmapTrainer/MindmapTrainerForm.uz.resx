@@ -117,19 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Megmutat</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Helyes</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Helytelen</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Megszakítása</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Vizsga téma</value>
+    <value>Aql xaritasi murabbiy</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>Aql xaritasi murabbiyidan</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>ma'lumot</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+I</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Intensiv</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Litsenziya (GPL v2)</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+N</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
+    <value>Ya&amp;ngi</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Ochiq</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+T</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Trening</value>
+  </data>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>Aql xaritasi fayllar|*.MindMap.xml</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Aql xaritasi fayllar|*.MindMap.xml</value>
   </data>
 </root>

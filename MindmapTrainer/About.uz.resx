@@ -117,19 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Megmutat</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>MindmapTrainer v1.0
+Mualliflik huquqi © 2024-2025 NataljaNeumann@gmx.de
+
+Bu dastur bepul dastur hisoblanadi; Free Software Foundation tomonidan e'lon qilingan GNU General Public License shartlari asosida uni qayta tarqatishingiz va/yoki o'zgartirishingiz mumkin; Litsenziyaning 2-versiyasi yoki (sizning xohishingizga ko'ra) har qanday keyingi versiyasi.
+
+Ushbu dastur foydali bo'ladi degan umidda tarqatiladi, lekin HECH QANDAY KAFOLATSIZ; SOVLASH MUVOFIQligi yoki MAQSUS MAQSADGA MUVOFIQligi haqidagi nazarda tutilgan kafolatisiz ham.  Batafsil ma'lumot uchun GNU General Public License-ga qarang.
+
+Siz ushbu dastur bilan birga GNU General Public License nusxasini olishingiz kerak edi; boʻlmasa,  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+</value>
   </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Helyes</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Helytelen</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Megszakítása</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEACAAEAAQAwBAAAFgAAACgAAABAAAAAgAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAgFx4AAAAAAP///////////////////////////////////////////r/////////4B//wD/////AH
+        //AD/6L/4AP/4AH/AH/gA//gAP+AP8AB/8AA/gAf4AP/4AD+AD/AAf/AAPwAH+AA/8AA/gA/wAB/gAH8
+        AB/gAP+AAf4AP8AAfwAB/AAf4AD+gAP+AD/wAHwAAfwAH/AAPgAD/AA/8AAQAAf8AD/4AAAAD/gAP/gA
+        AAAH8AA/+AAAAA/wAD/8AAAAH/AAf/wAAAA/4AD//AAAAH/AAH/+AAAAf+AA//4AAAB/AAB//4AAAP+A
+        AP//AAAB/wAB//+AAA/+AAP//wAAF/AAAf//gAA/+AAD///AAB/wAAf//+AAH+AAB///4AAHwAAH///o
+        AA/AAA////AABQAAH///+AAAAAA////8AAAAAD////4AAAAA/////gAAAAH/////AAAAA/////8AAAAH
+        /////4AAAA//////wAAAH//////gAAA//////8AAAH//////+AAA///////4AAB///////4AAH//////
+        /AAAP//////+AAA///////8AAB///////4AAP///////wAAf///////4AD////////AAH///////+gA/
+        ///////+AH////////+A/////////8X/////////////////////////////////////////////////
+        ///////////////////+v/////////gH//AP////8Af/8AP/ov/gA//gAf8Af+AD/+AA/4A/wAH/wAD+
+        AB/gA//gAP4AP8AB/8AA/AAf4AD/wAD+AD/AAH+AAfwAH+AA/4AB/gA/wAB/AAH8AB/gAP6AA/4AP/AA
+        fAAB/AAf8AA+AAP8AD/wABAAB/wAP/gAAAAP+AA/+AAAAAfwAD/4AAAAD/AAP/wAAAAf8AB//AAAAD/g
+        AP/8AAAAf8AAf/4AAAB/4AD//gAAAH8AAH//gAAA/4AA//8AAAH/AAH//4AAD/4AA///AAAX8AAB//+A
+        AD/4AAP//8AAH/AAB///4AAf4AAH///gAAfAAAf//+gAD8AAD///8AAFAAAf///4AAAAAD////wAAAAA
+        P////gAAAAD////+AAAAAf////8AAAAD/////wAAAAf/////gAAAD//////AAAAf/////+AAAD//////
+        wAAAf//////4AAD///////gAAH///////gAAf//////8AAA///////4AAD///////wAAH///////gAA/
+        ///////AAB////////gAP///////8AAf///////6AD////////4Af////////4D/////////xf//////
+        //////////////////8=
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Vizsga téma</value>
+    <value>Aql xaritasi murabbiyidan</value>
   </data>
 </root>

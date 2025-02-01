@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Megmutat</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Helyes</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Helytelen</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Imtihon mavzusi</value>
   </data>
   <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Megszakítása</value>
+    <value>Bekor qilish</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Vizsga téma</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>To'g'ri</value>
+  </data>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>Ko'rsatish</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>Noto'g'ri</value>
   </data>
 </root>
