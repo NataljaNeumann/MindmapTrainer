@@ -117,51 +117,72 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11.25pt</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 24</value>
+  </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
     <value>新的</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>51, 24</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>打开</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+    <value>52, 24</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>火车</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
+    <value>66, 24</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
     <value>密集的</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 22</value>
+    <value>218, 24</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
     <value>关于思维导图训练器</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 22</value>
+    <value>218, 24</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
     <value>许可证（GPL v2）</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>51, 24</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
     <value>信息</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 28</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 43</value>
+  </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 31</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 428</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
     <value>思维导图文件|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>思维导图文件|*.MindMap.xml</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>思维导图训练师</value>
