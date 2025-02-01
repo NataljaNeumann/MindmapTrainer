@@ -194,8 +194,8 @@
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Open</value>
   </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 24</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Mindmap Trainer</value>
   </data>
   <data name="&gt;&gt;m_dlgOpenFileDialog1.Name" xml:space="preserve">
     <value>m_dlgOpenFileDialog1</value>
@@ -216,9 +216,6 @@
   <data name="m_ctlOpenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Strg+O</value>
   </data>
-  <data name="&gt;&gt;m_ctlPanel.Name" xml:space="preserve">
-    <value>m_ctlPanel</value>
-  </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
     <value>About "Mindmap Trainer"</value>
   </data>
@@ -234,8 +231,8 @@
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Info</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Training</value>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 24</value>
   </data>
   <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>707, 432</value>
@@ -252,8 +249,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MindmapTrainerForm</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Mindmap Trainer</value>
+  <data name="&gt;&gt;m_ctlPanel.Name" xml:space="preserve">
+    <value>m_ctlPanel</value>
   </data>
   <data name="&gt;&gt;m_dlgOpenFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -303,8 +300,8 @@
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 20</value>
   </data>
-  <data name="m_btnHiddenAcceptButton.Text" xml:space="preserve">
-    <value>...</value>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Training</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 20</value>
@@ -348,6 +345,9 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
   </data>
+  <data name="m_btnHiddenAcceptButton.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
   <data name="&gt;&gt;m_ctlMindmapNodeView.Type" xml:space="preserve">
     <value>MindmapTrainer.MindmapNodeView, MindmapTrainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
@@ -361,7 +361,7 @@
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="m_oMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+    <value>10, 18</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -371,8 +371,5 @@
   </metadata>
   <metadata name="m_dlgSaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>Punjabi (India)</value>
   </metadata>
 </root>

@@ -118,52 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>کنٹرول+این</value>
+  </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 20</value>
+    <value>50, 25</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>ਨਵਾਂ</value>
+    <value>نواں</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>کنٹرول+او</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
+    <value>59, 25</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>ਖੋਲੋ</value>
+    <value>کھولو</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>کنٹرول+ٹی</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 25</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>ਸਿਖਲਾਈ</value>
+    <value>سکھلائی</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>کنٹرول+آئی</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
+    <value>56, 25</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>ਤੀਬਰ</value>
+    <value>شدید</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 22</value>
+    <value>252, 26</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>ਮਾਈਂਡ ਮੈਪ ਟ੍ਰੇਨਰ ਬਾਰੇ</value>
+    <value>مائنڈ میپ ٹرینر دے بارے چ</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 22</value>
+    <value>252, 26</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>ਲਾਇਸੰਸ (GPL v2)</value>
+    <value>لائسنس (GPL v2)</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
+    <value>70, 25</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>ਜਾਣਕਾਰੀ</value>
+    <value>جانکاری</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 29</value>
+  </data>
+  <data name="m_btnHiddenAcceptButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 38</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 48</value>
+  </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 427</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>ਮਾਈਂਡ ਮੈਪ ਫਾਈਲਾਂ|*.MindMap.xml</value>
+    <value>مائنڈ میپ فائلاں|*.مائنڈ میپ.ایکس ایم ایل</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>ਮਾਈਂਡ ਮੈਪ ਫਾਈਲਾਂ|*.MindMap.xml</value>
+    <value>مائنڈ میپ فائلاں|*.مائنڈ میپ.ایکس ایم ایل</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ਮਨ ਦਾ ਨਕਸ਼ਾ ਟ੍ਰੇਨਰ</value>
+    <value>مائنڈ میپ ٹرینر</value>
   </data>
 </root>
