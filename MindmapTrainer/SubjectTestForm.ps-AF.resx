@@ -132,7 +132,7 @@
     <value>998, 125</value>
   </data>
   <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 154</value>
@@ -141,7 +141,7 @@
     <value>72, 0, 72, 0</value>
   </data>
   <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 20</value>
+    <value>60, 24</value>
   </data>
   <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 18pt</value>
@@ -203,17 +203,18 @@
   <data name="m_btnCanel.Text" xml:space="preserve">
     <value>لغوه</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1034, 543</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1152, 249, 1152, 249</value>
+  </data>
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>د امتحان موضوع</value>
