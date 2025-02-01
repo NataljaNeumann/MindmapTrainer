@@ -117,12 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value>បញ្ជា(Ctrl)+N</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 20</value>
+    <value>34, 25</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
     <value>ថ្មី</value>
@@ -131,7 +134,7 @@
     <value>បញ្ជា(Ctrl)+O</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>54, 25</value>
   </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>បើក</value>
@@ -140,7 +143,7 @@
     <value>បញ្ជា(Ctrl)+T</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
+    <value>70, 25</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>លំហាត់</value>
@@ -149,34 +152,79 @@
     <value>បញ្ជា(Ctrl)+I</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+    <value>54, 25</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
     <value>ខ្លាំង</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+    <value>237, 26</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
     <value>អំពីគ្រូបង្ហាត់ផែនទីចិត្ត</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+    <value>237, 26</value>
   </data>
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
     <value>អាជ្ញាប័ណ្ណ (GPL v2)</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 20</value>
+    <value>90, 25</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
     <value>ជូនដំណឹង</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 29</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_ctlMindmapNodeView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 48</value>
+  </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 32</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 427</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
     <value>ឯកសារផែនទីគំនិត|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>ឯកសារផែនទីគំនិត|*.MindMap.xml</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEACAAEAAQAwBAAAFgAAACgAAABAAAAAgAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAgFx4AAAAAAP///////////////////////////////////////////r/////////4B//wD/////AH
+        //AD/6L/4AP/4AH/AH/gA//gAP+AP8AB/8AA/gAf4AP/4AD+AD/AAf/AAPwAH+AA/8AA/gA/wAB/gAH8
+        AB/gAP+AAf4AP8AAfwAB/AAf4AD+gAP+AD/wAHwAAfwAH/AAPgAD/AA/8AAQAAf8AD/4AAAAD/gAP/gA
+        AAAH8AA/+AAAAA/wAD/8AAAAH/AAf/wAAAA/4AD//AAAAH/AAH/+AAAAf+AA//4AAAB/AAB//4AAAP+A
+        AP//AAAB/wAB//+AAA/+AAP//wAAF/AAAf//gAA/+AAD///AAB/wAAf//+AAH+AAB///4AAHwAAH///o
+        AA/AAA////AABQAAH///+AAAAAA////8AAAAAD////4AAAAA/////gAAAAH/////AAAAA/////8AAAAH
+        /////4AAAA//////wAAAH//////gAAA//////8AAAH//////+AAA///////4AAB///////4AAH//////
+        /AAAP//////+AAA///////8AAB///////4AAP///////wAAf///////4AD////////AAH///////+gA/
+        ///////+AH////////+A/////////8X/////////////////////////////////////////////////
+        ///////////////////+v/////////gH//AP////8Af/8AP/ov/gA//gAf8Af+AD/+AA/4A/wAH/wAD+
+        AB/gA//gAP4AP8AB/8AA/AAf4AD/wAD+AD/AAH+AAfwAH+AA/4AB/gA/wAB/AAH8AB/gAP6AA/4AP/AA
+        fAAB/AAf8AA+AAP8AD/wABAAB/wAP/gAAAAP+AA/+AAAAAfwAD/4AAAAD/AAP/wAAAAf8AB//AAAAD/g
+        AP/8AAAAf8AAf/4AAAB/4AD//gAAAH8AAH//gAAA/4AA//8AAAH/AAH//4AAD/4AA///AAAX8AAB//+A
+        AD/4AAP//8AAH/AAB///4AAf4AAH///gAAfAAAf//+gAD8AAD///8AAFAAAf///4AAAAAD////wAAAAA
+        P////gAAAAD////+AAAAAf////8AAAAD/////wAAAAf/////gAAAD//////AAAAf/////+AAAD//////
+        wAAAf//////4AAD///////gAAH///////gAAf//////8AAA///////4AAD///////wAAH///////gAA/
+        ///////AAB////////gAP///////8AAf///////6AD////////4Af////////4D/////////xf//////
+        //////////////////8=
+</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>គ្រូបង្ហាត់ផែនទីចិត្ត</value>
