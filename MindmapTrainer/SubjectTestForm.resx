@@ -117,218 +117,86 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="m_lblElements.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Show</value>
-  </data>
-  <data name="m_lblElements.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_lblSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_lblSubject.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20.25pt</value>
   </data>
-  <data name="&gt;&gt;m_btnCanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="m_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="m_lblSubject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>48, 0, 48, 0</value>
   </data>
   <data name="m_lblSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>665, 81</value>
   </data>
-  <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="m_lblSubject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="m_btnShow.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="m_btnCorrectResult.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>689, 353</value>
-  </data>
-  <data name="&gt;&gt;m_lblElements.Name" xml:space="preserve">
-    <value>m_lblElements</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Wrong</value>
-  </data>
-  <data name="&gt;&gt;m_btnCorrectResult.Name" xml:space="preserve">
-    <value>m_btnCorrectResult</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>768, 162, 768, 162</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Test on subject</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_btnShow.Name" xml:space="preserve">
-    <value>m_btnShow</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="m_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="m_btnWrongResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 39</value>
-  </data>
-  <data name="&gt;&gt;m_lblElements.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="m_lblSubject.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_btnCorrectResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="m_btnCorrectResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 302</value>
-  </data>
-  <data name="m_lblSubject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>48, 0, 48, 0</value>
-  </data>
-  <data name="m_btnCorrectResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>48, 22, 48, 22</value>
-  </data>
-  <data name="m_btnWrongResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="m_btnWrongResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>325, 302</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;m_lblSubject.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;m_btnWrongResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="m_lblSubject.Text" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="m_btnCanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>48, 22, 48, 22</value>
+  <data name="m_lblSubject.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
   </data>
-  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 16</value>
-  </data>
-  <data name="m_btnShow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 39</value>
-  </data>
-  <data name="&gt;&gt;m_btnWrongResult.Name" xml:space="preserve">
-    <value>m_btnWrongResult</value>
-  </data>
-  <data name="&gt;&gt;m_btnCanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_btnShow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SubjectTestForm</value>
-  </data>
-  <data name="m_btnWrongResult.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>556, 302</value>
-  </data>
-  <data name="&gt;&gt;m_lblSubject.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="m_btnShow.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;m_btnCorrectResult.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="m_btnWrongResult.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;m_btnShow.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="m_btnCorrectResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 39</value>
-  </data>
-  <data name="&gt;&gt;m_btnCanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="m_btnCanel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="m_btnCorrectResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20.25pt</value>
-  </data>
-  <data name="m_btnCanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 39</value>
-  </data>
-  <data name="&gt;&gt;m_btnCorrectResult.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 100</value>
+  <data name="&gt;&gt;m_lblSubject.Name" xml:space="preserve">
+    <value>m_lblSubject</value>
   </data>
   <data name="&gt;&gt;m_lblSubject.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
+  <data name="&gt;&gt;m_lblSubject.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="m_btnCorrectResult.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;m_lblSubject.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;m_lblElements.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;m_btnShow.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="m_lblElements.Text" xml:space="preserve">
-    <value>points</value>
+  <data name="m_lblElements.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="m_btnCanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 100</value>
   </data>
-  <data name="&gt;&gt;m_btnCanel.Name" xml:space="preserve">
-    <value>m_btnCanel</value>
+  <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>48, 0, 48, 0</value>
   </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Correct</value>
+  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 16</value>
   </data>
-  <data name="m_btnWrongResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>48, 22, 48, 22</value>
+  <data name="m_lblElements.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="m_lblElements.Text" xml:space="preserve">
+    <value>points</value>
+  </data>
+  <data name="m_lblElements.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_lblElements.Name" xml:space="preserve">
+    <value>m_lblElements</value>
+  </data>
+  <data name="&gt;&gt;m_lblElements.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_lblElements.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_lblElements.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_btnShow.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="m_btnShow.Location" type="System.Drawing.Point, System.Drawing">
     <value>171, 302</value>
@@ -336,22 +204,177 @@
   <data name="m_btnShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>48, 22, 48, 22</value>
   </data>
-  <data name="&gt;&gt;m_lblSubject.Name" xml:space="preserve">
-    <value>m_lblSubject</value>
+  <data name="m_btnShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 39</value>
+  </data>
+  <data name="m_btnShow.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="&gt;&gt;m_btnShow.Name" xml:space="preserve">
+    <value>m_btnShow</value>
+  </data>
+  <data name="&gt;&gt;m_btnShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_btnShow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_btnShow.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="m_btnCorrectResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="m_btnCorrectResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 302</value>
+  </data>
+  <data name="m_btnCorrectResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>48, 22, 48, 22</value>
+  </data>
+  <data name="m_btnCorrectResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 39</value>
+  </data>
+  <data name="m_btnCorrectResult.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>Correct</value>
+  </data>
+  <data name="m_btnCorrectResult.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnCorrectResult.Name" xml:space="preserve">
+    <value>m_btnCorrectResult</value>
+  </data>
+  <data name="&gt;&gt;m_btnCorrectResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_btnCorrectResult.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_btnCorrectResult.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_btnWrongResult.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="m_btnWrongResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 302</value>
+  </data>
+  <data name="m_btnWrongResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>48, 22, 48, 22</value>
+  </data>
+  <data name="m_btnWrongResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 39</value>
+  </data>
+  <data name="m_btnWrongResult.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>Wrong</value>
+  </data>
+  <data name="m_btnWrongResult.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_btnWrongResult.Name" xml:space="preserve">
+    <value>m_btnWrongResult</value>
+  </data>
+  <data name="&gt;&gt;m_btnWrongResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;m_btnWrongResult.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="m_lblElements.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_lblElements.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;m_btnWrongResult.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="m_btnCanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>556, 302</value>
+  </data>
+  <data name="m_btnCanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>48, 22, 48, 22</value>
+  </data>
+  <data name="m_btnCanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 39</value>
+  </data>
+  <data name="m_btnCanel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;m_btnCanel.Name" xml:space="preserve">
+    <value>m_btnCanel</value>
+  </data>
+  <data name="&gt;&gt;m_btnCanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_btnCanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_btnCanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>689, 353</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEACAAEAAQAwBAAAFgAAACgAAABAAAAAgAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAgFx4AAAAAAP///////////////////////////////////////////r/////////4B//wD/////AH
+        //AD/6L/4AP/4AH/AH/gA//gAP+AP8AB/8AA/gAf4AP/4AD+AD/AAf/AAPwAH+AA/8AA/gA/wAB/gAH8
+        AB/gAP+AAf4AP8AAfwAB/AAf4AD+gAP+AD/wAHwAAfwAH/AAPgAD/AA/8AAQAAf8AD/4AAAAD/gAP/gA
+        AAAH8AA/+AAAAA/wAD/8AAAAH/AAf/wAAAA/4AD//AAAAH/AAH/+AAAAf+AA//4AAAB/AAB//4AAAP+A
+        AP//AAAB/wAB//+AAA/+AAP//wAAF/AAAf//gAA/+AAD///AAB/wAAf//+AAH+AAB///4AAHwAAH///o
+        AA/AAA////AABQAAH///+AAAAAA////8AAAAAD////4AAAAA/////gAAAAH/////AAAAA/////8AAAAH
+        /////4AAAA//////wAAAH//////gAAA//////8AAAH//////+AAA///////4AAB///////4AAH//////
+        /AAAP//////+AAA///////8AAB///////4AAP///////wAAf///////4AD////////AAH///////+gA/
+        ///////+AH////////+A/////////8X/////////////////////////////////////////////////
+        ///////////////////+v/////////gH//AP////8Af/8AP/ov/gA//gAf8Af+AD/+AA/4A/wAH/wAD+
+        AB/gA//gAP4AP8AB/8AA/AAf4AD/wAD+AD/AAH+AAfwAH+AA/4AB/gA/wAB/AAH8AB/gAP6AA/4AP/AA
+        fAAB/AAf8AA+AAP8AD/wABAAB/wAP/gAAAAP+AA/+AAAAAfwAD/4AAAAD/AAP/wAAAAf8AB//AAAAD/g
+        AP/8AAAAf8AAf/4AAAB/4AD//gAAAH8AAH//gAAA/4AA//8AAAH/AAH//4AAD/4AA///AAAX8AAB//+A
+        AD/4AAP//8AAH/AAB///4AAf4AAH///gAAfAAAf//+gAD8AAD///8AAFAAAf///4AAAAAD////wAAAAA
+        P////gAAAAD////+AAAAAf////8AAAAD/////wAAAAf/////gAAAD//////AAAAf/////+AAAD//////
+        wAAAf//////4AAD///////gAAH///////gAAf//////8AAA///////4AAD///////wAAH///////gAA/
+        ///////AAB////////gAP///////8AAf///////6AD////////4Af////////4D/////////xf//////
+        //////////////////8=
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>768, 162, 768, 162</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Test on subject</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SubjectTestForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

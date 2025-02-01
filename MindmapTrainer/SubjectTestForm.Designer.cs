@@ -57,55 +57,39 @@ namespace MindmapTrainer
             // 
             // m_lblSubject
             // 
-            this.m_lblSubject.AccessibleDescription = null;
-            this.m_lblSubject.AccessibleName = null;
             resources.ApplyResources(this.m_lblSubject, "m_lblSubject");
             this.m_lblSubject.Name = "m_lblSubject";
             // 
             // m_lblElements
             // 
-            this.m_lblElements.AccessibleDescription = null;
-            this.m_lblElements.AccessibleName = null;
             resources.ApplyResources(this.m_lblElements, "m_lblElements");
             this.m_lblElements.Name = "m_lblElements";
             this.m_lblElements.SizeChanged += new System.EventHandler(this.label2_SizeChanged);
             // 
             // m_btnShow
             // 
-            this.m_btnShow.AccessibleDescription = null;
-            this.m_btnShow.AccessibleName = null;
             resources.ApplyResources(this.m_btnShow, "m_btnShow");
-            this.m_btnShow.BackgroundImage = null;
             this.m_btnShow.Name = "m_btnShow";
             this.m_btnShow.UseVisualStyleBackColor = true;
             this.m_btnShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
             // m_btnCorrectResult
             // 
-            this.m_btnCorrectResult.AccessibleDescription = null;
-            this.m_btnCorrectResult.AccessibleName = null;
             resources.ApplyResources(this.m_btnCorrectResult, "m_btnCorrectResult");
-            this.m_btnCorrectResult.BackgroundImage = null;
             this.m_btnCorrectResult.Name = "m_btnCorrectResult";
             this.m_btnCorrectResult.UseVisualStyleBackColor = true;
             this.m_btnCorrectResult.Click += new System.EventHandler(this.buttonCorrect_Click);
             // 
             // m_btnWrongResult
             // 
-            this.m_btnWrongResult.AccessibleDescription = null;
-            this.m_btnWrongResult.AccessibleName = null;
             resources.ApplyResources(this.m_btnWrongResult, "m_btnWrongResult");
-            this.m_btnWrongResult.BackgroundImage = null;
             this.m_btnWrongResult.Name = "m_btnWrongResult";
             this.m_btnWrongResult.UseVisualStyleBackColor = true;
             this.m_btnWrongResult.Click += new System.EventHandler(this.buttonWrong_Click);
             // 
             // m_btnCanel
             // 
-            this.m_btnCanel.AccessibleDescription = null;
-            this.m_btnCanel.AccessibleName = null;
             resources.ApplyResources(this.m_btnCanel, "m_btnCanel");
-            this.m_btnCanel.BackgroundImage = null;
             this.m_btnCanel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.m_btnCanel.Name = "m_btnCanel";
             this.m_btnCanel.UseVisualStyleBackColor = true;
@@ -114,11 +98,8 @@ namespace MindmapTrainer
             // SubjectTestForm
             // 
             this.AcceptButton = this.m_btnShow;
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = null;
             this.CancelButton = this.m_btnCanel;
             this.Controls.Add(this.m_btnCanel);
             this.Controls.Add(this.m_btnWrongResult);
@@ -127,7 +108,6 @@ namespace MindmapTrainer
             this.Controls.Add(this.m_lblElements);
             this.Controls.Add(this.m_lblSubject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = null;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SubjectTestForm";
