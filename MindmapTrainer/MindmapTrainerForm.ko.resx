@@ -167,10 +167,10 @@
     <value>707, 28</value>
   </data>
   <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 48</value>
+    <value>102, 43</value>
   </data>
   <data name="m_ctlPanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
   <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 31</value>
