@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 36pt</value>
+  </data>
   <data name="m_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 11</value>
   </data>
@@ -128,14 +131,20 @@
   <data name="m_lblSubject.Size" type="System.Drawing.Size, System.Drawing">
     <value>887, 100</value>
   </data>
+  <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
   <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 123</value>
   </data>
   <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>64, 0, 64, 0</value>
   </data>
+  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
+  </data>
   <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="m_btnShow.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 372</value>
@@ -150,7 +159,7 @@
     <value>दर्शयतु</value>
   </data>
   <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="m_btnCorrectResult.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 372</value>
@@ -165,7 +174,7 @@
     <value>उचितं</value>
   </data>
   <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="m_btnWrongResult.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 372</value>
@@ -180,7 +189,7 @@
     <value>अशुद्धम्</value>
   </data>
   <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 15.75pt</value>
   </data>
   <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>741, 372</value>
@@ -194,14 +203,8 @@
   <data name="m_btnCanel.Text" xml:space="preserve">
     <value>निरसयतु</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>919, 434</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1024, 199, 1024, 199</value>
