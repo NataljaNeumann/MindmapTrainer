@@ -191,10 +191,10 @@
     <value>707, 427</value>
   </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>مائنڈ میپ فائلاں|*.مائنڈ میپ.ایکس ایم ایل</value>
+    <value>مائنڈ میپ فائلاں|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>مائنڈ میپ فائلاں|*.مائنڈ میپ.ایکس ایم ایل</value>
+    <value>مائنڈ میپ فائلاں|*.MindMap.xml</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
