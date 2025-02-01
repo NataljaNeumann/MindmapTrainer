@@ -117,19 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Показати</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Правильно</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Невірно</value>
-  </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Скасувати</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Тема екзамену</value>
+    <value>A gondolattérkép trénerből</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>MindmapTrainer v1.0
+Szerzői jog (C) 2024-2025 NataljaNeumann@gmx.de
+
+Ez a program ingyenes szoftver; tovább terjesztheti és/vagy módosíthatja a Free Software Foundation által közzétett GNU General Public License feltételei szerint; vagy a Licenc 2-es verzióját, vagy (az Ön választása szerint) bármely későbbi verziót.
+
+Ezt a programot abban a reményben terjesztjük, hogy hasznos lesz, de MINDEN GARANCIA NÉLKÜL; még az ELADHATÓSÁGRA vagy A MEGHATÁROZOTT CÉLRA VALÓ ALKALMASSÁGRA vonatkozó hallgatólagos garancia nélkül.  További részletekért lásd a GNU általános nyilvános licencet.
+
+Ehhez a programhoz a GNU General Public License egy példányát kellett volna kapnia; ha nem, írjon a Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+</value>
   </data>
 </root>
