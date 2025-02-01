@@ -25,26 +25,102 @@ using System.Windows.Forms;
 
 namespace MindmapTrainer
 {
+
+    //*******************************************************************************************************
+    /// <summary>
+    /// This is the main form of the application
+    /// </summary>
+    //*******************************************************************************************************
     public partial class MindmapTrainerForm : Form
     {
+        //===================================================================================================
+        /// <summary>
+        /// The mind map
+        /// </summary>
         SortedDictionary<string, Dictionary<String, bool>> _mindMap;
+
+        //===================================================================================================
+        /// <summary>
+        /// The training results
+        /// </summary>
         SortedDictionary<string, string> _training;
+
+
+        //===================================================================================================
+        /// <summary>
+        /// The count of correct answers for each node
+        /// </summary>
         SortedDictionary<string, int> _correctAnswers;
+
+        //===================================================================================================
+        /// <summary>
+        /// The recently trained subjects, see alsso m_bSkipLast
+        /// </summary>
         LinkedList<string> _trainedSubjects = new LinkedList<string>();
+
+        //===================================================================================================
+        /// <summary>
+        /// The total number of errors
+        /// </summary>
         int _totalErrors;
+
+        //===================================================================================================
+        /// <summary>
+        /// Holds information, if recently trained subjects can be skipped
+        /// </summary>
         bool _skipLast;
+
+        //===================================================================================================
+        /// <summary>
+        /// A random number generator for randomization
+        /// </summary>
         Random _rnd;
+
+        //===================================================================================================
+        /// <summary>
+        /// A second random number generator for randomization
+        /// </summary>
         Random _rnd2;
 
 
+        //===================================================================================================
+        /// <summary>
+        /// The name of the root node of the min map graph
+        /// </summary>
         string _root;
+
+        //===================================================================================================
+        /// <summary>
+        /// The file name of the mind map
+        /// </summary>
         string _fileName;
 
+        //***************************************************************************************************
+        /// <summary>
+        /// Represents a node of the mind map
+        /// </summary>
+        //***************************************************************************************************
         class MindMapNode : IMindmapNode
         {
+            //===============================================================================================
+            /// <summary>
+            /// Holds the text of the node
+            /// </summary>
             string _text;
+
+            //===============================================================================================
+            /// <summary>
+            /// The pointer to the form
+            /// </summary>
             MindmapTrainerForm _tr;
 
+            //===============================================================================================
+            /// <summary>
+            /// Constructs a new node
+            /// </summary>
+            /// <param name="tr">The training form</param>
+            /// <param name="text">The text of the node</param>
+            //===============================================================================================
             public MindMapNode(MindmapTrainerForm tr, string text)
             {
                 _text = text;
@@ -53,6 +129,11 @@ namespace MindmapTrainer
 
             #region IMindmapNode Member
 
+
+            //===============================================================================================
+            /// <summary>
+            /// Gets or sets the text of the node
+            /// </summary>
             public string Text
             {
                 get
@@ -65,6 +146,10 @@ namespace MindmapTrainer
                 }
             }
 
+            //===============================================================================================
+            /// <summary>
+            /// Gets the sub-elements of this node
+            /// </summary>
             public IEnumerable<IMindmapNode> Elements
             {
                 get {
@@ -79,6 +164,11 @@ namespace MindmapTrainer
                 }
             }
 
+            //===============================================================================================
+            /// <summary>
+            /// Add an element to sub-element
+            /// </summary>
+            /// <param name="text">The name(text) of the element</param>
             public void AddElement(string text)
             {
                 if (_tr != null && _text != null)
@@ -102,6 +192,10 @@ namespace MindmapTrainer
                 }
             }
 
+            //===================================================================================================
+            /// <summary>
+            /// Tests, if there are sub-elements in this node
+            /// </summary>
             public bool HasElements
             {
                 get { 
@@ -112,25 +206,48 @@ namespace MindmapTrainer
             #endregion
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// Constructs a new mind map trainer form
+        /// </summary>
+        //===================================================================================================
         public MindmapTrainerForm()
         {
             InitializeComponent();
 
             // init random with current time
-            _rnd = new Random(((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
-            _rnd2 = new Random((((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
+            _rnd = new Random(((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 +
+                DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
+            _rnd2 = new Random((((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
-            m_btnHiddenAcceptButton.Location = new Point(-m_btnHiddenAcceptButton.Size.Width, -m_btnHiddenAcceptButton.Size.Height);
+            m_btnHiddenAcceptButton.Location = 
+                new Point(-m_btnHiddenAcceptButton.Size.Width,
+                          -m_btnHiddenAcceptButton.Size.Height);
 
             EnableDisableMenu();
         }
 
         
+        //===================================================================================================
+        /// <summary>
+        /// This is execuded then the hidden accept button is triggered
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void hiddenAcceptButton_Click(object sender, EventArgs e)
         {
 
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks 'New'
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void neueMindmapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (m_dlgSaveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -139,7 +256,8 @@ namespace MindmapTrainer
                 _training = new SortedDictionary<string, string>();
                 _correctAnswers = new SortedDictionary<string, int>();
 
-                _root = m_dlgSaveFileDialog1.FileName.Substring(m_dlgSaveFileDialog1.FileName.LastIndexOf('\\')+1).Replace(".MindMap.xml","");
+                _root = m_dlgSaveFileDialog1.FileName.Substring(
+                    m_dlgSaveFileDialog1.FileName.LastIndexOf('\\')+1).Replace(".MindMap.xml","");
                 _fileName = m_dlgSaveFileDialog1.FileName;
                 _mindMap[_root] = new Dictionary<string, bool>();
                 _training[_root] = "111011";
@@ -152,6 +270,13 @@ namespace MindmapTrainer
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks on 'open'
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (m_dlgOpenFileDialog1.ShowDialog() == DialogResult.OK)
@@ -218,6 +343,11 @@ namespace MindmapTrainer
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// Saves the mind map and training results
+        /// </summary>
+        //===================================================================================================
         private void Save()
         {
             System.IO.FileInfo fi2 = new System.IO.FileInfo(_fileName);
@@ -241,7 +371,8 @@ namespace MindmapTrainer
                     w.WriteLine("  <start>{0}</start>", PrepareForXml(_root));
                     foreach (KeyValuePair<string, Dictionary<string, bool>> pair in _mindMap)
                     {
-                        w.Write("  <subject name=\"{0}\" training=\"{1}\" correct=\"{2}\">", PrepareForXml(pair.Key), _training[pair.Key], _correctAnswers[pair.Key]);
+                        w.Write("  <subject name=\"{0}\" training=\"{1}\" correct=\"{2}\">", 
+                            PrepareForXml(pair.Key), _training[pair.Key], _correctAnswers[pair.Key]);
                         foreach (string element in pair.Value.Keys)
                         {
                             w.WriteLine();
@@ -274,26 +405,51 @@ namespace MindmapTrainer
                 {
                 }
 
-                System.Windows.Forms.MessageBox.Show(this, ex.Message, "Fehler beim Speichern der Datei", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Windows.Forms.MessageBox.Show(this, ex.Message, "Fehler beim Speichern der Datei", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// Prepares a text for XML
+        /// </summary>
+        /// <param name="text">Text to convert to XML representation</param>
+        /// <returns>Converted text</returns>
+        //===================================================================================================
         string PrepareForXml(string text)
         {
             return text.Replace("&", "&amp;").Replace("\"","&quot;").Replace("<", "&lt;").Replace(">", "&gt;");
         }
 
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when mouse moves over the window for making more random numbers
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void MindmapTrainerForm_MouseMove(object sender, MouseEventArgs e)
         {
             // make randoms less deterministic, whenever possible
             if (_rnd != null)
-                _rnd = new Random(_rnd.Next() + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond + (e.X & 3) * 256);
+                _rnd = new Random(_rnd.Next() + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                    DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond + (e.X & 3) * 256);
             if (_rnd2 != null)
-                _rnd2 = new Random(_rnd2.Next() + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear + (e.Y & 3) * 256);
+                _rnd2 = new Random(_rnd2.Next() + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                    DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + 
+                    DateTime.UtcNow.DayOfYear + (e.Y & 3) * 256);
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the 'Training' button
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void trainierenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -320,7 +476,8 @@ namespace MindmapTrainer
                             wordIndex += 1;
                             if (values.Current.Contains("0"))
                             {
-                                selectedError -= values.Current.Length - values.Current.Replace("0", "").Length + 1;
+                                selectedError -= values.Current.Length - 
+                                    values.Current.Replace("0", "").Length + 1;
                             }
                             else
                                 selectedError -= 1;
@@ -337,6 +494,13 @@ namespace MindmapTrainer
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the 'Intensive training' menu item
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void intensivToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -349,20 +513,23 @@ namespace MindmapTrainer
                     bRepeat = false;
                     // decide, if we will train one subject randomly, or one that needs additional training
                     int rnd = _rnd.Next();
-                    _rnd = new Random(rnd + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
+                    _rnd = new Random(rnd + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                        DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
 
                     if ((_totalErrors > 0) && (rnd % 100 < 50))
                     {
                         // there we train one of the subjects that need additional training
                         int rnd2 = _rnd2.Next();
-                        _rnd2 = new Random(rnd + rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
+                        _rnd2 = new Random(rnd + rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                            DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
                         int selectedError = rnd2 % _totalErrors;
 
                         _skipLast = _mindMap.Count > 10;
 
                         int wordIndex = -1;
-                        using (SortedDictionary<string, string>.ValueCollection.Enumerator values = _training.Values.GetEnumerator())
+                        using (SortedDictionary<string, string>.ValueCollection.Enumerator 
+                            values = _training.Values.GetEnumerator())
                         {
                             while (selectedError >= 0 && values.MoveNext())
                             {
@@ -380,7 +547,8 @@ namespace MindmapTrainer
                     {
                         // there we train one of the words
                         int rnd2 = _rnd2.Next();
-                        _rnd2 = new Random(rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
+                        _rnd2 = new Random(rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                            DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
 
                         // calculate mean of correct answers
@@ -403,7 +571,8 @@ namespace MindmapTrainer
                         int selectedWeight = rnd2 % iTotalWeights;
 
                         int wordIndex = -1;
-                        using (SortedDictionary<string, int>.ValueCollection.Enumerator values = _correctAnswers.Values.GetEnumerator())
+                        using (SortedDictionary<string, int>.ValueCollection.Enumerator 
+                            values = _correctAnswers.Values.GetEnumerator())
                         {
                             while (selectedWeight >= 0 && values.MoveNext())
                             {
@@ -432,6 +601,13 @@ namespace MindmapTrainer
 
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed for training the user on a specific subject and interpret the results
+        /// </summary>
+        /// <param name="index">Index of the subject</param>
+        /// <returns>true iff training shall continue</returns>
+        //===================================================================================================
         private bool TrainSubject(int index)
         {
 
@@ -461,7 +637,8 @@ namespace MindmapTrainer
                     string subject = pair.Key;
                     using (SubjectTestForm test = new SubjectTestForm() )
                     {
-                        test.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MindmapTrainerForm_MouseMove);
+                        test.MouseMove += new System.Windows.Forms.MouseEventHandler(
+                            this.MindmapTrainerForm_MouseMove);
 
                         test.m_lblSubject.Text = subject + ":";
                         StringBuilder b = new StringBuilder();
@@ -491,11 +668,14 @@ namespace MindmapTrainer
                         if (bContinue)
                         {
                             string prevResults = _training[subject];
-                            string newResults = (bCorrect ? "1" : "0") + prevResults.Substring(0, prevResults.Length<5?prevResults.Length:5);
+                            string newResults = (bCorrect ? "1" : "0") + prevResults.Substring(0, 
+                                prevResults.Length<5?prevResults.Length:5);
                             _training[subject] = newResults;
-                            _totalErrors += newResults.Length - newResults.Replace("0", "").Length - (prevResults.Length - prevResults.Replace("0", "").Length);
+                            _totalErrors += newResults.Length - newResults.Replace("0", "").Length - 
+                                (prevResults.Length - prevResults.Replace("0", "").Length);
 
-                            // if the result was correct and we didn't repeat it because of earlier mistakes, then increment the number of correct answers
+                            // if the result was correct and we didn't repeat it because of 
+                            // earlier mistakes, then increment the number of correct answers
                             if (bCorrect && prevResults.IndexOf('0')<0)
                                 _correctAnswers[subject]++;
 
@@ -509,12 +689,25 @@ namespace MindmapTrainer
             return bContinue;
         }
 
-
+        //===================================================================================================
+        /// <summary>
+        /// Enables or disables menu items
+        /// </summary>
+        //===================================================================================================
         private void EnableDisableMenu()
         {
-            m_ctlTrainingToolStripMenuItem.Enabled = m_ctlIntensiveToolStripMenuItem.Enabled = _mindMap != null && _mindMap.Count > 0;
+            m_ctlTrainingToolStripMenuItem.Enabled = 
+                m_ctlIntensiveToolStripMenuItem.Enabled = 
+                    _mindMap != null && _mindMap.Count > 0;
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the 'About mind map trainer' menu item
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void aboutMenuItem_Click(object sender, EventArgs e)
         {
             using (AboutForm form = new AboutForm())
@@ -523,14 +716,16 @@ namespace MindmapTrainer
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the 'Show licence' menu item
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void licenseMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.gnu.org/licenses/gpl-2.0.html");
-        }
-
-        private void licenseInUserLanguageMenuItem_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.gnu.de/documents/gpl-2.0.de.html");
         }
 
     }
