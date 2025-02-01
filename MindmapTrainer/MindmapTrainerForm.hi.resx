@@ -145,15 +145,6 @@
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
     <value>गहन</value>
   </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 25</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>जानकारी</value>
-  </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 29</value>
-  </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 26</value>
   </data>
@@ -166,23 +157,32 @@
   <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
     <value>लाइसेंस (GPL v2)</value>
   </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 25</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>जानकारी</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 29</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 43</value>
+  </data>
+  <data name="m_ctlPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11.25pt</value>
+  </data>
   <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 32</value>
   </data>
   <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>707, 427</value>
   </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 48</value>
-  </data>
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
     <value>माइंड मैप फ़ाइलें|*.MindMap.xml</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>माइंड मैप फ़ाइलें|*.MindMap.xml</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>माइंड मैप ट्रेनर</value>
