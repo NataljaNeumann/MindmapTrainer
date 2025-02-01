@@ -1,5 +1,5 @@
 ﻿/*  Mindmap-Trainer aims to help people in training for exams
-    Copyright (C) 2024 NataljaNeumann@gmx.de
+    Copyright (C) 2024-2025 NataljaNeumann@gmx.de
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -66,117 +66,78 @@ namespace MindmapTrainer
             // 
             // m_oMenuStrip
             // 
-            this.m_oMenuStrip.AccessibleDescription = null;
-            this.m_oMenuStrip.AccessibleName = null;
-            resources.ApplyResources(this.m_oMenuStrip, "m_oMenuStrip");
-            this.m_oMenuStrip.BackgroundImage = null;
             this.m_oMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.m_ctlNewMindmapToolStripMenuItem,
             this.m_ctlOpenToolStripMenuItem,
             this.m_ctlTrainingToolStripMenuItem,
             this.m_ctlIntensiveToolStripMenuItem,
             this.m_ctlAboutToolStripMenuItem});
+            resources.ApplyResources(this.m_oMenuStrip, "m_oMenuStrip");
             this.m_oMenuStrip.Name = "m_oMenuStrip";
             // 
             // m_ctlNewMindmapToolStripMenuItem
             // 
-            this.m_ctlNewMindmapToolStripMenuItem.AccessibleDescription = null;
-            this.m_ctlNewMindmapToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.m_ctlNewMindmapToolStripMenuItem, "m_ctlNewMindmapToolStripMenuItem");
-            this.m_ctlNewMindmapToolStripMenuItem.BackgroundImage = null;
             this.m_ctlNewMindmapToolStripMenuItem.Name = "m_ctlNewMindmapToolStripMenuItem";
+            resources.ApplyResources(this.m_ctlNewMindmapToolStripMenuItem, "m_ctlNewMindmapToolStripMenuItem");
             this.m_ctlNewMindmapToolStripMenuItem.Click += new System.EventHandler(this.neueMindmapToolStripMenuItem_Click);
             // 
             // m_ctlOpenToolStripMenuItem
             // 
-            this.m_ctlOpenToolStripMenuItem.AccessibleDescription = null;
-            this.m_ctlOpenToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.m_ctlOpenToolStripMenuItem, "m_ctlOpenToolStripMenuItem");
-            this.m_ctlOpenToolStripMenuItem.BackgroundImage = null;
             this.m_ctlOpenToolStripMenuItem.Name = "m_ctlOpenToolStripMenuItem";
+            resources.ApplyResources(this.m_ctlOpenToolStripMenuItem, "m_ctlOpenToolStripMenuItem");
             this.m_ctlOpenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
             // 
             // m_ctlTrainingToolStripMenuItem
             // 
-            this.m_ctlTrainingToolStripMenuItem.AccessibleDescription = null;
-            this.m_ctlTrainingToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.m_ctlTrainingToolStripMenuItem, "m_ctlTrainingToolStripMenuItem");
-            this.m_ctlTrainingToolStripMenuItem.BackgroundImage = null;
             this.m_ctlTrainingToolStripMenuItem.Name = "m_ctlTrainingToolStripMenuItem";
+            resources.ApplyResources(this.m_ctlTrainingToolStripMenuItem, "m_ctlTrainingToolStripMenuItem");
             this.m_ctlTrainingToolStripMenuItem.Click += new System.EventHandler(this.trainierenToolStripMenuItem_Click);
             // 
             // m_ctlIntensiveToolStripMenuItem
             // 
-            this.m_ctlIntensiveToolStripMenuItem.AccessibleDescription = null;
-            this.m_ctlIntensiveToolStripMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.m_ctlIntensiveToolStripMenuItem, "m_ctlIntensiveToolStripMenuItem");
-            this.m_ctlIntensiveToolStripMenuItem.BackgroundImage = null;
             this.m_ctlIntensiveToolStripMenuItem.Name = "m_ctlIntensiveToolStripMenuItem";
+            resources.ApplyResources(this.m_ctlIntensiveToolStripMenuItem, "m_ctlIntensiveToolStripMenuItem");
             this.m_ctlIntensiveToolStripMenuItem.Click += new System.EventHandler(this.intensivToolStripMenuItem_Click);
             // 
             // m_ctlAboutToolStripMenuItem
             // 
-            this.m_ctlAboutToolStripMenuItem.AccessibleDescription = null;
-            this.m_ctlAboutToolStripMenuItem.AccessibleName = null;
             this.m_ctlAboutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.m_ctlAboutToolStripMenuItem, "m_ctlAboutToolStripMenuItem");
-            this.m_ctlAboutToolStripMenuItem.BackgroundImage = null;
             this.m_ctlAboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.m_ctlAboutMenuItem,
             this.m_ctlLicenseMenuItem});
             this.m_ctlAboutToolStripMenuItem.Name = "m_ctlAboutToolStripMenuItem";
-            this.m_ctlAboutToolStripMenuItem.ShortcutKeyDisplayString = null;
+            resources.ApplyResources(this.m_ctlAboutToolStripMenuItem, "m_ctlAboutToolStripMenuItem");
             // 
             // m_ctlAboutMenuItem
             // 
-            this.m_ctlAboutMenuItem.AccessibleDescription = null;
-            this.m_ctlAboutMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.m_ctlAboutMenuItem, "m_ctlAboutMenuItem");
-            this.m_ctlAboutMenuItem.BackgroundImage = null;
             this.m_ctlAboutMenuItem.Name = "m_ctlAboutMenuItem";
-            this.m_ctlAboutMenuItem.ShortcutKeyDisplayString = null;
+            resources.ApplyResources(this.m_ctlAboutMenuItem, "m_ctlAboutMenuItem");
             this.m_ctlAboutMenuItem.Click += new System.EventHandler(this.aboutMenuItem_Click);
             // 
             // m_ctlLicenseMenuItem
             // 
-            this.m_ctlLicenseMenuItem.AccessibleDescription = null;
-            this.m_ctlLicenseMenuItem.AccessibleName = null;
-            resources.ApplyResources(this.m_ctlLicenseMenuItem, "m_ctlLicenseMenuItem");
-            this.m_ctlLicenseMenuItem.BackgroundImage = null;
             this.m_ctlLicenseMenuItem.Name = "m_ctlLicenseMenuItem";
-            this.m_ctlLicenseMenuItem.ShortcutKeyDisplayString = null;
+            resources.ApplyResources(this.m_ctlLicenseMenuItem, "m_ctlLicenseMenuItem");
             this.m_ctlLicenseMenuItem.Click += new System.EventHandler(this.licenseMenuItem_Click);
             // 
             // m_ctlPanel
             // 
-            this.m_ctlPanel.AccessibleDescription = null;
-            this.m_ctlPanel.AccessibleName = null;
             resources.ApplyResources(this.m_ctlPanel, "m_ctlPanel");
-            this.m_ctlPanel.BackgroundImage = null;
             this.m_ctlPanel.Controls.Add(this.m_btnHiddenAcceptButton);
             this.m_ctlPanel.Controls.Add(this.m_ctlMindmapNodeView);
-            this.m_ctlPanel.Font = null;
             this.m_ctlPanel.Name = "m_ctlPanel";
             // 
             // m_btnHiddenAcceptButton
             // 
-            this.m_btnHiddenAcceptButton.AccessibleDescription = null;
-            this.m_btnHiddenAcceptButton.AccessibleName = null;
-            resources.ApplyResources(this.m_btnHiddenAcceptButton, "m_btnHiddenAcceptButton");
-            this.m_btnHiddenAcceptButton.BackgroundImage = null;
             this.m_btnHiddenAcceptButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.m_btnHiddenAcceptButton.Font = null;
+            resources.ApplyResources(this.m_btnHiddenAcceptButton, "m_btnHiddenAcceptButton");
             this.m_btnHiddenAcceptButton.Name = "m_btnHiddenAcceptButton";
             this.m_btnHiddenAcceptButton.UseVisualStyleBackColor = true;
             this.m_btnHiddenAcceptButton.Click += new System.EventHandler(this.hiddenAcceptButton_Click);
             // 
             // m_ctlMindmapNodeView
             // 
-            this.m_ctlMindmapNodeView.AccessibleDescription = null;
-            this.m_ctlMindmapNodeView.AccessibleName = null;
             resources.ApplyResources(this.m_ctlMindmapNodeView, "m_ctlMindmapNodeView");
-            this.m_ctlMindmapNodeView.BackgroundImage = null;
-            this.m_ctlMindmapNodeView.Font = null;
             this.m_ctlMindmapNodeView.Name = "m_ctlMindmapNodeView";
             this.m_ctlMindmapNodeView.Node = null;
             // 
@@ -194,14 +155,10 @@ namespace MindmapTrainer
             // MindmapTrainerForm
             // 
             this.AcceptButton = this.m_btnHiddenAcceptButton;
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackgroundImage = null;
             this.Controls.Add(this.m_ctlPanel);
             this.Controls.Add(this.m_oMenuStrip);
-            this.Icon = null;
             this.MainMenuStrip = this.m_oMenuStrip;
             this.Name = "MindmapTrainerForm";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MindmapTrainerForm_MouseMove);

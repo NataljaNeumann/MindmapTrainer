@@ -117,224 +117,95 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="m_oMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>0, 0</value>
+  </metadata>
   <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value>Ctrl+N</value>
   </data>
-  <data name="&gt;&gt;m_ctlMindmapNodeView.Parent" xml:space="preserve">
-    <value>m_ctlPanel</value>
-  </data>
-  <data name="&gt;&gt;m_oMenuStrip.Name" xml:space="preserve">
-    <value>m_oMenuStrip</value>
-  </data>
-  <data name="&gt;&gt;m_ctlOpenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_oMenuStrip.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;m_oMenuStrip.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_ctlPanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;m_dlgSaveFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Strg+I</value>
-  </data>
-  <data name="&gt;&gt;m_ctlMindmapNodeView.Name" xml:space="preserve">
-    <value>m_ctlMindmapNodeView</value>
-  </data>
-  <data name="&gt;&gt;m_ctlTrainingToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_btnHiddenAcceptButton.Name" xml:space="preserve">
-    <value>m_btnHiddenAcceptButton</value>
+  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Strg+N</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_oMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;m_btnHiddenAcceptButton.Parent" xml:space="preserve">
-    <value>m_ctlPanel</value>
-  </data>
-  <data name="&gt;&gt;m_dlgSaveFileDialog1.Name" xml:space="preserve">
-    <value>m_dlgSaveFileDialog1</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="m_ctlMindmapNodeView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;m_ctlNewMindmapToolStripMenuItem.Name" xml:space="preserve">
-    <value>m_ctlNewMindmapToolStripMenuItem</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>707, 460</value>
-  </data>
-  <data name="&gt;&gt;m_ctlAboutMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_ctlLicenseMenuItem.Name" xml:space="preserve">
-    <value>m_ctlLicenseMenuItem</value>
-  </data>
-  <data name="&gt;&gt;m_ctlMindmapNodeView.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_ctlTrainingToolStripMenuItem.Name" xml:space="preserve">
-    <value>m_ctlTrainingToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;m_btnHiddenAcceptButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Open</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Mindmap Trainer</value>
-  </data>
-  <data name="&gt;&gt;m_dlgOpenFileDialog1.Name" xml:space="preserve">
-    <value>m_dlgOpenFileDialog1</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 22</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="m_btnHiddenAcceptButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 20</value>
-  </data>
-  <data name="m_oMenuStrip.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Strg+O</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>About "Mindmap Trainer"</value>
-  </data>
-  <data name="&gt;&gt;m_ctlAboutMenuItem.Name" xml:space="preserve">
-    <value>m_ctlAboutMenuItem</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 22</value>
-  </data>
-  <data name="&gt;&gt;m_ctlPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>Info</value>
-  </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 24</value>
-  </data>
-  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 432</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+I</value>
-  </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Mind Map Files|*.MindMap.xml</value>
-  </data>
-  <data name="&gt;&gt;m_ctlPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MindmapTrainerForm</value>
-  </data>
-  <data name="&gt;&gt;m_ctlPanel.Name" xml:space="preserve">
-    <value>m_ctlPanel</value>
-  </data>
-  <data name="&gt;&gt;m_dlgOpenFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Strg+T</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Licence (GPL v2)</value>
-  </data>
-  <data name="&gt;&gt;m_btnHiddenAcceptButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="m_ctlPanel.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 27</value>
-  </data>
-  <data name="&gt;&gt;m_ctlAboutToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intensively</value>
-  </data>
-  <data name="m_btnHiddenAcceptButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="m_ctlPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Mind Map Files|*.MindMap.xml</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_ctlIntensiveToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;New</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 20</value>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+O</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Training</value>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Strg+O</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 31</value>
-  </data>
-  <data name="m_ctlMindmapNodeView.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Open</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value>Ctrl+T</value>
   </data>
-  <data name="m_btnHiddenAcceptButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 23</value>
+  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Strg+T</value>
   </data>
-  <data name="&gt;&gt;m_ctlOpenToolStripMenuItem.Name" xml:space="preserve">
-    <value>m_ctlOpenToolStripMenuItem</value>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
   </data>
-  <data name="m_ctlMindmapNodeView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Training</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Strg+N</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+I</value>
   </data>
-  <data name="&gt;&gt;m_ctlAboutToolStripMenuItem.Name" xml:space="preserve">
-    <value>m_ctlAboutToolStripMenuItem</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Strg+I</value>
   </data>
-  <data name="&gt;&gt;m_ctlNewMindmapToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 20</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+O</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Intensively</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>About "Mindmap Trainer"</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 22</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Licence (GPL v2)</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="m_oMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_oMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_oMenuStrip.Name" xml:space="preserve">
+    <value>m_oMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;m_oMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_oMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;m_oMenuStrip.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -342,34 +213,186 @@
   <data name="m_ctlPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>96, 96</value>
+  <data name="m_ctlPanel.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="m_btnHiddenAcceptButton.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="&gt;&gt;m_ctlMindmapNodeView.Type" xml:space="preserve">
-    <value>MindmapTrainer.MindmapNodeView, MindmapTrainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;m_ctlIntensiveToolStripMenuItem.Name" xml:space="preserve">
-    <value>m_ctlIntensiveToolStripMenuItem</value>
+  <data name="m_btnHiddenAcceptButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="m_btnHiddenAcceptButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>663, 201</value>
   </data>
-  <data name="&gt;&gt;m_ctlLicenseMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="m_btnHiddenAcceptButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 23</value>
   </data>
-  <metadata name="m_oMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="m_dlgOpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>297, 17</value>
-  </metadata>
+  <data name="m_btnHiddenAcceptButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_btnHiddenAcceptButton.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;m_btnHiddenAcceptButton.Name" xml:space="preserve">
+    <value>m_btnHiddenAcceptButton</value>
+  </data>
+  <data name="&gt;&gt;m_btnHiddenAcceptButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_btnHiddenAcceptButton.Parent" xml:space="preserve">
+    <value>m_ctlPanel</value>
+  </data>
+  <data name="&gt;&gt;m_btnHiddenAcceptButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 31</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMindmapNodeView.Name" xml:space="preserve">
+    <value>m_ctlMindmapNodeView</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMindmapNodeView.Type" xml:space="preserve">
+    <value>MindmapTrainer.MindmapNodeView, MindmapTrainer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMindmapNodeView.Parent" xml:space="preserve">
+    <value>m_ctlPanel</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMindmapNodeView.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 27</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 432</value>
+  </data>
+  <data name="m_ctlPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;m_ctlPanel.Name" xml:space="preserve">
+    <value>m_ctlPanel</value>
+  </data>
+  <data name="&gt;&gt;m_ctlPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_ctlPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="m_dlgSaveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Mind Map Files|*.MindMap.xml</value>
+  </data>
+  <metadata name="m_dlgOpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>297, 17</value>
+  </metadata>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>Mind Map Files|*.MindMap.xml</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>707, 460</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAQEACAAEAAQAwBAAAFgAAACgAAABAAAAAgAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAgFx4AAAAAAP///////////////////////////////////////////r/////////4B//wD/////AH
+        //AD/6L/4AP/4AH/AH/gA//gAP+AP8AB/8AA/gAf4AP/4AD+AD/AAf/AAPwAH+AA/8AA/gA/wAB/gAH8
+        AB/gAP+AAf4AP8AAfwAB/AAf4AD+gAP+AD/wAHwAAfwAH/AAPgAD/AA/8AAQAAf8AD/4AAAAD/gAP/gA
+        AAAH8AA/+AAAAA/wAD/8AAAAH/AAf/wAAAA/4AD//AAAAH/AAH/+AAAAf+AA//4AAAB/AAB//4AAAP+A
+        AP//AAAB/wAB//+AAA/+AAP//wAAF/AAAf//gAA/+AAD///AAB/wAAf//+AAH+AAB///4AAHwAAH///o
+        AA/AAA////AABQAAH///+AAAAAA////8AAAAAD////4AAAAA/////gAAAAH/////AAAAA/////8AAAAH
+        /////4AAAA//////wAAAH//////gAAA//////8AAAH//////+AAA///////4AAB///////4AAH//////
+        /AAAP//////+AAA///////8AAB///////4AAP///////wAAf///////4AD////////AAH///////+gA/
+        ///////+AH////////+A/////////8X/////////////////////////////////////////////////
+        ///////////////////+v/////////gH//AP////8Af/8AP/ov/gA//gAf8Af+AD/+AA/4A/wAH/wAD+
+        AB/gA//gAP4AP8AB/8AA/AAf4AD/wAD+AD/AAH+AAfwAH+AA/4AB/gA/wAB/AAH8AB/gAP6AA/4AP/AA
+        fAAB/AAf8AA+AAP8AD/wABAAB/wAP/gAAAAP+AA/+AAAAAfwAD/4AAAAD/AAP/wAAAAf8AB//AAAAD/g
+        AP/8AAAAf8AAf/4AAAB/4AD//gAAAH8AAH//gAAA/4AA//8AAAH/AAH//4AAD/4AA///AAAX8AAB//+A
+        AD/4AAP//8AAH/AAB///4AAf4AAH///gAAfAAAf//+gAD8AAD///8AAFAAAf///4AAAAAD////wAAAAA
+        P////gAAAAD////+AAAAAf////8AAAAD/////wAAAAf/////gAAAD//////AAAAf/////+AAAD//////
+        wAAAf//////4AAD///////gAAH///////gAAf//////8AAA///////4AAD///////wAAH///////gAA/
+        ///////AAB////////gAP///////8AAf///////6AD////////4Af////////4D/////////xf//////
+        //////////////////8=
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Mindmap Trainer</value>
+  </data>
+  <data name="&gt;&gt;m_ctlNewMindmapToolStripMenuItem.Name" xml:space="preserve">
+    <value>m_ctlNewMindmapToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlNewMindmapToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlOpenToolStripMenuItem.Name" xml:space="preserve">
+    <value>m_ctlOpenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlOpenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlTrainingToolStripMenuItem.Name" xml:space="preserve">
+    <value>m_ctlTrainingToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlTrainingToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlIntensiveToolStripMenuItem.Name" xml:space="preserve">
+    <value>m_ctlIntensiveToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlIntensiveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlAboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>m_ctlAboutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlAboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlAboutMenuItem.Name" xml:space="preserve">
+    <value>m_ctlAboutMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlAboutMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlLicenseMenuItem.Name" xml:space="preserve">
+    <value>m_ctlLicenseMenuItem</value>
+  </data>
+  <data name="&gt;&gt;m_ctlLicenseMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_dlgSaveFileDialog1.Name" xml:space="preserve">
+    <value>m_dlgSaveFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;m_dlgSaveFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_dlgOpenFileDialog1.Name" xml:space="preserve">
+    <value>m_dlgOpenFileDialog1</value>
+  </data>
+  <data name="&gt;&gt;m_dlgOpenFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MindmapTrainerForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
