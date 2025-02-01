@@ -1,5 +1,5 @@
 ﻿/*  Mindmap-Trainer aims to help people in training for exams
-    Copyright (C) 2024 NataljaNeumann@gmx.de
+    Copyright (C) 2024-2025 NataljaNeumann@gmx.de
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -47,7 +47,6 @@ namespace MindmapTrainer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MindmapNodeView));
             this.m_btnExpand = new System.Windows.Forms.Button();
             this.m_lblText = new System.Windows.Forms.Label();
             this.m_tbxNextItemInput = new System.Windows.Forms.TextBox();
@@ -55,32 +54,44 @@ namespace MindmapTrainer
             // 
             // m_btnExpand
             // 
-            resources.ApplyResources(this.m_btnExpand, "m_btnExpand");
+            this.m_btnExpand.Location = new System.Drawing.Point(3, 3);
             this.m_btnExpand.Name = "m_btnExpand";
+            this.m_btnExpand.Size = new System.Drawing.Size(23, 25);
+            this.m_btnExpand.TabIndex = 0;
+            this.m_btnExpand.Text = ">";
             this.m_btnExpand.UseVisualStyleBackColor = true;
             this.m_btnExpand.Click += new System.EventHandler(this.button1_Click);
             // 
             // m_lblText
             // 
-            resources.ApplyResources(this.m_lblText, "m_lblText");
+            this.m_lblText.AutoSize = true;
+            this.m_lblText.Location = new System.Drawing.Point(32, 9);
             this.m_lblText.Name = "m_lblText";
+            this.m_lblText.Size = new System.Drawing.Size(38, 13);
+            this.m_lblText.TabIndex = 1;
+            this.m_lblText.Text = "lblText";
             this.m_lblText.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDoubleClick);
             this.m_lblText.SizeChanged += new System.EventHandler(this.label1_SizeChanged);
             // 
             // m_tbxNextItemInput
             // 
-            resources.ApplyResources(this.m_tbxNextItemInput, "m_tbxNextItemInput");
+            this.m_tbxNextItemInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_tbxNextItemInput.Location = new System.Drawing.Point(33, 40);
             this.m_tbxNextItemInput.Name = "m_tbxNextItemInput";
+            this.m_tbxNextItemInput.Size = new System.Drawing.Size(58, 20);
+            this.m_tbxNextItemInput.TabIndex = 2;
             this.m_tbxNextItemInput.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.textBox1_PreviewKeyDown);
             // 
             // MindmapNodeView
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.m_tbxNextItemInput);
             this.Controls.Add(this.m_lblText);
             this.Controls.Add(this.m_btnExpand);
             this.Name = "MindmapNodeView";
+            this.Size = new System.Drawing.Size(97, 60);
             this.ResumeLayout(false);
             this.PerformLayout();
 

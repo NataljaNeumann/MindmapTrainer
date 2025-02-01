@@ -26,28 +26,56 @@ using System.Windows.Forms;
 
 namespace MindmapTrainer
 {
+    //*******************************************************************************************************
+    /// <summary>
+    /// This class presents a node of the mindmap
+    /// </summary>
+    //*******************************************************************************************************
     public partial class MindmapNodeView : UserControl
     {
-        bool _bExpanded;
+        //===================================================================================================
+        /// <summary>
+        /// Indicates that the view is in expanded mode
+        /// </summary>
+        bool m_bExpanded;
 
-        List<MindmapNodeView> _subElements;
+        //===================================================================================================
+        /// <summary>
+        /// The sub-elements of this node
+        /// </summary>
+        List<MindmapNodeView> m_aSubElements;
 
-        IMindmapNode _node;
+        //===================================================================================================
+        /// <summary>
+        /// The process is in clearing sub-elements, so resizing is ignored
+        /// </summary>
+        bool m_bInClearSubElements;
+
+        //===================================================================================================
+        /// <summary>
+        /// The corresponding mindmap node
+        /// </summary>
+        IMindmapNode m_iNode;
+
+        //===================================================================================================
+        /// <summary>
+        /// Gets or sets the mindmap node
+        /// </summary>
         public IMindmapNode Node
         {
             get
             {
-                return _node;
+                return m_iNode;
             }
             set
             {
-                _node = value;
+                m_iNode = value;
                 ClearSubElements();
-                if (_node!=null)
+                if (m_iNode!=null)
                 {
-                    m_lblText.Text = _node.Text;
+                    m_lblText.Text = m_iNode.Text;
 
-                    if (_node.HasElements)
+                    if (m_iNode.HasElements)
                         m_btnExpand.Text = "+";
                     else
                         m_btnExpand.Text = ">";
@@ -61,41 +89,91 @@ namespace MindmapTrainer
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// Clears sub-views
+        /// </summary>
+        //===================================================================================================
         private void ClearSubElements()
         {
-            if (_subElements != null)
+            if (m_aSubElements != null)
             {
-                foreach (MindmapNodeView v in _subElements)
+                try
                 {
-                    this.Controls.Remove(v);
-                    v.Dispose();
+                    m_bInClearSubElements = true;
+
+                    while (m_aSubElements.Count > 0)
+                    {
+                        MindmapNodeView v = m_aSubElements[m_aSubElements.Count - 1];
+                        m_aSubElements.RemoveAt(m_aSubElements.Count - 1);
+
+                        try
+                        {
+                            this.Controls.Remove(v);
+                            v.Dispose();
+                        }
+                        catch
+                        {
+                            // ignore
+                        }
+
+                    }
                 }
-                _subElements.Clear();
+                finally
+                {
+                    m_bInClearSubElements = false;
+                }
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// Constructs a new view
+        /// </summary>
+        //===================================================================================================
         public MindmapNodeView()
         {
             InitializeComponent();
             m_btnExpand.TabIndex = 1;
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when label changes its size
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void label1_SizeChanged(object sender, EventArgs e)
         {
             CalcNewSize();
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user double clicks on the label 
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void label1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
 
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the button inside the control
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void button1_Click(object sender, EventArgs e)
         {
-            _bExpanded = !_bExpanded;
+            m_bExpanded = !m_bExpanded;
             CalcNewSize();
 
-            if (_bExpanded)
+            if (m_bExpanded)
             {
                 m_btnExpand.Text = "-";
                 Controls.Remove(m_tbxNextItemInput);
@@ -104,40 +182,50 @@ namespace MindmapTrainer
             }
             else
             {
-                if (_node != null && _node.HasElements)
+                if (m_iNode != null && m_iNode.HasElements)
                     m_btnExpand.Text = "+";
                 else
                     m_btnExpand.Text = ">";
             }
         }
 
+        //===================================================================================================
+        /// <summary>
+        /// Calculates new size of control, including all contents
+        /// </summary>
+        //===================================================================================================
         private void CalcNewSize()
         {
             Size newSize;
-            if (_bExpanded)
+            if (m_bExpanded)
             {
-                newSize = new Size(Math.Max(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X,100), m_lblText.Location.Y + m_lblText.Size.Height + m_tbxNextItemInput.Size.Height + m_btnExpand.Location.Y * 3);
-                if (_subElements == null)
-                    _subElements = new List<MindmapNodeView>();
-                if (_node != null)
+                newSize = new Size(
+                    Math.Max(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X,100), 
+                    m_lblText.Location.Y + m_lblText.Size.Height + m_tbxNextItemInput.Size.Height + 
+                    m_btnExpand.Location.Y * 3);
+
+                if (m_aSubElements == null)
+                    m_aSubElements = new List<MindmapNodeView>();
+                if (m_iNode != null)
                 {
-                    if (_subElements.Count == 0)
+                    if (m_aSubElements.Count == 0)
                     {
 
-                        int currentY = Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height);
+                        int currentY = Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, 
+                            m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height);
                         int tabIndex = 2;
-                        foreach (IMindmapNode n in _node.Elements)
+                        foreach (IMindmapNode n in m_iNode.Elements)
                         {
                             MindmapNodeView v = new MindmapNodeView();
                             v.Location = new Point(m_btnExpand.Location.X * 2 + m_btnExpand.Size.Width, currentY);
                             v.Node = n;
-                            _subElements.Add(v);
+                            m_aSubElements.Add(v);
                             this.Controls.Add(v);
                             v.Show();
                             v.TabIndex = tabIndex++;
                         }
 
-                        foreach (MindmapNodeView v in _subElements)
+                        foreach (MindmapNodeView v in m_aSubElements)
                         {
                             v.SizeChanged += new EventHandler(v_SizeChanged);
                             v.Location = new Point(m_btnExpand.Location.X * 2 + m_btnExpand.Size.Width, currentY);
@@ -151,8 +239,9 @@ namespace MindmapTrainer
 
                     } else
                     {
-                        int currentY = Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height);
-                        foreach (MindmapNodeView v in _subElements)
+                        int currentY = Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, 
+                            m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height);
+                        foreach (MindmapNodeView v in m_aSubElements)
                         {
                             v.Location = new Point(m_btnExpand.Location.X * 2 + m_btnExpand.Size.Width, currentY);
                             currentY = v.Location.Y + v.Size.Height + m_btnExpand.Location.Y;
@@ -173,18 +262,39 @@ namespace MindmapTrainer
             }
             else
             {
-                newSize = new Size(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X, Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height));
+                newSize = new Size(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X, 
+                    Math.Max(m_lblText.Size.Height + m_lblText.Location.Y + m_btnExpand.Location.Y, 
+                    m_btnExpand.Location.Y * 2 + m_btnExpand.Size.Height));
                 Size = newSize;
                 ClearSubElements();
                 m_tbxNextItemInput.Hide();
             }
         }
 
+
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when size changes
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         void v_SizeChanged(object sender, EventArgs e)
         {
-            CalcNewSize();
+            if (!m_bInClearSubElements)
+            {
+                CalcNewSize();
+            }
         }
 
+
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user presses a key down, while in text box
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event args</param>
+        //===================================================================================================
         private void textBox1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -196,9 +306,9 @@ namespace MindmapTrainer
                 else
                 {
                     e.IsInputKey = false;
-                    if (_node != null)
+                    if (m_iNode != null)
                     {
-                        _node.AddElement(m_tbxNextItemInput.Text);
+                        m_iNode.AddElement(m_tbxNextItemInput.Text);
                         m_tbxNextItemInput.Text = "";
                         ClearSubElements();
                         CalcNewSize();
