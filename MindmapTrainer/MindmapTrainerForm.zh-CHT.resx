@@ -167,7 +167,10 @@
     <value>707, 29</value>
   </data>
   <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 39</value>
+    <value>106, 48</value>
+  </data>
+  <data name="m_ctlPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 32</value>
@@ -180,9 +183,6 @@
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>心智圖檔|*.MindMap.xml</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>心智圖訓練師</value>
