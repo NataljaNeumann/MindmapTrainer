@@ -1,5 +1,5 @@
 ﻿/*  Mindmap-Trainer aims to help people in training for exams
-    Copyright (C) 2024 NataljaNeumann@gmx.de
+    Copyright (C) 2024-2025 NataljaNeumann@gmx.de
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,14 +22,36 @@ using System.Text;
 
 namespace MindmapTrainer
 {
+    //*******************************************************************************************************
+    /// <summary>
+    /// Objects that implement this interface provide information about single node of the graph
+    /// </summary>
+    //*******************************************************************************************************
     public interface IMindmapNode
     {
+        //===================================================================================================
+        /// <summary>
+        /// Gets or sets the text of the node
+        /// </summary>
         string Text { get; set; }
 
+        //===================================================================================================
+        /// <summary>
+        /// Gets the sub-elements of this node
+        /// </summary>
         IEnumerable<IMindmapNode> Elements { get; }
 
+        //===================================================================================================
+        /// <summary>
+        /// Add an element to sub-element
+        /// </summary>
+        /// <param name="text">The name(text) of the element</param>
         void AddElement(string text);
 
+        //===================================================================================================
+        /// <summary>
+        /// Tests, if there are sub-elements in this node
+        /// </summary>
         bool HasElements { get; }
     }
 }
