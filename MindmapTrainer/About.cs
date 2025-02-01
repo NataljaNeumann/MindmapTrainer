@@ -28,16 +28,22 @@ using System.Windows.Forms;
 
 namespace MindmapTrainer
 {
+    //*******************************************************************************************************
+    /// <summary>
+    /// This class shows the about window
+    /// </summary>
+    //*******************************************************************************************************
     public partial class AboutForm : Form
     {
+        //===================================================================================================
+        /// <summary>
+        /// Constructs a new about form object
+        /// </summary>
+        //===================================================================================================
         public AboutForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
