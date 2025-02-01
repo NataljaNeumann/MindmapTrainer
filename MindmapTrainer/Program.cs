@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace MindmapTrainer
 {
@@ -31,6 +32,11 @@ namespace MindmapTrainer
         [STAThread]
         static void Main()
         {
+#if DEBUG
+            //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("pa-Arab-PK");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("pa-Arab-PK");
+#endif
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MindmapTrainerForm());

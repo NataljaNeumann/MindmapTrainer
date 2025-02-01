@@ -118,18 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Ko'rsatish</value>
+    <value>Cho tôi xem</value>
   </data>
   <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>To'g'ri</value>
+    <value>Chính xác</value>
   </data>
   <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Noto'g'ri</value>
+    <value>Không đúng</value>
   </data>
   <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Bekor qilish</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Imtihon mavzusi</value>
+    <value>Hủy bỏ</value>
   </data>
 </root>

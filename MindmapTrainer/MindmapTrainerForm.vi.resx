@@ -117,19 +117,56 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Ko'rsatish</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>To'g'ri</value>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mới</value>
   </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Noto'g'ri</value>
+  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
   </data>
-  <data name="m_btnCanel.Text" xml:space="preserve">
-    <value>Bekor qilish</value>
+  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mở</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 20</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bài &amp;tập</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Căng</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 22</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>Giới thiệu về Huấn luyện viên Bản đồ Tư duy</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 22</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Giấy phép (GPL v2)</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 20</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Tệp bản đồ tư duy|*.MindMap.xml</value>
+  </data>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>Tệp bản đồ tư duy|*.MindMap.xml</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Imtihon mavzusi</value>
+    <value>Huấn luyện viên bản đồ tư duy</value>
   </data>
 </root>
