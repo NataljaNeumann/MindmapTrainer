@@ -460,11 +460,23 @@
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.ro.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MindmapTrainerForm.ru.resx">
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MindmapTrainerForm.sa.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.sr.resx">
+      <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MindmapTrainerForm.sv.resx">
       <DependentUpon>MindmapTrainerForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -645,11 +657,23 @@
       <DependentUpon>SubjectTestForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.ro.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubjectTestForm.ru.resx">
       <DependentUpon>SubjectTestForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectTestForm.sa.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.sr.resx">
+      <DependentUpon>SubjectTestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectTestForm.sv.resx">
       <DependentUpon>SubjectTestForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
