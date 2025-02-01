@@ -117,85 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 25</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>جدید</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>باز کردن</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>تمرینات</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 25</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>فشرده</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 26</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Trener mapy myśli</value>
   </data>
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>درباره ترینر نقشه ذهنی</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 26</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>مجوز (GPL v2)</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 25</value>
+    <value>O trenerze mapy myśli</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>اطلاعات</value>
+    <value>informacja</value>
   </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 29</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+I</value>
   </data>
-  <data name="m_btnHiddenAcceptButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 33</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
   </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 43</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Intensywny</value>
   </data>
-  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 32</value>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Licencja (GPL v2)</value>
   </data>
-  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 427</value>
+  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+N</value>
   </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>فایل های نقشه ذهنی|*.MindMap.xml</value>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Nowy</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+O</value>
+  </data>
+  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Otwarte</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>Ctrl+T</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>szkolenie</value>
   </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>فایل های نقشه ذهنی|*.MindMap.xml</value>
+    <value>Pliki mapy myśli|*.MindMap.xml</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>مربی نقشه ذهن</value>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Pliki mapy myśli|*.MindMap.xml</value>
   </data>
 </root>

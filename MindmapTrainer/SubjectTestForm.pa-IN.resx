@@ -118,84 +118,104 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 36pt</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 25</value>
+  <data name="m_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 12</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>جدید</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_lblSubject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>72, 0, 72, 0</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+  <data name="m_lblSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>998, 112</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>باز کردن</value>
+  <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
+  <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 138</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>تمرینات</value>
+  <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>72, 0, 72, 0</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 25</value>
+  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>فشرده</value>
+  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 26</value>
+  <data name="m_btnShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>256, 418</value>
   </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>درباره ترینر نقشه ذهنی</value>
+  <data name="m_btnShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>72, 30, 72, 30</value>
   </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 26</value>
+  <data name="m_btnShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 54</value>
   </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>مجوز (GPL v2)</value>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>ਦਿਖਾਓ</value>
   </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 25</value>
+  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>اطلاعات</value>
+  <data name="m_btnCorrectResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 418</value>
   </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 29</value>
+  <data name="m_btnCorrectResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>72, 30, 72, 30</value>
   </data>
-  <data name="m_btnHiddenAcceptButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 33</value>
+  <data name="m_btnCorrectResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 54</value>
   </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 43</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>ਸਹੀ</value>
   </data>
-  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 32</value>
+  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
   </data>
-  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 427</value>
+  <data name="m_btnWrongResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>488, 418</value>
   </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>فایل های نقشه ذهنی|*.MindMap.xml</value>
+  <data name="m_btnWrongResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>72, 30, 72, 30</value>
   </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>فایل های نقشه ذهنی|*.MindMap.xml</value>
+  <data name="m_btnWrongResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 54</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>ਗਲਤ</value>
+  </data>
+  <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>834, 418</value>
+  </data>
+  <data name="m_btnCanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>72, 30, 72, 30</value>
+  </data>
+  <data name="m_btnCanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 54</value>
+  </data>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>ਰੱਦ ਕਰੋ</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>9, 18</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1034, 489</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 11.25pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1152, 224, 1152, 224</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>مربی نقشه ذهن</value>
+    <value>ਪ੍ਰੀਖਿਆ ਦਾ ਵਿਸ਼ਾ</value>
   </data>
 </root>

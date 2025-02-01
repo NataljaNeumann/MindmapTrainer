@@ -117,85 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 25</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>جدید</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
-  </data>
-  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>باز کردن</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 25</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>تمرینات</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 25</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>فشرده</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 26</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>درباره ترینر نقشه ذهنی</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 26</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>مجوز (GPL v2)</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 25</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>اطلاعات</value>
-  </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 29</value>
-  </data>
-  <data name="m_btnHiddenAcceptButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 33</value>
-  </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 43</value>
-  </data>
-  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 32</value>
-  </data>
-  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 427</value>
-  </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>فایل های نقشه ذهنی|*.MindMap.xml</value>
-  </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>فایل های نقشه ذهنی|*.MindMap.xml</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 11.25pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>MindmapTrainer v1.0
+Prawa autorskie (C) 2024-2025 NataljaNeumann@gmx.de
+
+Ten program jest oprogramowaniem wolnym; możesz go rozpowszechniać i/lub modyfikować zgodnie z warunkami Powszechnej Licencji Publicznej GNU opublikowanej przez Free Software Foundation; albo wersja 2 Licencji, albo (według Twojego wyboru) dowolna nowsza wersja.
+
+Ten program jest rozpowszechniany z nadzieją, że będzie przydatny, ale BEZ ŻADNEJ GWARANCJI; nawet bez dorozumianej gwarancji PRZYDATNOŚCI HANDLOWEJ lub PRZYDATNOŚCI DO OKREŚLONEGO CELU.  Więcej szczegółów znajdziesz w Powszechnej Licencji Publicznej GNU.
+
+Wraz z tym programem powinieneś otrzymać kopię Powszechnej Licencji Publicznej GNU; jeśli nie, napisz do Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>مربی نقشه ذهن</value>
+    <value>O trenerze mapy myśli</value>
   </data>
 </root>
