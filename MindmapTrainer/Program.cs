@@ -1,5 +1,5 @@
 ﻿/*  Mindmap-Trainer aims to help people in training for exams
-    Copyright (C) 2024 NataljaNeumann@gmx.de
+    Copyright (C) 2024-2025 NataljaNeumann@gmx.de
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -24,17 +24,25 @@ using System.Globalization;
 
 namespace MindmapTrainer
 {
+
+    //*******************************************************************************************************
+    /// <summary>
+    /// The main progam
+    /// </summary>
+    //*******************************************************************************************************
     static class Program
     {
+        //===================================================================================================
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
+        //===================================================================================================
         [STAThread]
         static void Main()
         {
 #if DEBUG
-            //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("pa-Arab-PK");
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("pa-Arab-PK");
+            //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("ar-SA");
+            //System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-SA");
 #endif
 
             Application.EnableVisualStyles();
