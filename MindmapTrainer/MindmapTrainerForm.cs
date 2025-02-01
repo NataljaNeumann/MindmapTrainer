@@ -37,63 +37,63 @@ namespace MindmapTrainer
         /// <summary>
         /// The mind map
         /// </summary>
-        SortedDictionary<string, Dictionary<String, bool>> _mindMap;
+        SortedDictionary<string, Dictionary<String, bool>> m_oMindMap;
 
         //===================================================================================================
         /// <summary>
         /// The training results
         /// </summary>
-        SortedDictionary<string, string> _training;
+        SortedDictionary<string, string> m_oTrainingResults;
 
 
         //===================================================================================================
         /// <summary>
         /// The count of correct answers for each node
         /// </summary>
-        SortedDictionary<string, int> _correctAnswers;
+        SortedDictionary<string, int> m_oCorrectAnswers;
 
         //===================================================================================================
         /// <summary>
-        /// The recently trained subjects, see alsso m_bSkipLast
+        /// The recently trained subjects, see alsso m_bSkipLastTrained
         /// </summary>
-        LinkedList<string> _trainedSubjects = new LinkedList<string>();
+        LinkedList<string> m_oLastTrainedSubjects = new LinkedList<string>();
 
         //===================================================================================================
         /// <summary>
         /// The total number of errors
         /// </summary>
-        int _totalErrors;
+        int m_nTotalErrors;
 
         //===================================================================================================
         /// <summary>
         /// Holds information, if recently trained subjects can be skipped
         /// </summary>
-        bool _skipLast;
+        bool m_bSkipLastTrained;
 
         //===================================================================================================
         /// <summary>
         /// A random number generator for randomization
         /// </summary>
-        Random _rnd;
+        Random m_oRandomGenerator;
 
         //===================================================================================================
         /// <summary>
         /// A second random number generator for randomization
         /// </summary>
-        Random _rnd2;
+        Random m_oRandomGenerator2;
 
 
         //===================================================================================================
         /// <summary>
         /// The name of the root node of the min map graph
         /// </summary>
-        string _root;
+        string m_strRootNodeName;
 
         //===================================================================================================
         /// <summary>
         /// The file name of the mind map
         /// </summary>
-        string _fileName;
+        string m_strFilePath;
 
         //***************************************************************************************************
         /// <summary>
@@ -106,13 +106,13 @@ namespace MindmapTrainer
             /// <summary>
             /// Holds the text of the node
             /// </summary>
-            string _text;
+            string m_strText;
 
             //===============================================================================================
             /// <summary>
             /// The pointer to the form
             /// </summary>
-            MindmapTrainerForm _tr;
+            MindmapTrainerForm m_oTrainerForm;
 
             //===============================================================================================
             /// <summary>
@@ -121,10 +121,10 @@ namespace MindmapTrainer
             /// <param name="tr">The training form</param>
             /// <param name="text">The text of the node</param>
             //===============================================================================================
-            public MindMapNode(MindmapTrainerForm tr, string text)
+            public MindMapNode(MindmapTrainerForm oTrainerForm, string strText)
             {
-                _text = text;
-                _tr = tr;
+                m_strText = strText;
+                m_oTrainerForm = oTrainerForm;
             }
 
             #region IMindmapNode Member
@@ -138,11 +138,11 @@ namespace MindmapTrainer
             {
                 get
                 {
-                    return _text;
+                    return m_strText;
                 }
                 set
                 {
-                    _text = value;
+                    m_strText = value;
                 }
             }
 
@@ -153,11 +153,11 @@ namespace MindmapTrainer
             public IEnumerable<IMindmapNode> Elements
             {
                 get {
-                    if (_tr != null && _text != null && _tr._mindMap.ContainsKey(_text))
+                    if (m_oTrainerForm != null && m_strText != null && m_oTrainerForm.m_oMindMap.ContainsKey(m_strText))
                     {
-                        foreach (string text in _tr._mindMap[_text].Keys)
+                        foreach (string text in m_oTrainerForm.m_oMindMap[m_strText].Keys)
                         {
-                            yield return new MindMapNode(_tr, text);
+                            yield return new MindMapNode(m_oTrainerForm, text);
                         }
                     }
                     yield break;
@@ -171,24 +171,24 @@ namespace MindmapTrainer
             /// <param name="text">The name(text) of the element</param>
             public void AddElement(string text)
             {
-                if (_tr != null && _text != null)
+                if (m_oTrainerForm != null && m_strText != null)
                 {
-                    if (!_tr._mindMap.ContainsKey(_text))
-                        _tr._mindMap[_text] = new Dictionary<string,bool>();
+                    if (!m_oTrainerForm.m_oMindMap.ContainsKey(m_strText))
+                        m_oTrainerForm.m_oMindMap[m_strText] = new Dictionary<string,bool>();
 
-                    if (!_tr._training.ContainsKey(_text))
+                    if (!m_oTrainerForm.m_oTrainingResults.ContainsKey(m_strText))
                     {
-                        _tr._training[_text] = "111011";
-                        _tr._totalErrors += 1;
+                        m_oTrainerForm.m_oTrainingResults[m_strText] = "111011";
+                        m_oTrainerForm.m_nTotalErrors += 1;
                     }
 
-                    if (!_tr._correctAnswers.ContainsKey(_text))
-                        _tr._correctAnswers[_text] = 0;
+                    if (!m_oTrainerForm.m_oCorrectAnswers.ContainsKey(m_strText))
+                        m_oTrainerForm.m_oCorrectAnswers[m_strText] = 0;
 
-                    if (!_tr._mindMap[_text].ContainsKey(text))
-                        _tr._mindMap[_text][text] = false;
+                    if (!m_oTrainerForm.m_oMindMap[m_strText].ContainsKey(text))
+                        m_oTrainerForm.m_oMindMap[m_strText][text] = false;
 
-                    _tr.Save();
+                    m_oTrainerForm.Save();
                 }
             }
 
@@ -199,7 +199,7 @@ namespace MindmapTrainer
             public bool HasElements
             {
                 get { 
-                    return (_tr != null && _text != null && _tr._mindMap.ContainsKey(_text) && _tr._mindMap[_text].Count>0);
+                    return (m_oTrainerForm != null && m_strText != null && m_oTrainerForm.m_oMindMap.ContainsKey(m_strText) && m_oTrainerForm.m_oMindMap[m_strText].Count>0);
                 }
             }
 
@@ -216,9 +216,9 @@ namespace MindmapTrainer
             InitializeComponent();
 
             // init random with current time
-            _rnd = new Random(((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 +
+            m_oRandomGenerator = new Random(((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 +
                 DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
-            _rnd2 = new Random((((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+            m_oRandomGenerator2 = new Random((((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                 DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
             m_btnHiddenAcceptButton.Location = 
@@ -252,18 +252,18 @@ namespace MindmapTrainer
         {
             if (m_dlgSaveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                _mindMap = new SortedDictionary<string,Dictionary<string,bool>>();
-                _training = new SortedDictionary<string, string>();
-                _correctAnswers = new SortedDictionary<string, int>();
+                m_oMindMap = new SortedDictionary<string,Dictionary<string,bool>>();
+                m_oTrainingResults = new SortedDictionary<string, string>();
+                m_oCorrectAnswers = new SortedDictionary<string, int>();
 
-                _root = m_dlgSaveFileDialog1.FileName.Substring(
+                m_strRootNodeName = m_dlgSaveFileDialog1.FileName.Substring(
                     m_dlgSaveFileDialog1.FileName.LastIndexOf('\\')+1).Replace(".MindMap.xml","");
-                _fileName = m_dlgSaveFileDialog1.FileName;
-                _mindMap[_root] = new Dictionary<string, bool>();
-                _training[_root] = "111011";
-                _totalErrors = 1;
-                _correctAnswers[_root] = 0;
-                m_ctlMindmapNodeView.Node = new MindMapNode(this, _root);
+                m_strFilePath = m_dlgSaveFileDialog1.FileName;
+                m_oMindMap[m_strRootNodeName] = new Dictionary<string, bool>();
+                m_oTrainingResults[m_strRootNodeName] = "111011";
+                m_nTotalErrors = 1;
+                m_oCorrectAnswers[m_strRootNodeName] = 0;
+                m_ctlMindmapNodeView.Node = new MindMapNode(this, m_strRootNodeName);
                 m_ctlMindmapNodeView.Show();
 
                 EnableDisableMenu();
@@ -281,19 +281,19 @@ namespace MindmapTrainer
         {
             if (m_dlgOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                _mindMap = new SortedDictionary<string, Dictionary<string, bool>>();
-                _training = new SortedDictionary<string, string>();
-                _correctAnswers = new SortedDictionary<string, int>();
+                m_oMindMap = new SortedDictionary<string, Dictionary<string, bool>>();
+                m_oTrainingResults = new SortedDictionary<string, string>();
+                m_oCorrectAnswers = new SortedDictionary<string, int>();
 
-                _fileName = m_dlgOpenFileDialog1.FileName;
+                m_strFilePath = m_dlgOpenFileDialog1.FileName;
                 System.Xml.XmlDocument doc = new System.Xml.XmlDocument();
                 doc.Load(m_dlgOpenFileDialog1.FileName);
                 foreach (System.Xml.XmlElement e5 in doc.SelectNodes("/mindmap/start"))
                 {
-                    _root = e5.InnerText;
+                    m_strRootNodeName = e5.InnerText;
                 };
 
-                _mindMap[_root]=new Dictionary<string,bool>();
+                m_oMindMap[m_strRootNodeName]=new Dictionary<string,bool>();
 
                 foreach (System.Xml.XmlElement e4 in doc.SelectNodes("/mindmap/subject"))
                 {
@@ -304,9 +304,9 @@ namespace MindmapTrainer
                         {
                             elements[e3.InnerText] = false;
                         }
-                        _mindMap[e2.InnerText] = elements;
+                        m_oMindMap[e2.InnerText] = elements;
 
-                        _training[e2.InnerText] = "111011";
+                        m_oTrainingResults[e2.InnerText] = "111011";
                         foreach (System.Xml.XmlNode e5 in e4.SelectNodes("@training"))
                         {
                             string s = e5.InnerText;
@@ -314,12 +314,12 @@ namespace MindmapTrainer
                                 s = "1" + s;
                             if (s.Length > 6)
                                 s = s.Substring(0, 6);
-                            _training[e2.InnerText] = s;
+                            m_oTrainingResults[e2.InnerText] = s;
                         }
 
                         // count errors
-                        string s2 = _training[e2.InnerText];
-                        _totalErrors += s2.Length - s2.Replace("0", "").Length;
+                        string s2 = m_oTrainingResults[e2.InnerText];
+                        m_nTotalErrors += s2.Length - s2.Replace("0", "").Length;
 
                         // load correct answers for the subject
                         int res = 0;
@@ -330,12 +330,12 @@ namespace MindmapTrainer
                                 res = 0;
                             }
                         }
-                        _correctAnswers[e2.InnerText] = res;
+                        m_oCorrectAnswers[e2.InnerText] = res;
                     }
                 }
 
 
-                m_ctlMindmapNodeView.Node = new MindMapNode(this, _root);
+                m_ctlMindmapNodeView.Node = new MindMapNode(this, m_strRootNodeName);
                 m_ctlMindmapNodeView.Show();
 
                 EnableDisableMenu();
@@ -350,10 +350,10 @@ namespace MindmapTrainer
         //===================================================================================================
         private void Save()
         {
-            System.IO.FileInfo fi2 = new System.IO.FileInfo(_fileName);
+            System.IO.FileInfo fi2 = new System.IO.FileInfo(m_strFilePath);
             if (fi2.Exists)
             {
-                System.IO.FileInfo fi = new System.IO.FileInfo(_fileName + ".bak");
+                System.IO.FileInfo fi = new System.IO.FileInfo(m_strFilePath + ".bak");
                 if (fi.Exists)
                 {
                     fi.Delete();
@@ -364,19 +364,20 @@ namespace MindmapTrainer
 
             try
             {
-                using (System.IO.StreamWriter w = new System.IO.StreamWriter(_fileName, false, Encoding.UTF8))
+                using (System.IO.StreamWriter w = 
+                    new System.IO.StreamWriter(m_strFilePath, false, Encoding.UTF8))
                 {
                     w.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
                     w.WriteLine("<mindmap>");
-                    w.WriteLine("  <start>{0}</start>", PrepareForXml(_root));
-                    foreach (KeyValuePair<string, Dictionary<string, bool>> pair in _mindMap)
+                    w.WriteLine("  <start>{0}</start>", PrepareForXml(m_strRootNodeName));
+                    foreach (KeyValuePair<string, Dictionary<string, bool>> pair in m_oMindMap)
                     {
                         w.Write("  <subject name=\"{0}\" training=\"{1}\" correct=\"{2}\">", 
-                            PrepareForXml(pair.Key), _training[pair.Key], _correctAnswers[pair.Key]);
-                        foreach (string element in pair.Value.Keys)
+                            PrepareForXml(pair.Key), m_oTrainingResults[pair.Key], m_oCorrectAnswers[pair.Key]);
+                        foreach (string strElement in pair.Value.Keys)
                         {
                             w.WriteLine();
-                            w.Write("    <element>{0}</element>", PrepareForXml(element));
+                            w.Write("    <element>{0}</element>", PrepareForXml(strElement));
                         }
                         w.WriteLine("</subject>");
                     }
@@ -387,7 +388,7 @@ namespace MindmapTrainer
             {
                 try
                 {
-                    System.IO.FileInfo fi3 = new System.IO.FileInfo(_fileName);
+                    System.IO.FileInfo fi3 = new System.IO.FileInfo(m_strFilePath);
                     if (fi3.Exists)
                         fi3.Delete();
                 }
@@ -397,9 +398,9 @@ namespace MindmapTrainer
 
                 try
                 {
-                    System.IO.FileInfo fi4 = new System.IO.FileInfo(_fileName + ".bak");
+                    System.IO.FileInfo fi4 = new System.IO.FileInfo(m_strFilePath + ".bak");
                     if (fi4.Exists)
-                        fi4.MoveTo(_fileName);
+                        fi4.MoveTo(m_strFilePath);
                 }
                 catch
                 {
@@ -420,7 +421,8 @@ namespace MindmapTrainer
         //===================================================================================================
         string PrepareForXml(string text)
         {
-            return text.Replace("&", "&amp;").Replace("\"","&quot;").Replace("<", "&lt;").Replace(">", "&gt;");
+            return text.Replace("&", "&amp;").Replace("\"","&quot;")
+                .Replace("<", "&lt;").Replace(">", "&gt;");
         }
 
 
@@ -434,11 +436,13 @@ namespace MindmapTrainer
         private void MindmapTrainerForm_MouseMove(object sender, MouseEventArgs e)
         {
             // make randoms less deterministic, whenever possible
-            if (_rnd != null)
-                _rnd = new Random(_rnd.Next() + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+            if (m_oRandomGenerator != null)
+                m_oRandomGenerator = new Random(m_oRandomGenerator.Next() + 
+                    ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                     DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond + (e.X & 3) * 256);
-            if (_rnd2 != null)
-                _rnd2 = new Random(_rnd2.Next() + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+            if (m_oRandomGenerator2 != null)
+                m_oRandomGenerator2 = new Random(m_oRandomGenerator2.Next() + 
+                    (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                     DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + 
                     DateTime.UtcNow.DayOfYear + (e.Y & 3) * 256);
         }
@@ -461,15 +465,18 @@ namespace MindmapTrainer
                 {
                     bRepeat = false;
                     // there we train one of the words randomly. Words with errors get higher weight
-                    int rnd2 = _rnd2.Next();
-                    _rnd2 = new Random(rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
+                    int rnd2 = m_oRandomGenerator2.Next();
+                    m_oRandomGenerator2 = new Random(rnd2 + 
+                        (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + DateTime.UtcNow.Second) * 1000 + 
+                        DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
-                    int selectedError = rnd2 % (_totalErrors + _mindMap.Count);
+                    int selectedError = rnd2 % (m_nTotalErrors + m_oMindMap.Count);
 
-                    _skipLast = _mindMap.Count > 5;
+                    m_bSkipLastTrained = m_oMindMap.Count > 5;
 
                     int wordIndex = -1;
-                    using (SortedDictionary<string, string>.ValueCollection.Enumerator values = _training.Values.GetEnumerator())
+                    using (SortedDictionary<string, string>.ValueCollection.Enumerator 
+                        values = m_oTrainingResults.Values.GetEnumerator())
                     {
                         while (selectedError >= 0 && values.MoveNext())
                         {
@@ -512,24 +519,24 @@ namespace MindmapTrainer
                 {
                     bRepeat = false;
                     // decide, if we will train one subject randomly, or one that needs additional training
-                    int rnd = _rnd.Next();
-                    _rnd = new Random(rnd + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                    int rnd = m_oRandomGenerator.Next();
+                    m_oRandomGenerator = new Random(rnd + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                         DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
 
-                    if ((_totalErrors > 0) && (rnd % 100 < 50))
+                    if ((m_nTotalErrors > 0) && (rnd % 100 < 50))
                     {
                         // there we train one of the subjects that need additional training
-                        int rnd2 = _rnd2.Next();
-                        _rnd2 = new Random(rnd + rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                        int rnd2 = m_oRandomGenerator2.Next();
+                        m_oRandomGenerator2 = new Random(rnd + rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                             DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
-                        int selectedError = rnd2 % _totalErrors;
+                        int selectedError = rnd2 % m_nTotalErrors;
 
-                        _skipLast = _mindMap.Count > 10;
+                        m_bSkipLastTrained = m_oMindMap.Count > 10;
 
                         int wordIndex = -1;
                         using (SortedDictionary<string, string>.ValueCollection.Enumerator 
-                            values = _training.Values.GetEnumerator())
+                            values = m_oTrainingResults.Values.GetEnumerator())
                         {
                             while (selectedError >= 0 && values.MoveNext())
                             {
@@ -546,21 +553,21 @@ namespace MindmapTrainer
                     else
                     {
                         // there we train one of the words
-                        int rnd2 = _rnd2.Next();
-                        _rnd2 = new Random(rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                        int rnd2 = m_oRandomGenerator2.Next();
+                        m_oRandomGenerator2 = new Random(rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                             DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
 
                         // calculate mean of correct answers
                         long lTotal = 0;
-                        foreach (int i in _correctAnswers.Values)
+                        foreach (int i in m_oCorrectAnswers.Values)
                             lTotal += i;
 
-                        int mean = (int)(lTotal / _correctAnswers.Count);
+                        int mean = (int)(lTotal / m_oCorrectAnswers.Count);
 
                         // now calculate the sum of weights of all words
                         int iTotalWeights = 0;
-                        foreach (int i in _correctAnswers.Values)
+                        foreach (int i in m_oCorrectAnswers.Values)
                         {
                             int weight = mean + 3 - i;
                             if (weight <= 0)
@@ -572,7 +579,7 @@ namespace MindmapTrainer
 
                         int wordIndex = -1;
                         using (SortedDictionary<string, int>.ValueCollection.Enumerator 
-                            values = _correctAnswers.Values.GetEnumerator())
+                            values = m_oCorrectAnswers.Values.GetEnumerator())
                         {
                             while (selectedWeight >= 0 && values.MoveNext())
                             {
@@ -586,7 +593,7 @@ namespace MindmapTrainer
                                 selectedWeight -= weight;
                             }
 
-                            _skipLast = _training.Count > 5;
+                            m_bSkipLastTrained = m_oTrainingResults.Count > 5;
 
                             bRepeat = TrainSubject(wordIndex);
                         }
@@ -613,25 +620,25 @@ namespace MindmapTrainer
 
             bool bContinue = false;
             bool bCorrect = false;
-            foreach (KeyValuePair<string, string> pair in _training)
+            foreach (KeyValuePair<string, string> pair in m_oTrainingResults)
             {
                 if (0 == index--)
                 {
-                    if (_skipLast)
+                    if (m_bSkipLastTrained)
                     {
-                        foreach (string s in _trainedSubjects)
+                        foreach (string s in m_oLastTrainedSubjects)
                         {
                             // if we trained this subject recently, then try to skip it
                             if (s.Equals(pair.Key))
-                                if (_rnd2.Next(100) > 0)
+                                if (m_oRandomGenerator2.Next(100) > 0)
                                     return true;
                         };
                     }
 
                     // add the subject to the list of recently trained rotate the list
-                    _trainedSubjects.AddFirst(pair.Key); 
-                    if (_trainedSubjects.Count > 5)
-                        _trainedSubjects.RemoveLast();
+                    m_oLastTrainedSubjects.AddFirst(pair.Key); 
+                    if (m_oLastTrainedSubjects.Count > 5)
+                        m_oLastTrainedSubjects.RemoveLast();
 
 
                     string subject = pair.Key;
@@ -642,7 +649,7 @@ namespace MindmapTrainer
 
                         test.m_lblSubject.Text = subject + ":";
                         StringBuilder b = new StringBuilder();
-                        foreach (string s in _mindMap[pair.Key].Keys)
+                        foreach (string s in m_oMindMap[pair.Key].Keys)
                             if (b.Length>0)
                                 b.AppendFormat("\r\n> {0}",s);
                             else
@@ -667,17 +674,17 @@ namespace MindmapTrainer
 
                         if (bContinue)
                         {
-                            string prevResults = _training[subject];
+                            string prevResults = m_oTrainingResults[subject];
                             string newResults = (bCorrect ? "1" : "0") + prevResults.Substring(0, 
                                 prevResults.Length<5?prevResults.Length:5);
-                            _training[subject] = newResults;
-                            _totalErrors += newResults.Length - newResults.Replace("0", "").Length - 
+                            m_oTrainingResults[subject] = newResults;
+                            m_nTotalErrors += newResults.Length - newResults.Replace("0", "").Length - 
                                 (prevResults.Length - prevResults.Replace("0", "").Length);
 
                             // if the result was correct and we didn't repeat it because of 
                             // earlier mistakes, then increment the number of correct answers
                             if (bCorrect && prevResults.IndexOf('0')<0)
-                                _correctAnswers[subject]++;
+                                m_oCorrectAnswers[subject]++;
 
                             EnableDisableMenu();                        
                         }
@@ -698,7 +705,7 @@ namespace MindmapTrainer
         {
             m_ctlTrainingToolStripMenuItem.Enabled = 
                 m_ctlIntensiveToolStripMenuItem.Enabled = 
-                    _mindMap != null && _mindMap.Count > 0;
+                    m_oMindMap != null && m_oMindMap.Count > 0;
         }
 
         //===================================================================================================
