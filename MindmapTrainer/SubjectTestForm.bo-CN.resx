@@ -118,73 +118,104 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 14.25pt</value>
+  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 72pt</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 29</value>
+  <data name="m_lblSubject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 17</value>
   </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>ใหม่</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_lblSubject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>96, 0, 96, 0</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 29</value>
+  <data name="m_lblSubject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1330, 156</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>เปิด</value>
+  <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 27.75pt</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 29</value>
+  <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 192</value>
   </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>การฝึกอบรม</value>
+  <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>96, 0, 96, 0</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 29</value>
+  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 42</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>เข้มข้น</value>
+  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 27.75pt</value>
   </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 29</value>
+  <data name="m_btnShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>342, 581</value>
   </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>ข้อมูล</value>
+  <data name="m_btnShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>96, 42, 96, 42</value>
   </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 33</value>
+  <data name="m_btnShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 75</value>
   </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 30</value>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>མངོན་སྟོན</value>
   </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>เกี่ยวกับเทรนเนอร์แผนที่ความคิด</value>
+  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 27.75pt</value>
   </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 30</value>
+  <data name="m_btnCorrectResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 581</value>
   </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>ใบอนุญาต (GPL v2)</value>
+  <data name="m_btnCorrectResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>96, 42, 96, 42</value>
   </data>
-  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 36</value>
+  <data name="m_btnCorrectResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 75</value>
   </data>
-  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 423</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>ཡང་དག་པ</value>
   </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 58</value>
+  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 27.75pt</value>
   </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>ไฟล์แผนที่ความคิด|*.MindMap.xml</value>
+  <data name="m_btnWrongResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 581</value>
   </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>ไฟล์แผนที่ความคิด|*.MindMap.xml</value>
+  <data name="m_btnWrongResult.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>96, 42, 96, 42</value>
+  </data>
+  <data name="m_btnWrongResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 75</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>ནོར་འདུག </value>
+  </data>
+  <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 27.75pt</value>
+  </data>
+  <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1112, 581</value>
+  </data>
+  <data name="m_btnCanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>96, 42, 96, 42</value>
+  </data>
+  <data name="m_btnCanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 75</value>
+  </data>
+  <data name="m_btnCanel.Text" xml:space="preserve">
+    <value>འདོར་བ</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 25</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1378, 679</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 15.75pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1536, 312, 1536, 312</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ผู้ฝึกสอนแผนที่ความคิด</value>
+    <value>རྒྱུགས་གཞིའི་བརྗོད་གཞི།</value>
   </data>
 </root>
