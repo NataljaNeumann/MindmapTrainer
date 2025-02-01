@@ -201,7 +201,7 @@ namespace MindmapTrainer
             {
                 newSize = new Size(
                     Math.Max(m_lblText.Location.X + m_lblText.Size.Width + m_btnExpand.Location.X,100), 
-                    m_lblText.Location.Y + m_lblText.Size.Height + m_tbxNextItemInput.Size.Height + 
+                    m_btnExpand.Location.Y + m_btnExpand.Size.Height + m_tbxNextItemInput.Size.Height + 
                     m_btnExpand.Location.Y * 3);
 
                 if (m_aSubElements == null)
