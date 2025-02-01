@@ -250,7 +250,7 @@ namespace MindmapTrainer
         //===================================================================================================
         private void neueMindmapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m_dlgSaveFileDialog1.FileName = Text + ".MindMap.xml";
+            m_dlgSaveFileDialog1.FileName = "";
             m_dlgSaveFileDialog1.DefaultExt = ".MindMap.xml";
             if (m_dlgSaveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -281,7 +281,7 @@ namespace MindmapTrainer
         //===================================================================================================
         private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m_dlgOpenFileDialog1.FileName = Text + ".MindMap.xml";
+            m_dlgOpenFileDialog1.FileName = "";
             m_dlgOpenFileDialog1.DefaultExt = ".MindMap.xml";
 
             if (m_dlgOpenFileDialog1.ShowDialog() == DialogResult.OK)
