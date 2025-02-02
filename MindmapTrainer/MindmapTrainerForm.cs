@@ -248,7 +248,7 @@ namespace MindmapTrainer
         /// <param name="sender">Sender object</param>
         /// <param name="e">Event args</param>
         //===================================================================================================
-        private void neueMindmapToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newMindmapToolStripMenuItem_Click(object sender, EventArgs e)
         {
             m_dlgSaveFileDialog1.FileName = "";
             m_dlgSaveFileDialog1.DefaultExt = ".MindMap.xml";
@@ -279,7 +279,7 @@ namespace MindmapTrainer
         /// <param name="sender">Sender object</param>
         /// <param name="e">Event args</param>
         //===================================================================================================
-        private void öffnenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             m_dlgOpenFileDialog1.FileName = "";
             m_dlgOpenFileDialog1.DefaultExt = ".MindMap.xml";
@@ -459,7 +459,7 @@ namespace MindmapTrainer
         /// <param name="sender">Sender object</param>
         /// <param name="e">Event args</param>
         //===================================================================================================
-        private void trainierenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
@@ -513,7 +513,7 @@ namespace MindmapTrainer
         /// <param name="sender">Sender object</param>
         /// <param name="e">Event args</param>
         //===================================================================================================
-        private void intensivToolStripMenuItem_Click(object sender, EventArgs e)
+        private void intensivelyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {

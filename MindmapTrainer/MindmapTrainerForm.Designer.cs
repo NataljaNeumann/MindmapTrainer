@@ -79,25 +79,25 @@ namespace MindmapTrainer
             // 
             this.m_ctlNewMindmapToolStripMenuItem.Name = "m_ctlNewMindmapToolStripMenuItem";
             resources.ApplyResources(this.m_ctlNewMindmapToolStripMenuItem, "m_ctlNewMindmapToolStripMenuItem");
-            this.m_ctlNewMindmapToolStripMenuItem.Click += new System.EventHandler(this.neueMindmapToolStripMenuItem_Click);
+            this.m_ctlNewMindmapToolStripMenuItem.Click += new System.EventHandler(this.newMindmapToolStripMenuItem_Click);
             // 
             // m_ctlOpenToolStripMenuItem
             // 
             this.m_ctlOpenToolStripMenuItem.Name = "m_ctlOpenToolStripMenuItem";
             resources.ApplyResources(this.m_ctlOpenToolStripMenuItem, "m_ctlOpenToolStripMenuItem");
-            this.m_ctlOpenToolStripMenuItem.Click += new System.EventHandler(this.öffnenToolStripMenuItem_Click);
+            this.m_ctlOpenToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // m_ctlTrainingToolStripMenuItem
             // 
             this.m_ctlTrainingToolStripMenuItem.Name = "m_ctlTrainingToolStripMenuItem";
             resources.ApplyResources(this.m_ctlTrainingToolStripMenuItem, "m_ctlTrainingToolStripMenuItem");
-            this.m_ctlTrainingToolStripMenuItem.Click += new System.EventHandler(this.trainierenToolStripMenuItem_Click);
+            this.m_ctlTrainingToolStripMenuItem.Click += new System.EventHandler(this.trainingToolStripMenuItem_Click);
             // 
             // m_ctlIntensiveToolStripMenuItem
             // 
             this.m_ctlIntensiveToolStripMenuItem.Name = "m_ctlIntensiveToolStripMenuItem";
             resources.ApplyResources(this.m_ctlIntensiveToolStripMenuItem, "m_ctlIntensiveToolStripMenuItem");
-            this.m_ctlIntensiveToolStripMenuItem.Click += new System.EventHandler(this.intensivToolStripMenuItem_Click);
+            this.m_ctlIntensiveToolStripMenuItem.Click += new System.EventHandler(this.intensivelyToolStripMenuItem_Click);
             // 
             // m_ctlAboutToolStripMenuItem
             // 
