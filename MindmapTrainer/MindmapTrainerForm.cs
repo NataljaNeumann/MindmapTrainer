@@ -95,6 +95,13 @@ namespace MindmapTrainer
         /// </summary>
         string m_strFilePath;
 
+
+        //===================================================================================================
+        /// <summary>
+        /// Indicates, that the tree view started an edit operation (not insertion)
+        /// </summary>
+        bool m_bTreeViewInEditNodeMode;
+
         //***************************************************************************************************
         /// <summary>
         /// Represents a node of the mind map
@@ -116,15 +123,22 @@ namespace MindmapTrainer
 
             //===============================================================================================
             /// <summary>
+            /// The parent node of this node, or null
+            /// </summary>
+            MindMapNode m_oParentNode;
+
+            //===============================================================================================
+            /// <summary>
             /// Constructs a new node
             /// </summary>
             /// <param name="tr">The training form</param>
             /// <param name="text">The text of the node</param>
             //===============================================================================================
-            public MindMapNode(MindmapTrainerForm oTrainerForm, string strText)
+            public MindMapNode(MindmapTrainerForm oTrainerForm, MindMapNode oParentNode, string strText)
             {
                 m_strText = strText;
                 m_oTrainerForm = oTrainerForm;
+                m_oParentNode = oParentNode;
             }
 
             #region IMindmapNode Member
@@ -157,7 +171,7 @@ namespace MindmapTrainer
                     {
                         foreach (string text in m_oTrainerForm.m_oMindMap[m_strText].Keys)
                         {
-                            yield return new MindMapNode(m_oTrainerForm, text);
+                            yield return new MindMapNode(m_oTrainerForm, this, text);
                         }
                     }
                     yield break;
@@ -225,6 +239,21 @@ namespace MindmapTrainer
                 new Point(-m_btnHiddenAcceptButton.Size.Width,
                           -m_btnHiddenAcceptButton.Size.Height);
 
+
+            // for right to left cultures switch to the tree view per default
+            if (this.RightToLeftLayout)
+            {
+                m_ctlTreeView.Show();
+                m_ctlTreeView.Enabled = false;
+                m_ctlMindmapNodeView.Hide();
+            }
+            else
+            {
+                m_ctlTreeView.Hide();
+            }
+
+            m_ctlTreeView.RightToLeft = RightToLeftLayout ? RightToLeft.Yes : RightToLeft.No;
+
             EnableDisableMenu();
         }
 
@@ -238,6 +267,33 @@ namespace MindmapTrainer
         //===================================================================================================
         private void hiddenAcceptButton_Click(object sender, EventArgs e)
         {
+
+            if (m_bTreeViewInEditNodeMode)
+            {
+            }
+            else
+            {
+
+                TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
+                MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
+                currentNodeData.Text = m_tbxEditNodeText.Text;
+                currentNode.Text = m_tbxEditNodeText.Text;
+                m_tbxEditNodeText.Visible = false;
+
+                if (currentNode.Parent != null)
+                {
+                    ((MindMapNode)currentNode.Parent.Tag).AddElement(m_tbxEditNodeText.Text);
+
+                    /*
+                    MindMapNode newNodeData = new Node("");
+
+                    TreeNode newNode = new TreeNode() { Tag = newNodeData };
+                    currentNode.Parent.Nodes.Add(newNode);
+                    StartEditingNode(newNode);
+                     */
+                }
+            }
+
 
         }
 
@@ -254,6 +310,7 @@ namespace MindmapTrainer
             m_dlgSaveFileDialog1.DefaultExt = ".MindMap.xml";
             if (m_dlgSaveFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                m_ctlToggleGUI.Enabled = true;
                 m_oMindMap = new SortedDictionary<string,Dictionary<string,bool>>();
                 m_oTrainingResults = new SortedDictionary<string, string>();
                 m_oCorrectAnswers = new SortedDictionary<string, int>();
@@ -265,8 +322,16 @@ namespace MindmapTrainer
                 m_oTrainingResults[m_strRootNodeName] = "111011";
                 m_nTotalErrors = 1;
                 m_oCorrectAnswers[m_strRootNodeName] = 0;
-                m_ctlMindmapNodeView.Node = new MindMapNode(this, m_strRootNodeName);
-                m_ctlMindmapNodeView.Show();
+
+                if (m_ctlTreeView.Visible)
+                {
+                    m_ctlMindmapNodeView.Node = new MindMapNode(this, null, m_strRootNodeName);
+                    m_ctlMindmapNodeView.Show();
+                }
+                else
+                {
+                    PopulateTreeView();
+                }
 
                 EnableDisableMenu();
             }
@@ -286,6 +351,8 @@ namespace MindmapTrainer
 
             if (m_dlgOpenFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                m_ctlToggleGUI.Enabled = true;
+
                 m_oMindMap = new SortedDictionary<string, Dictionary<string, bool>>();
                 m_oTrainingResults = new SortedDictionary<string, string>();
                 m_oCorrectAnswers = new SortedDictionary<string, int>();
@@ -339,9 +406,16 @@ namespace MindmapTrainer
                     }
                 }
 
-
-                m_ctlMindmapNodeView.Node = new MindMapNode(this, m_strRootNodeName);
-                m_ctlMindmapNodeView.Show();
+                if (m_ctlTreeView.Visible)
+                {
+                    PopulateTreeView();
+                }
+                else
+                {
+                    m_ctlMindmapNodeView.Node = new MindMapNode(this, null, m_strRootNodeName);
+                    m_ctlMindmapNodeView.Show();
+                }
+                 
 
                 EnableDisableMenu();
 
@@ -738,6 +812,200 @@ namespace MindmapTrainer
         private void licenseMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.gnu.org/licenses/gpl-2.0.html");
+        }
+
+        private void m_ctlTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void m_ctlTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ContextMenu contextMenu = new ContextMenu();
+                MenuItem addNodeMenuItem = new MenuItem("Add Node");
+                addNodeMenuItem.Click += (s, args) => StartEditingNewNode(e.Node);
+                contextMenu.MenuItems.Add(addNodeMenuItem);
+
+                MenuItem detachNodeMenuItem = new MenuItem("Detach Node");
+                detachNodeMenuItem.Click += (s, args) => DetachNode(e.Node);
+                contextMenu.MenuItems.Add(detachNodeMenuItem);
+
+                MenuItem editNodeMenuItem = new MenuItem("Edit Node");
+                editNodeMenuItem.Click += (s, args) => EditNode(e.Node);
+                contextMenu.MenuItems.Add(editNodeMenuItem);
+
+                contextMenu.Show(m_ctlTreeView, e.Location);
+            }
+        }
+
+        private void m_ctlTreeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
+        {
+
+            TreeNode node = e.Node;
+            if (node.Nodes[0].Text == "Loading...")
+            {
+                node.Nodes.Clear(); // Remove the placeholder node
+                LoadChildNodes(node);
+            }
+
+            /*
+            foreach (TreeNode node in m_ctlTreeView.Nodes)
+            {
+                CollapseAllNodes(node);
+            }*/
+        }
+
+        private void LoadChildNodes(TreeNode parentNode)
+        {
+            if (m_oMindMap.ContainsKey(parentNode.Text))
+            {
+                foreach (string text in m_oMindMap[parentNode.Text].Keys)
+                {
+                    TreeNode childNode = new TreeNode(text) { Tag = new MindMapNode(this, (MindMapNode)parentNode.Tag, text) };
+                    if (m_oMindMap.ContainsKey(text) && m_oMindMap[text].Keys.Count>0)
+                    {
+                        childNode.Nodes.Add(new TreeNode("Loading...")); // Add placeholder node for child nodes
+                    }
+                    parentNode.Nodes.Add(childNode);
+                }
+            }
+        }
+
+
+
+        private void CollapseAllNodes(TreeNode node)
+        {
+            foreach (TreeNode subNode in node.Nodes)
+            {
+                subNode.Collapse();
+                CollapseAllNodes(subNode);
+            }
+        }
+
+
+        private void StartEditingNewNode(TreeNode parentNode)
+        {
+            m_bTreeViewInEditNodeMode = false;
+            MindMapNode parentNodeData = (MindMapNode)parentNode.Tag;
+            MindMapNode newNodeData = new MindMapNode(this, parentNodeData, "");
+
+            TreeNode newNode = new TreeNode() { Tag = newNodeData };
+            parentNode.Nodes.Add(newNode);
+            parentNode.Expand();
+
+
+            m_tbxEditNodeText.Bounds = new Rectangle(newNode.Bounds.Location, new Size(200, newNode.Bounds.Height));
+            m_tbxEditNodeText.Text = "";
+            m_tbxEditNodeText.Visible = true;
+            m_tbxEditNodeText.Focus();
+            m_tbxEditNodeText.Tag = newNode;
+        }
+
+        private void EditNode(TreeNode node)
+        {
+            m_bTreeViewInEditNodeMode = true;
+            m_tbxEditNodeText.Bounds = node.Bounds;
+            m_tbxEditNodeText.Text = node.Text;
+            m_tbxEditNodeText.Visible = true;
+            m_tbxEditNodeText.Focus();
+            m_tbxEditNodeText.Tag = node;
+        }
+
+        private void DetachNode(TreeNode node)
+        {
+            if (node.Parent != null)
+            {
+                node.Parent.Nodes.Remove(node);
+                m_ctlTreeView.Nodes.Add(node);
+            }
+        }
+        private void m_ctlTreeView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && m_ctlTreeView.SelectedNode != null)
+            {
+                EditNode(m_ctlTreeView.SelectedNode);
+            }
+        }
+
+        private void m_tbxEditNodeText_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
+                MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
+                currentNodeData.Text = m_tbxEditNodeText.Text;
+                currentNode.Text = m_tbxEditNodeText.Text;
+                m_tbxEditNodeText.Visible = false;
+
+                if (currentNode.Parent != null)
+                {
+                    ((MindMapNode)currentNode.Parent.Tag).AddElement(m_tbxEditNodeText.Text);
+
+                    /*
+                    MindMapNode newNodeData = new Node("");
+
+                    TreeNode newNode = new TreeNode() { Tag = newNodeData };
+                    currentNode.Parent.Nodes.Add(newNode);
+                    StartEditingNode(newNode);
+                     */
+                }
+                //PopulateTreeView();
+            }
+        }
+
+        private void PopulateTreeView()
+        {
+            m_ctlTreeView.Nodes.Clear();
+            if (m_oMindMap!=null)
+            {
+                this.Enabled = true;
+
+                TreeNode oTreeNode = new TreeNode(m_strRootNodeName);
+                oTreeNode.Tag = new MindMapNode(this, null, m_strRootNodeName);
+                m_ctlTreeView.Nodes.Add(oTreeNode);
+                if (m_oMindMap.ContainsKey(m_strRootNodeName) && m_oMindMap[m_strRootNodeName].Keys.Count > 0)
+                {
+                    oTreeNode.Nodes.Add(new TreeNode("Loading...")); // Add placeholder node for child nodes
+                }
+            }
+            else
+            {
+                this.Enabled = false;
+            }
+        }
+
+        private void AddSubNodes(TreeNode treeNode, MindMapNode node)
+        {
+            foreach (var subNode in node.Elements)
+            {
+                TreeNode subTreeNode = new TreeNode(subNode.Text);
+                subTreeNode.Tag = subNode;
+                treeNode.Nodes.Add(subTreeNode);
+            }
+        }
+
+        private void OnToggleGUIClick(object sender, EventArgs e)
+        {
+            if (m_ctlTreeView.Visible)
+            {
+                m_ctlTreeView.Hide();
+                if (!string.IsNullOrEmpty(m_strFilePath))
+                {
+                    m_ctlMindmapNodeView.Node = new MindMapNode(this, null, m_strRootNodeName);
+                    m_ctlMindmapNodeView.Show();
+                }
+            }
+            else
+            {
+                m_ctlTreeView.Show();
+                m_ctlTreeView.Enabled = true;
+                PopulateTreeView();
+
+                m_ctlMindmapNodeView.Hide();
+            }
+
         }
 
     }

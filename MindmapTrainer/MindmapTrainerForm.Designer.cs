@@ -56,10 +56,13 @@ namespace MindmapTrainer
             this.m_ctlAboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m_ctlLicenseMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.m_ctlPanel = new System.Windows.Forms.Panel();
+            this.m_tbxEditNodeText = new System.Windows.Forms.TextBox();
+            this.m_ctlTreeView = new System.Windows.Forms.TreeView();
             this.m_btnHiddenAcceptButton = new System.Windows.Forms.Button();
-            this.m_ctlMindmapNodeView = new MindmapTrainer.MindmapNodeView();
             this.m_dlgSaveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.m_dlgOpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.m_ctlToggleGUI = new System.Windows.Forms.ToolStripMenuItem();
+            this.m_ctlMindmapNodeView = new MindmapTrainer.MindmapNodeView();
             this.m_oMenuStrip.SuspendLayout();
             this.m_ctlPanel.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +74,8 @@ namespace MindmapTrainer
             this.m_ctlOpenToolStripMenuItem,
             this.m_ctlTrainingToolStripMenuItem,
             this.m_ctlIntensiveToolStripMenuItem,
-            this.m_ctlAboutToolStripMenuItem});
+            this.m_ctlAboutToolStripMenuItem,
+            this.m_ctlToggleGUI});
             resources.ApplyResources(this.m_oMenuStrip, "m_oMenuStrip");
             this.m_oMenuStrip.Name = "m_oMenuStrip";
             // 
@@ -123,9 +127,27 @@ namespace MindmapTrainer
             // m_ctlPanel
             // 
             resources.ApplyResources(this.m_ctlPanel, "m_ctlPanel");
+            this.m_ctlPanel.Controls.Add(this.m_tbxEditNodeText);
+            this.m_ctlPanel.Controls.Add(this.m_ctlTreeView);
             this.m_ctlPanel.Controls.Add(this.m_btnHiddenAcceptButton);
             this.m_ctlPanel.Controls.Add(this.m_ctlMindmapNodeView);
             this.m_ctlPanel.Name = "m_ctlPanel";
+            // 
+            // m_tbxEditNodeText
+            // 
+            this.m_tbxEditNodeText.AcceptsReturn = true;
+            resources.ApplyResources(this.m_tbxEditNodeText, "m_tbxEditNodeText");
+            this.m_tbxEditNodeText.Name = "m_tbxEditNodeText";
+            this.m_tbxEditNodeText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_tbxEditNodeText_KeyDown);
+            // 
+            // m_ctlTreeView
+            // 
+            resources.ApplyResources(this.m_ctlTreeView, "m_ctlTreeView");
+            this.m_ctlTreeView.Name = "m_ctlTreeView";
+            this.m_ctlTreeView.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.m_ctlTreeView_BeforeExpand);
+            this.m_ctlTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.m_ctlTreeView_AfterSelect);
+            this.m_ctlTreeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.m_ctlTreeView_NodeMouseClick);
+            this.m_ctlTreeView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.m_ctlTreeView_KeyDown);
             // 
             // m_btnHiddenAcceptButton
             // 
@@ -134,12 +156,6 @@ namespace MindmapTrainer
             this.m_btnHiddenAcceptButton.Name = "m_btnHiddenAcceptButton";
             this.m_btnHiddenAcceptButton.UseVisualStyleBackColor = true;
             this.m_btnHiddenAcceptButton.Click += new System.EventHandler(this.hiddenAcceptButton_Click);
-            // 
-            // m_ctlMindmapNodeView
-            // 
-            resources.ApplyResources(this.m_ctlMindmapNodeView, "m_ctlMindmapNodeView");
-            this.m_ctlMindmapNodeView.Name = "m_ctlMindmapNodeView";
-            this.m_ctlMindmapNodeView.Node = null;
             // 
             // m_dlgSaveFileDialog1
             // 
@@ -151,6 +167,18 @@ namespace MindmapTrainer
             this.m_dlgOpenFileDialog1.DefaultExt = "MindMap.xml";
             this.m_dlgOpenFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.m_dlgOpenFileDialog1, "m_dlgOpenFileDialog1");
+            // 
+            // m_ctlToggleGUI
+            // 
+            resources.ApplyResources(this.m_ctlToggleGUI, "m_ctlToggleGUI");
+            this.m_ctlToggleGUI.Name = "m_ctlToggleGUI";
+            this.m_ctlToggleGUI.Click += new System.EventHandler(this.OnToggleGUIClick);
+            // 
+            // m_ctlMindmapNodeView
+            // 
+            resources.ApplyResources(this.m_ctlMindmapNodeView, "m_ctlMindmapNodeView");
+            this.m_ctlMindmapNodeView.Name = "m_ctlMindmapNodeView";
+            this.m_ctlMindmapNodeView.Node = null;
             // 
             // MindmapTrainerForm
             // 
@@ -165,6 +193,7 @@ namespace MindmapTrainer
             this.m_oMenuStrip.ResumeLayout(false);
             this.m_oMenuStrip.PerformLayout();
             this.m_ctlPanel.ResumeLayout(false);
+            this.m_ctlPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,6 +214,9 @@ namespace MindmapTrainer
         private System.Windows.Forms.ToolStripMenuItem m_ctlAboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem m_ctlAboutMenuItem;
         private System.Windows.Forms.ToolStripMenuItem m_ctlLicenseMenuItem;
+        private System.Windows.Forms.TreeView m_ctlTreeView;
+        private System.Windows.Forms.TextBox m_tbxEditNodeText;
+        private System.Windows.Forms.ToolStripMenuItem m_ctlToggleGUI;
     }
 }
 

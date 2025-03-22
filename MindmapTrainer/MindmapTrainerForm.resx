@@ -188,13 +188,22 @@
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Info</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="m_ctlToggleGUI.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="m_ctlToggleGUI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 20</value>
+  </data>
+  <data name="m_ctlToggleGUI.Text" xml:space="preserve">
+    <value>Toggle GUI</value>
+  </data>
   <data name="m_oMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
     <value>707, 24</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="m_oMenuStrip.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -215,6 +224,54 @@
   </data>
   <data name="m_ctlPanel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="m_tbxEditNodeText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 175</value>
+  </data>
+  <data name="m_tbxEditNodeText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="m_tbxEditNodeText.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_tbxEditNodeText.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_tbxEditNodeText.Name" xml:space="preserve">
+    <value>m_tbxEditNodeText</value>
+  </data>
+  <data name="&gt;&gt;m_tbxEditNodeText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_tbxEditNodeText.Parent" xml:space="preserve">
+    <value>m_ctlPanel</value>
+  </data>
+  <data name="&gt;&gt;m_tbxEditNodeText.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_ctlTreeView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="m_ctlTreeView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="m_ctlTreeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>701, 426</value>
+  </data>
+  <data name="m_ctlTreeView.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;m_ctlTreeView.Name" xml:space="preserve">
+    <value>m_ctlTreeView</value>
+  </data>
+  <data name="&gt;&gt;m_ctlTreeView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlTreeView.Parent" xml:space="preserve">
+    <value>m_ctlPanel</value>
+  </data>
+  <data name="&gt;&gt;m_ctlTreeView.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="m_btnHiddenAcceptButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -241,7 +298,7 @@
     <value>m_ctlPanel</value>
   </data>
   <data name="&gt;&gt;m_btnHiddenAcceptButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="m_ctlMindmapNodeView.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -265,7 +322,7 @@
     <value>m_ctlPanel</value>
   </data>
   <data name="&gt;&gt;m_ctlMindmapNodeView.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 27</value>
@@ -332,6 +389,9 @@
         //////////////////8=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Mindmap Trainer</value>
   </data>
@@ -388,6 +448,12 @@
   </data>
   <data name="&gt;&gt;m_dlgOpenFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlToggleGUI.Name" xml:space="preserve">
+    <value>m_ctlToggleGUI</value>
+  </data>
+  <data name="&gt;&gt;m_ctlToggleGUI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MindmapTrainerForm</value>
