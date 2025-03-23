@@ -237,6 +237,9 @@
   <data name="m_tbxEditNodeText.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="m_tbxEditNodeText.WordWrap" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;m_tbxEditNodeText.Name" xml:space="preserve">
     <value>m_tbxEditNodeText</value>
   </data>
@@ -388,6 +391,9 @@
         ///////AAB////////gAP///////8AAf///////6AD////////4Af////////4D/////////xf//////
         //////////////////8=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Mindmap Trainer</value>

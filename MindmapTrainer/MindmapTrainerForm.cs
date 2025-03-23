@@ -832,13 +832,16 @@ namespace MindmapTrainer
                 addNodeMenuItem.Click += (s, args) => StartEditingNewNode(e.Node);
                 contextMenu.MenuItems.Add(addNodeMenuItem);
 
-                MenuItem detachNodeMenuItem = new MenuItem(Properties.Resources.DetachNode);
-                detachNodeMenuItem.Click += (s, args) => DetachNode(e.Node);
-                contextMenu.MenuItems.Add(detachNodeMenuItem);
+                if (e.Node.Parent != null)
+                {
+                    MenuItem detachNodeMenuItem = new MenuItem(Properties.Resources.DetachNode);
+                    detachNodeMenuItem.Click += (s, args) => DetachNode(e.Node);
+                    contextMenu.MenuItems.Add(detachNodeMenuItem);
 
-                MenuItem editNodeMenuItem = new MenuItem(Properties.Resources.EditNode);
-                editNodeMenuItem.Click += (s, args) => EditNode(e.Node);
-                contextMenu.MenuItems.Add(editNodeMenuItem);
+                    MenuItem editNodeMenuItem = new MenuItem(Properties.Resources.EditNode);
+                    editNodeMenuItem.Click += (s, args) => EditNode(e.Node);
+                    contextMenu.MenuItems.Add(editNodeMenuItem);
+                }
 
                 contextMenu.Show(m_ctlTreeView, e.Location);
             }
@@ -1067,12 +1070,12 @@ namespace MindmapTrainer
 
                 m_ctlMindmapNodeView.Hide();
             }
-
         }
 
         private void OnNodeEditTextBoxFocusLeft(object oSender, EventArgs e)
         {
             m_tbxEditNodeText.Visible = false;
+            hiddenAcceptButton_Click(this, EventArgs.Empty);
         }
 
     }

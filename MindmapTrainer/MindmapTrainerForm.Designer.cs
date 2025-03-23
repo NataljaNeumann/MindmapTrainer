@@ -60,9 +60,9 @@ namespace MindmapTrainer
             this.m_tbxEditNodeText = new System.Windows.Forms.TextBox();
             this.m_ctlTreeView = new System.Windows.Forms.TreeView();
             this.m_btnHiddenAcceptButton = new System.Windows.Forms.Button();
-            this.m_ctlMindmapNodeView = new MindmapTrainer.MindmapNodeView();
             this.m_dlgSaveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.m_dlgOpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.m_ctlMindmapNodeView = new MindmapTrainer.MindmapNodeView();
             this.m_oMenuStrip.SuspendLayout();
             this.m_ctlPanel.SuspendLayout();
             this.SuspendLayout();
@@ -164,12 +164,6 @@ namespace MindmapTrainer
             this.m_btnHiddenAcceptButton.UseVisualStyleBackColor = true;
             this.m_btnHiddenAcceptButton.Click += new System.EventHandler(this.hiddenAcceptButton_Click);
             // 
-            // m_ctlMindmapNodeView
-            // 
-            resources.ApplyResources(this.m_ctlMindmapNodeView, "m_ctlMindmapNodeView");
-            this.m_ctlMindmapNodeView.Name = "m_ctlMindmapNodeView";
-            this.m_ctlMindmapNodeView.Node = null;
-            // 
             // m_dlgSaveFileDialog1
             // 
             this.m_dlgSaveFileDialog1.DefaultExt = "MindMap.xml";
@@ -180,6 +174,12 @@ namespace MindmapTrainer
             this.m_dlgOpenFileDialog1.DefaultExt = "MindMap.xml";
             this.m_dlgOpenFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.m_dlgOpenFileDialog1, "m_dlgOpenFileDialog1");
+            // 
+            // m_ctlMindmapNodeView
+            // 
+            resources.ApplyResources(this.m_ctlMindmapNodeView, "m_ctlMindmapNodeView");
+            this.m_ctlMindmapNodeView.Name = "m_ctlMindmapNodeView";
+            this.m_ctlMindmapNodeView.Node = null;
             // 
             // MindmapTrainerForm
             // 
