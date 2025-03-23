@@ -41,8 +41,77 @@ namespace MindmapTrainer
         static void Main()
         {
 #if DEBUG
-            //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("ar-SA");
-            //System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo("ar-SA");
+#if DEBUG
+            string strSetCulture =
+             "af-ZA";
+            // "ar-SA";
+            // "az-Latn-AZ";
+            // "be-BY";
+            // "bg-BG";
+            // "bs-Latn-BA";
+            // "cs-CZ";
+            // "da-DK";
+            // "de-DE";
+            // "el-GR";
+            // "es-ES";
+            // "et-EE";
+            // "fa-IR";
+            // "fi-FI";
+            // "fr-FR";
+            // "he-IL";
+            // "hi-IN";
+            // "hu-HU";
+            // "hy-AM";
+            // "id-ID";
+            // "is-IS";
+            // "it-IT";
+            // "ja-JP";
+            // "ka-GE";
+            // "kk-KZ";
+            // "km-KH";
+            // "ko-KR";
+            // "ky-KG";
+            // "lt-LT";
+            // "lv-LV";
+            // "mk-MK";
+            // "mn-MN";
+            // "ms-MY";
+            // "nl-NL";
+            // "no-NO";
+            // "pa-Arab-PK";
+            // "pa-IN";
+            // "pl-PL";
+            // "ps-AF";
+            // "pt-PT";
+            // "en-US";
+            // "ro-RO";
+            // "ru-RU";
+            // "sa-IN";
+            // "sk-SK";
+            // "sl-SL";
+            // "sr-Cyrl-RS"; // TODO: need a fix
+            // "sv-SE";
+            // "tg-Cyrl-TJ";
+            // "th-TH";
+            // "tr-TR";
+            // "uk-UA";
+            // "uz-Latn-UZ";
+            // "vi-VN";
+            // "zh-TW";
+            // "zh-CN";
+
+            // "ga-IE";
+            // "ku-Arab-IQ";
+            // "ti-ER";
+            // "am-ET";
+            // "ig-NG";
+            // "yo-NG";
+            // "wo-SN";
+            // "so-SO";
+            // "rw-RW";
+             System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo(strSetCulture);
+             System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(strSetCulture);
+#endif
 #endif
 
             Application.EnableVisualStyles();

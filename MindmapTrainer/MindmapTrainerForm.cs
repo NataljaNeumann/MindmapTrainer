@@ -229,6 +229,10 @@ namespace MindmapTrainer
         {
             InitializeComponent();
 
+            m_ctlTreeView.RightToLeft = RightToLeft;
+            m_ctlTreeView.RightToLeftLayout = RightToLeftLayout;
+            m_tbxEditNodeText.RightToLeft = RightToLeft;
+
             // init random with current time
             m_oRandomGenerator = new Random(((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 +
                 DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
@@ -325,12 +329,12 @@ namespace MindmapTrainer
 
                 if (m_ctlTreeView.Visible)
                 {
-                    m_ctlMindmapNodeView.Node = new MindMapNode(this, null, m_strRootNodeName);
-                    m_ctlMindmapNodeView.Show();
+                    PopulateTreeView();
                 }
                 else
                 {
-                    PopulateTreeView();
+                    m_ctlMindmapNodeView.Node = new MindMapNode(this, null, m_strRootNodeName);
+                    m_ctlMindmapNodeView.Show();
                 }
 
                 EnableDisableMenu();
@@ -485,7 +489,7 @@ namespace MindmapTrainer
                 {
                 }
 
-                System.Windows.Forms.MessageBox.Show(this, ex.Message, "Fehler beim Speichern der Datei", 
+                System.Windows.Forms.MessageBox.Show(this, ex.Message, Properties.Resources.ErrorSavingFile, 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -824,15 +828,15 @@ namespace MindmapTrainer
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu contextMenu = new ContextMenu();
-                MenuItem addNodeMenuItem = new MenuItem("Add Node");
+                MenuItem addNodeMenuItem = new MenuItem(Properties.Resources.AddNode);
                 addNodeMenuItem.Click += (s, args) => StartEditingNewNode(e.Node);
                 contextMenu.MenuItems.Add(addNodeMenuItem);
 
-                MenuItem detachNodeMenuItem = new MenuItem("Detach Node");
+                MenuItem detachNodeMenuItem = new MenuItem(Properties.Resources.DetachNode);
                 detachNodeMenuItem.Click += (s, args) => DetachNode(e.Node);
                 contextMenu.MenuItems.Add(detachNodeMenuItem);
 
-                MenuItem editNodeMenuItem = new MenuItem("Edit Node");
+                MenuItem editNodeMenuItem = new MenuItem(Properties.Resources.EditNode);
                 editNodeMenuItem.Click += (s, args) => EditNode(e.Node);
                 contextMenu.MenuItems.Add(editNodeMenuItem);
 
@@ -890,27 +894,85 @@ namespace MindmapTrainer
             m_bTreeViewInEditNodeMode = false;
             MindMapNode parentNodeData = (MindMapNode)parentNode.Tag;
             MindMapNode newNodeData = new MindMapNode(this, parentNodeData, "");
+            parentNode.Expand();
 
             TreeNode newNode = new TreeNode() { Tag = newNodeData };
             parentNode.Nodes.Add(newNode);
             parentNode.Expand();
 
-
-            m_tbxEditNodeText.Bounds = new Rectangle(newNode.Bounds.Location, new Size(200, newNode.Bounds.Height));
+            /*
+            if (RightToLeftLayout)
+            {
+                m_tbxEditNodeText.Bounds = new Rectangle(
+                    newNode.Bounds.Right - 200,
+                    newNode.Bounds.Top,
+                    200, newNode.Bounds.Height);
+            }
+            else
+            {
+                m_tbxEditNodeText.Bounds = new Rectangle(newNode.Bounds.Location,
+                    new Size(200, newNode.Bounds.Height));
+            }
+             */
+            ShowTextBoxForNode(newNode);
             m_tbxEditNodeText.Text = "";
-            m_tbxEditNodeText.Visible = true;
-            m_tbxEditNodeText.Focus();
             m_tbxEditNodeText.Tag = newNode;
         }
 
         private void EditNode(TreeNode node)
         {
             m_bTreeViewInEditNodeMode = true;
-            m_tbxEditNodeText.Bounds = node.Bounds;
+            ShowTextBoxForNode(node);
+
+            /*
+            if (RightToLeftLayout)
+            {
+                m_tbxEditNodeText.Bounds = new Rectangle(
+                    node.Bounds.Right - Math.Max(node.Bounds.Width * 11 / 10, 200),
+                    node.Bounds.Top,
+                    Math.Max(node.Bounds.Width * 11 / 10, 200), 
+                    node.Bounds.Height);
+            }
+            else
+            {
+                m_tbxEditNodeText.Bounds = new Rectangle(node.Bounds.Location,
+                    new Size(Math.Max(node.Bounds.Width * 11 / 10, 200), node.Bounds.Height));
+            }*/
             m_tbxEditNodeText.Text = node.Text;
-            m_tbxEditNodeText.Visible = true;
-            m_tbxEditNodeText.Focus();
             m_tbxEditNodeText.Tag = node;
+        }
+
+        private void ShowTextBoxForNode(TreeNode node)
+        {
+            if (node == null) return;
+
+            // Get the bounds of the node
+            Rectangle nodeBounds = node.Bounds;
+
+            // Determine the width of the textbox
+            int textBoxWidth = Math.Max(nodeBounds.Width, 200); // Enforce minimum width of 200
+
+            // Adjust the position based on Right-to-Left layout
+            int xPosition;
+            if (this.RightToLeft == RightToLeft.Yes)
+            {
+                // Right-to-Left: Align the textbox to the right side of the node
+                xPosition = m_ctlTreeView.Width - nodeBounds.Left - textBoxWidth;
+            }
+            else
+            {
+                // Left-to-Right: Use the left side of the node
+                xPosition = nodeBounds.X;
+            }
+
+            // Position and size the textbox
+            m_tbxEditNodeText.Location = new Point(xPosition, nodeBounds.Y);
+            m_tbxEditNodeText.Size = new Size(textBoxWidth, nodeBounds.Height);
+
+            // Show and focus the textbox
+            m_tbxEditNodeText.Visible = true;
+            m_tbxEditNodeText.BringToFront();
+            m_tbxEditNodeText.Focus();
         }
 
         private void DetachNode(TreeNode node)
@@ -960,7 +1022,7 @@ namespace MindmapTrainer
             m_ctlTreeView.Nodes.Clear();
             if (m_oMindMap!=null)
             {
-                this.Enabled = true;
+                m_ctlTreeView.Enabled = true;
 
                 TreeNode oTreeNode = new TreeNode(m_strRootNodeName);
                 oTreeNode.Tag = new MindMapNode(this, null, m_strRootNodeName);
@@ -972,7 +1034,7 @@ namespace MindmapTrainer
             }
             else
             {
-                this.Enabled = false;
+                m_ctlTreeView.Enabled = false;
             }
         }
 
@@ -1006,6 +1068,11 @@ namespace MindmapTrainer
                 m_ctlMindmapNodeView.Hide();
             }
 
+        }
+
+        private void OnNodeEditTextBoxFocusLeft(object oSender, EventArgs e)
+        {
+            m_tbxEditNodeText.Visible = false;
         }
 
     }

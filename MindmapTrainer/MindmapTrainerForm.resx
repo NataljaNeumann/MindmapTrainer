@@ -253,10 +253,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="m_ctlTreeView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>0, 0</value>
   </data>
   <data name="m_ctlTreeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>701, 426</value>
+    <value>707, 432</value>
   </data>
   <data name="m_ctlTreeView.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -389,9 +389,6 @@
         //////////////////8=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Mindmap Trainer</value>
   </data>
@@ -437,6 +434,12 @@
   <data name="&gt;&gt;m_ctlLicenseMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;m_ctlToggleGUI.Name" xml:space="preserve">
+    <value>m_ctlToggleGUI</value>
+  </data>
+  <data name="&gt;&gt;m_ctlToggleGUI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;m_dlgSaveFileDialog1.Name" xml:space="preserve">
     <value>m_dlgSaveFileDialog1</value>
   </data>
@@ -448,12 +451,6 @@
   </data>
   <data name="&gt;&gt;m_dlgOpenFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_ctlToggleGUI.Name" xml:space="preserve">
-    <value>m_ctlToggleGUI</value>
-  </data>
-  <data name="&gt;&gt;m_ctlToggleGUI.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MindmapTrainerForm</value>
