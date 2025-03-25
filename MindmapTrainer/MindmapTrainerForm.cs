@@ -182,8 +182,8 @@ namespace MindmapTrainer
             /// <summary>
             /// Add an element to sub-element
             /// </summary>
-            /// <param name="text">The name(text) of the element</param>
-            public void AddElement(string text)
+            /// <param name="strText">The name(text) of the element</param>
+            public void AddElement(string strText)
             {
                 if (m_oTrainerForm != null && m_strText != null)
                 {
@@ -199,8 +199,78 @@ namespace MindmapTrainer
                     if (!m_oTrainerForm.m_oCorrectAnswers.ContainsKey(m_strText))
                         m_oTrainerForm.m_oCorrectAnswers[m_strText] = 0;
 
-                    if (!m_oTrainerForm.m_oMindMap[m_strText].ContainsKey(text))
-                        m_oTrainerForm.m_oMindMap[m_strText][text] = false;
+                    if (!m_oTrainerForm.m_oMindMap[m_strText].ContainsKey(strText))
+                        m_oTrainerForm.m_oMindMap[m_strText][strText] = false;
+
+                    m_oTrainerForm.Save();
+                }
+            }
+
+
+            public void RenameElement(string strOldText, string strNewText)
+            {
+                if (m_oTrainerForm != null && m_strText != null)
+                {
+
+                    SortedDictionary<string, Dictionary<string, bool>> oNewMindMap =
+                        new SortedDictionary<string, Dictionary<string, bool>>();
+
+                    SortedDictionary<string, string> oNewTrainingResults =
+                        new SortedDictionary<string, string>();
+
+                    SortedDictionary<string, int> oNewCorrectResults =
+                        new SortedDictionary<string, int>();
+
+                    foreach (KeyValuePair<string, Dictionary<string, bool>> oElement in m_oTrainerForm.m_oMindMap)
+                    {
+                        if (oElement.Key.Equals(strOldText))
+                        {
+                            oNewMindMap[strNewText] = oElement.Value;
+                            oNewTrainingResults[strNewText] = m_oTrainerForm.m_oTrainingResults[strOldText];
+                            oNewCorrectResults[strNewText] = m_oTrainerForm.m_oCorrectAnswers[strOldText];
+                        }
+                        else
+                        {
+                            oNewTrainingResults[oElement.Key] = m_oTrainerForm.m_oTrainingResults[oElement.Key];
+                            oNewCorrectResults[oElement.Key] = m_oTrainerForm.m_oCorrectAnswers[oElement.Key];
+
+                            if (oElement.Key.Equals(m_strText))
+                            {
+                                bool bSomethingChanged = false;
+                                Dictionary<string, bool> oNewSubElements = new Dictionary<string, bool>();
+                                foreach (string strKey in oElement.Value.Keys)
+                                {
+                                    if (strKey.Equals(strOldText))
+                                    {
+                                        oNewSubElements[strNewText] = true;
+                                        bSomethingChanged = true;
+                                    }
+                                    else
+                                    {
+                                        oNewSubElements[strKey] = true;
+                                    }
+                                }
+                                if (bSomethingChanged)
+                                {
+                                    // use new subelements
+                                    oNewMindMap[oElement.Key] = oNewSubElements;
+                                }
+                                else
+                                {
+                                    // use old subelements
+                                    oNewMindMap[oElement.Key] = oElement.Value;
+                                }
+                            }
+                            else
+                            {
+                                oNewMindMap[oElement.Key] = oElement.Value;
+                            }
+                        }
+                    }
+
+                    m_oTrainerForm.m_oCorrectAnswers = oNewCorrectResults;
+                    m_oTrainerForm.m_oTrainingResults = oNewTrainingResults;
+                    m_oTrainerForm.m_oMindMap = oNewMindMap;
 
                     m_oTrainerForm.Save();
                 }
@@ -274,6 +344,19 @@ namespace MindmapTrainer
 
             if (m_bTreeViewInEditNodeMode)
             {
+                m_bTreeViewInEditNodeMode = false;
+
+                TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
+                MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
+                string strPrevious = currentNodeData.Text;
+                currentNodeData.Text = m_tbxEditNodeText.Text;
+                currentNode.Text = m_tbxEditNodeText.Text;
+                m_tbxEditNodeText.Visible = false;
+
+                if (currentNode.Parent != null)
+                {
+                    ((MindMapNode)currentNode.Parent.Tag).RenameElement(strPrevious, m_tbxEditNodeText.Text);
+                }
             }
             else
             {
@@ -998,25 +1081,7 @@ namespace MindmapTrainer
         {
             if (e.KeyCode == Keys.Enter)
             {
-                TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
-                MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
-                currentNodeData.Text = m_tbxEditNodeText.Text;
-                currentNode.Text = m_tbxEditNodeText.Text;
-                m_tbxEditNodeText.Visible = false;
-
-                if (currentNode.Parent != null)
-                {
-                    ((MindMapNode)currentNode.Parent.Tag).AddElement(m_tbxEditNodeText.Text);
-
-                    /*
-                    MindMapNode newNodeData = new Node("");
-
-                    TreeNode newNode = new TreeNode() { Tag = newNodeData };
-                    currentNode.Parent.Nodes.Add(newNode);
-                    StartEditingNode(newNode);
-                     */
-                }
-                //PopulateTreeView();
+                hiddenAcceptButton_Click(sender, EventArgs.Empty);
             }
         }
 
