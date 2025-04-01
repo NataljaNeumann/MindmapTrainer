@@ -207,6 +207,13 @@ namespace MindmapTrainer
             }
 
 
+            //===============================================================================================
+            /// <summary>
+            /// Renames a subelement of this node
+            /// </summary>
+            /// <param name="strOldText">Old name of subelement</param>
+            /// <param name="strNewText">New name of subelement</param>
+            //===============================================================================================
             public void RenameElement(string strOldText, string strNewText)
             {
                 if (m_oTrainerForm != null && m_strText != null)
@@ -272,6 +279,41 @@ namespace MindmapTrainer
                     m_oTrainerForm.m_oTrainingResults = oNewTrainingResults;
                     m_oTrainerForm.m_oMindMap = oNewMindMap;
 
+                    m_oTrainerForm.Save();
+                }
+            }
+
+
+            //===============================================================================================
+            /// <summary>
+            /// Detaches a sub-element with a particular name. The element is still kept in data
+            /// but it is not referenced anymore
+            /// </summary>
+            /// <param name="strName">The name(text) of subelement</param>
+            //===============================================================================================
+            public void DetachElement(string strName)
+            {
+                if (m_oTrainerForm != null && m_strText != null)
+                {
+                    bool bSomethingChanged = false;
+                    Dictionary<string, bool> oNewSubElements = new Dictionary<string, bool>();
+                    foreach (string strKey in m_oTrainerForm.m_oMindMap[m_strText].Keys)
+                    {
+                        if (strKey.Equals(strName))
+                        {
+                            bSomethingChanged = true;
+                        }
+                        else
+                        {
+                            oNewSubElements[strKey] = true;
+                        }
+                    }
+                    if (bSomethingChanged)
+                    {
+                        // use new subelements
+                        m_oTrainerForm.m_oMindMap[m_strText] = oNewSubElements;
+                    }
+  
                     m_oTrainerForm.Save();
                 }
             }
@@ -342,46 +384,52 @@ namespace MindmapTrainer
         private void hiddenAcceptButton_Click(object sender, EventArgs e)
         {
 
-            if (m_bTreeViewInEditNodeMode)
+            if (m_ctlTreeView.Visible)
             {
-                m_bTreeViewInEditNodeMode = false;
-
-                TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
-                MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
-                string strPrevious = currentNodeData.Text;
-                currentNodeData.Text = m_tbxEditNodeText.Text;
-                currentNode.Text = m_tbxEditNodeText.Text;
-                m_tbxEditNodeText.Visible = false;
-
-                if (currentNode.Parent != null)
+                if (m_bTreeViewInEditNodeMode)
                 {
-                    ((MindMapNode)currentNode.Parent.Tag).RenameElement(strPrevious, m_tbxEditNodeText.Text);
+                    m_bTreeViewInEditNodeMode = false;
+
+                    TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
+                    MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
+                    string strPrevious = currentNodeData.Text;
+                    currentNodeData.Text = m_tbxEditNodeText.Text;
+                    currentNode.Text = m_tbxEditNodeText.Text;
+                    m_tbxEditNodeText.Visible = false;
+
+                    if (currentNode.Parent != null)
+                    {
+                        ((MindMapNode)currentNode.Parent.Tag).RenameElement(strPrevious, m_tbxEditNodeText.Text);
+                    }
+                }
+                else
+                {
+
+                    TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
+                    MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
+                    currentNodeData.Text = m_tbxEditNodeText.Text;
+                    currentNode.Text = m_tbxEditNodeText.Text;
+                    m_tbxEditNodeText.Visible = false;
+
+                    if (m_oMindMap.ContainsKey(m_tbxEditNodeText.Text) && m_oMindMap[m_tbxEditNodeText.Text].Keys.Count > 0)
+                    {
+                        currentNode.Nodes.Add(new TreeNode("Loading...")); // Add placeholder node for child nodes
+                    }
+
+                    if (currentNode.Parent != null)
+                    {
+                        ((MindMapNode)currentNode.Parent.Tag).AddElement(m_tbxEditNodeText.Text);
+
+                        /*
+                        MindMapNode newNodeData = new Node("");
+
+                        TreeNode newNode = new TreeNode() { Tag = newNodeData };
+                        currentNode.Parent.Nodes.Add(newNode);
+                        StartEditingNode(newNode);
+                         */
+                    }
                 }
             }
-            else
-            {
-
-                TreeNode currentNode = (TreeNode)m_tbxEditNodeText.Tag;
-                MindMapNode currentNodeData = (MindMapNode)currentNode.Tag;
-                currentNodeData.Text = m_tbxEditNodeText.Text;
-                currentNode.Text = m_tbxEditNodeText.Text;
-                m_tbxEditNodeText.Visible = false;
-
-                if (currentNode.Parent != null)
-                {
-                    ((MindMapNode)currentNode.Parent.Tag).AddElement(m_tbxEditNodeText.Text);
-
-                    /*
-                    MindMapNode newNodeData = new Node("");
-
-                    TreeNode newNode = new TreeNode() { Tag = newNodeData };
-                    currentNode.Parent.Nodes.Add(newNode);
-                    StartEditingNode(newNode);
-                     */
-                }
-            }
-
-
         }
 
         //===================================================================================================
@@ -986,20 +1034,6 @@ namespace MindmapTrainer
             parentNode.Nodes.Add(newNode);
             parentNode.Expand();
 
-            /*
-            if (RightToLeftLayout)
-            {
-                m_tbxEditNodeText.Bounds = new Rectangle(
-                    newNode.Bounds.Right - 200,
-                    newNode.Bounds.Top,
-                    200, newNode.Bounds.Height);
-            }
-            else
-            {
-                m_tbxEditNodeText.Bounds = new Rectangle(newNode.Bounds.Location,
-                    new Size(200, newNode.Bounds.Height));
-            }
-             */
             ShowTextBoxForNode(newNode);
             m_tbxEditNodeText.Text = "";
             m_tbxEditNodeText.Tag = newNode;
@@ -1010,20 +1044,6 @@ namespace MindmapTrainer
             m_bTreeViewInEditNodeMode = true;
             ShowTextBoxForNode(node);
 
-            /*
-            if (RightToLeftLayout)
-            {
-                m_tbxEditNodeText.Bounds = new Rectangle(
-                    node.Bounds.Right - Math.Max(node.Bounds.Width * 11 / 10, 200),
-                    node.Bounds.Top,
-                    Math.Max(node.Bounds.Width * 11 / 10, 200), 
-                    node.Bounds.Height);
-            }
-            else
-            {
-                m_tbxEditNodeText.Bounds = new Rectangle(node.Bounds.Location,
-                    new Size(Math.Max(node.Bounds.Width * 11 / 10, 200), node.Bounds.Height));
-            }*/
             m_tbxEditNodeText.Text = node.Text;
             m_tbxEditNodeText.Tag = node;
         }
@@ -1061,14 +1081,16 @@ namespace MindmapTrainer
             m_tbxEditNodeText.Focus();
         }
 
-        private void DetachNode(TreeNode node)
+        private void DetachNode(TreeNode currentNode)
         {
-            if (node.Parent != null)
+            if (currentNode.Parent != null)
             {
-                node.Parent.Nodes.Remove(node);
-                m_ctlTreeView.Nodes.Add(node);
+                ((MindMapNode)currentNode.Parent.Tag).DetachElement(currentNode.Text);
+
+                currentNode.Parent.Nodes.Remove(currentNode);
             }
         }
+
         private void m_ctlTreeView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && m_ctlTreeView.SelectedNode != null)
