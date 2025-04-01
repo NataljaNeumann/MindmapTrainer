@@ -42,8 +42,8 @@ namespace MindmapTrainer
         {
 #if DEBUG
 #if DEBUG
-            string strSetCulture =
-             "af-ZA";
+            // string strSetCulture =
+            // "af-ZA";
             // "ar-SA";
             // "az-Latn-AZ";
             // "be-BY";
@@ -109,8 +109,8 @@ namespace MindmapTrainer
             // "wo-SN";
             // "so-SO";
             // "rw-RW";
-             System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo(strSetCulture);
-             System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(strSetCulture);
+            // System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo(strSetCulture);
+            // System.Threading.Thread.CurrentThread.CurrentUICulture = new CultureInfo(strSetCulture);
 #endif
 #endif
 
