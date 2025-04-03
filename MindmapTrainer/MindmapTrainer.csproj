@@ -811,6 +811,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MindmapTrainer-Header.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MindmapTrainer-Sidebar1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MindmapTrainer-Sidebar2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="MindmapTrainer.ico" />
     <Content Include="MindmapTrainerSmall.ico" />
   </ItemGroup>

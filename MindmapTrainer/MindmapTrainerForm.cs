@@ -670,9 +670,12 @@ namespace MindmapTrainer
         //===================================================================================================
         private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bool bNewView = false;
             try
             {
+                bNewView = m_ctlTreeView.Visible;
                 m_ctlMindmapNodeView.Hide();
+                m_ctlTreeView.Hide();
 
                 bool bRepeat = true;
                 while (bRepeat)
@@ -711,7 +714,10 @@ namespace MindmapTrainer
             }
             finally
             {
-                m_ctlMindmapNodeView.Show();
+                if (bNewView)
+                    m_ctlTreeView.Show();
+                else
+                    m_ctlMindmapNodeView.Show();
             }
         }
 
@@ -724,9 +730,13 @@ namespace MindmapTrainer
         //===================================================================================================
         private void intensivelyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            bool bNewView = false;
             try
             {
+                bNewView = m_ctlTreeView.Visible;
                 m_ctlMindmapNodeView.Hide();
+                m_ctlTreeView.Hide();
+
 
                 bool bRepeat = true;
                 while (bRepeat)
@@ -817,9 +827,11 @@ namespace MindmapTrainer
             }
             finally
             {
-                m_ctlMindmapNodeView.Show();
+                if (bNewView)
+                    m_ctlTreeView.Show();
+                else
+                    m_ctlMindmapNodeView.Show();
             }
-
         }
 
         //===================================================================================================
