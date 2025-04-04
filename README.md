@@ -18,4 +18,6 @@ Following references to pictures are supported:
 2. A path, relative to pictures folder.
 3. A path, relative to documents folder.
 
+The second picture must have same dimensions as first.
+
 More descriptions will follow
