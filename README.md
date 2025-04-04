@@ -7,11 +7,12 @@ Français, Español, Português, Italiano, Deutsch, По русски, Polski, �
 
 If you have a picture that needs to be described for correct answer. Place a reference to it in first subpoint.
 
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/1084a995-8536-4fb8-b3e0-b79213ec0146)
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
+
 
 If you have one picture as question and another one as answer then you can place a reference to answer picture in second subpoint.
 
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/d844fdf9-8049-4ef0-af71-d0fa4513baa8)
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 Following references to pictures are supported: 
 1. A full path to the picture.
