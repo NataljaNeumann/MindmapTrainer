@@ -24,6 +24,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MindmapTrainer
 {
@@ -37,12 +38,30 @@ namespace MindmapTrainer
 
         //===================================================================================================
         /// <summary>
+        /// Indicates if we have main picture
+        /// </summary>
+        bool m_bWithPicture;
+
+        //===================================================================================================
+        /// <summary>
+        /// A replacement picture to show, when user clicks the "Show answer" button
+        /// </summary>
+        string m_strReplacementPicture;
+
+        //===================================================================================================
+        /// <summary>
         /// Constructs a new SubjectTestForm object
         /// </summary>
         //===================================================================================================
         public SubjectTestForm()
         {
             InitializeComponent();
+
+            // set maximum size of the form
+            MaximumSize = new Size(
+                        (int)(Screen.PrimaryScreen.Bounds.Width * 0.95),
+                        (int)(Screen.PrimaryScreen.Bounds.Height * 0.95)
+                    );
         }
 
 
@@ -50,11 +69,26 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user clicks the 'Show it' button
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void buttonShow_Click(object sender, EventArgs e)
+        private void buttonShow_Click(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
+            if (m_strReplacementPicture != null)
+            {
+                try
+                {
+                    m_ctlMainPicture.Image = Image.FromFile(m_strReplacementPicture);
+                }
+                catch (Exception oEx)
+                {
+                    MessageBox.Show(oEx.Message);
+                }
+            }
+
             m_lblElements.Show();
             m_btnCorrectResult.Show();
             m_btnWrongResult.Show();
@@ -66,38 +100,210 @@ namespace MindmapTrainer
 
         //===================================================================================================
         /// <summary>
+        /// Tries to find out if the string represents a valid path
+        /// </summary>
+        /// <param name="strInput">Input string. Can be abolute or relative path</param>
+        /// <returns>The absolute path, represented by input string</returns>
+        //===================================================================================================
+        public static string ExtractPath(
+            string strInput
+            )
+        {
+            try
+            {
+                // Test for UNC path
+                if (Uri.IsWellFormedUriString(strInput, UriKind.Absolute) 
+                    && strInput.StartsWith(@"\\"))
+                {
+                    return strInput;
+                }
+
+                // Test for absolute path
+                if (Path.IsPathRooted(strInput))
+                {
+                    return strInput;
+                }
+
+                // Test for relative path to pictures directory
+                string strCombinedPath = 
+                    Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.MyPictures),
+                        strInput);
+                if (File.Exists(strCombinedPath))
+                {
+                    return strCombinedPath;
+                }
+
+                // Test for relative path to documents directory
+                strCombinedPath = 
+                    Path.Combine(
+                        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), 
+                        strInput);
+                if (File.Exists(strCombinedPath))
+                {
+                    return strCombinedPath;
+                }
+            }
+            catch (Exception)
+            {
+                // ignore, just return null
+            }
+
+            // No valid path found
+            return null;
+        }
+
+        
+        //===================================================================================================
+        /// <summary>
+        /// Dinamically sets the correct anser text to show
+        /// </summary>
+        /// <param name="strInputText">Text to show, can contain picture path in first two lines</param>
+        //===================================================================================================
+        public void SetText(
+            string strInputText
+            )
+        {
+            // Process the input text
+            string[] astrLines = strInputText.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+
+            try
+            {
+                if (astrLines.Length > 0 && astrLines[0].Length > 5)
+                {
+                    // Check if the first line is a valid image pat
+                    string strImagePath = ExtractPath(astrLines[0].Substring(2));
+                    if (strImagePath != null && File.Exists(strImagePath))
+                    {
+                        Image oOriginalImage = Image.FromFile(strImagePath);
+
+                        // Scale the image proportionally to fit the client width
+                        int nMaxPictureWidth = Screen.PrimaryScreen.Bounds.Width * 3 / 4;
+                        int nMaxPictureHeight = Screen.PrimaryScreen.Bounds.Height / 2;
+                        int nNewPictureWidth = oOriginalImage.Width;
+                        int nNewPictureHeight = oOriginalImage.Height;
+
+                        if (nNewPictureWidth > nMaxPictureWidth)
+                        {
+                            float scaleFactor = (float)nMaxPictureWidth / nNewPictureWidth;
+                            nNewPictureWidth = nMaxPictureWidth;
+                            nNewPictureHeight = (int)(nNewPictureHeight * scaleFactor);
+                        };
+
+                        if (nNewPictureHeight > nMaxPictureHeight)
+                        {
+                            float scaleFactor = (float)nMaxPictureHeight / nNewPictureHeight;
+                            nNewPictureWidth = (int)(nNewPictureWidth * scaleFactor);
+                            nNewPictureHeight = nMaxPictureHeight;
+                        };
+
+
+                        m_ctlMainPicture.Width = nNewPictureWidth;
+                        m_ctlMainPicture.Height = nNewPictureHeight;
+
+                        m_lblSubject.BackColor = System.Drawing.SystemColors.ControlDark;
+
+                        m_ctlMainPicture.Image = oOriginalImage;
+                        m_ctlMainPicture.Visible = true;
+                        m_bWithPicture = true;
+
+                        if (astrLines.Length > 1 && astrLines[1].Length > 5)
+                        {
+                            string strPathToSecondImage = ExtractPath(astrLines[1].Substring(2));
+                            if (strPathToSecondImage != null && File.Exists(strPathToSecondImage))
+                            {
+                                m_strReplacementPicture = strPathToSecondImage;
+
+                                // Skip the first two lines
+                                m_lblElements.Text =
+                                    string.Join(Environment.NewLine, astrLines, 2, astrLines.Length - 2);
+                                return;
+                            }
+                        }
+
+                        // Skip the first line
+                        m_lblElements.Text =
+                            string.Join(Environment.NewLine, astrLines, 1, astrLines.Length - 1);
+                        return;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                // ignore
+            }
+
+            // No picture path found
+            m_bWithPicture = false;
+            m_ctlMainPicture.Visible = false;
+            // Use all lines if no valid image path
+            m_lblElements.Text = strInputText; 
+            
+        }
+
+        //===================================================================================================
+        /// <summary>
         /// This is executed when the size of the tested sub-elements text changes
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void label2_SizeChanged(object sender, EventArgs e)
+        private void OnAnswerLabelSizeChanged(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             if (!m_lblElements.Text.Equals("points"))
             {
-                m_lblElements.Location = 
-                    new Point((Size.Width - m_lblElements.Size.Width) / 2, m_lblElements.Location.Y);
+                int nNewWidth;
+
+                if (m_bWithPicture)
+                {
+                    nNewWidth = ClientSize.Width > m_ctlMainPicture.Width + 20 ?
+                        Size.Width :
+                        Size.Width - ClientSize.Width + 20 + m_ctlMainPicture.Width;
+
+                    m_ctlMainPicture.Location = 
+                        new Point((nNewWidth - m_ctlMainPicture.Width) / 2, m_ctlMainPicture.Top);
+                    m_lblElements.Location =
+                        new Point((nNewWidth - m_lblElements.Size.Width) / 2, m_ctlMainPicture.Bottom + 10);
+                }
+                else
+                {
+                    nNewWidth = Size.Width;
+
+                    m_lblElements.Location =  
+                        new Point((nNewWidth - m_lblElements.Size.Width) / 2, m_lblElements.Location.Y);
+                }
+
+
 
                 Size oOldSize = Size;
                 Size oNewSize = new Size(
-                    Size.Width, m_lblElements.Location.Y + m_lblElements.Size.Height + 
-                    m_lblSubject.Location.Y*2 + m_btnCanel.Size.Height + 
-                    (m_lblElements.Location.Y - (m_lblSubject.Size.Height + m_lblSubject.Location.Y)) * 3);
+                    nNewWidth,
+                    m_lblElements.Bottom + 
+                    ClientRectangle.Top +
+                    m_lblSubject.Top * 6 + m_btnCanel.Height);
 
                 if (m_oOriginalPositions != null)
                     m_oOriginalPositions.Clear();
 
-                
-                if (oNewSize.Width > oNewSize.Height)
+
+                if (!m_bWithPicture)
                 {
-                    ReadyToUseImageInjection("MindmapTrainer-Header.jpg");
-                }
-                else
-                {
-                    ReadyToUseSideImageInjection("MindmapTrainer-Sidebar2.jpg");
+                    if (oNewSize.Width > oNewSize.Height)
+                    {
+                        ReadyToUseImageInjection("MindmapTrainer-Header.jpg");
+                    }
+                    else
+                    {
+                        ReadyToUseSideImageInjection("MindmapTrainer-Sidebar2.jpg");
+                    }
                 }
 
-                Size = new Size(Size.Width - oOldSize.Width + oNewSize.Width, Size.Height - oOldSize.Height + oNewSize.Height);
+                Size = new Size(
+                    Size.Width - oOldSize.Width + oNewSize.Width, 
+                    Size.Height - oOldSize.Height + oNewSize.Height);
             }
         }
 
@@ -106,10 +312,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user clicks the 'It is correct' button
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void buttonCorrect_Click(object sender, EventArgs e)
+        private void OnCorrectClick(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             DialogResult = DialogResult.Yes;
         }
@@ -118,10 +327,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user click the 'I was wrong' button
         /// </summary>
-        /// <param name="sender">Sende object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sende object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void buttonWrong_Click(object sender, EventArgs e)
+        private void OnWrongClick(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             DialogResult = DialogResult.No;
         }
@@ -130,10 +342,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user clicks the 'Cancel' button
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void OnCancelClick(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             DialogResult = DialogResult.Cancel;
         }
@@ -161,7 +376,9 @@ namespace MindmapTrainer
         /// </summary>
         /// <param name="strName">Name of the image, without directory specifications</param>
         //===================================================================================================
-        private void ReadyToUseSideImageInjection(string strImageName)
+        private void ReadyToUseSideImageInjection(
+            string strImageName
+            )
         {
             string strImagePath = System.IO.Path.Combine(Application.StartupPath, strImageName);
             if (System.IO.File.Exists(strImagePath))
@@ -190,7 +407,10 @@ namespace MindmapTrainer
         /// <param name="oSender">Sender object</param>
         /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void ResizeSideImageAlongWithForm(object oSender, EventArgs oEventArgs)
+        private void ResizeSideImageAlongWithForm(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             ResizeSideImageAndShiftElements();
         }
@@ -201,7 +421,9 @@ namespace MindmapTrainer
         /// </summary>
         /// <param name="strImagePath"></param>
         //===================================================================================================
-        private void LoadAndResizeSideImage(string strImagePath)
+        private void LoadAndResizeSideImage(
+            string strImagePath
+            )
         {
             m_oLoadedImage = Image.FromFile(strImagePath);
             ResizeSideImageAndShiftElements();
@@ -246,7 +468,9 @@ namespace MindmapTrainer
         /// </summary>
         /// <param name="nNewPictureWidth">New width of the picture</param>
         //===================================================================================================
-        private void ShiftOtherElementsLeftOrRight(int nWidthChange)
+        private void ShiftOtherElementsLeftOrRight(
+            int nWidthChange
+            )
         {
             foreach (Control ctl in m_oOriginalPositions.Keys)
             {
@@ -271,7 +495,9 @@ namespace MindmapTrainer
         /// </summary>
         /// <param name="strName">Name of the image, without directory specifications</param>
         //===================================================================================================
-        private void ReadyToUseImageInjection(string strImageName)
+        private void ReadyToUseImageInjection(
+            string strImageName
+            )
         {
             string strImagePath = System.IO.Path.Combine(Application.StartupPath, strImageName);
             if (System.IO.File.Exists(strImagePath))
@@ -300,7 +526,10 @@ namespace MindmapTrainer
         /// <param name="oSender">Sender object</param>
         /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void ResizeImageAlongWithForm(object oSender, EventArgs oEventArgs)
+        private void ResizeImageAlongWithForm(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             ResizeImageAndShiftElements();
         }
@@ -311,7 +540,9 @@ namespace MindmapTrainer
         /// </summary>
         /// <param name="strImagePath"></param>
         //===================================================================================================
-        private void LoadAndResizeImage(string strImagePath)
+        private void LoadAndResizeImage(
+            string strImagePath
+            )
         {
             m_oLoadedImage = Image.FromFile(strImagePath);
             ResizeImageAndShiftElements();
@@ -353,7 +584,9 @@ namespace MindmapTrainer
         /// </summary>
         /// <param name="nNewPictureHeight">New height of the picture</param>
         //===================================================================================================
-        private void ShiftOtherElementsUpOrDown(int nNewPictureHeight)
+        private void ShiftOtherElementsUpOrDown(
+            int nNewPictureHeight
+            )
         {
             foreach (Control ctl in m_oOriginalPositions.Keys)
             {

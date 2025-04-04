@@ -163,7 +163,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="m_lblElements.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 100</value>
+    <value>9, 93</value>
   </data>
   <data name="m_lblElements.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>48, 0, 48, 0</value>
@@ -329,6 +329,33 @@
   </data>
   <data name="&gt;&gt;m_btnCanel.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="m_ctlMainPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 93</value>
+  </data>
+  <data name="m_ctlMainPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 35</value>
+  </data>
+  <data name="m_ctlMainPicture.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="m_ctlMainPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="m_ctlMainPicture.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMainPicture.Name" xml:space="preserve">
+    <value>m_ctlMainPicture</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMainPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMainPicture.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_ctlMainPicture.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

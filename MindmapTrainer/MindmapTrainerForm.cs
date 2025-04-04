@@ -868,7 +868,7 @@ namespace MindmapTrainer
 
 
                     string subject = pair.Key;
-                    using (SubjectTestForm test = new SubjectTestForm() )
+                    using (SubjectTestForm test = new SubjectTestForm())
                     {
                         test.MouseMove += new System.Windows.Forms.MouseEventHandler(
                             this.MindmapTrainerForm_MouseMove);
@@ -877,11 +877,11 @@ namespace MindmapTrainer
                         StringBuilder b = new StringBuilder();
                         foreach (string s in m_oMindMap[pair.Key].Keys)
                             if (b.Length>0)
-                                b.AppendFormat("\r\n> {0}",s);
+                                b.AppendFormat("\r\n> {0}", s);
                             else
-                                b.AppendFormat("> {0}",s);
+                                b.AppendFormat("> {0}", s);
 
-                        test.m_lblElements.Text = b.ToString();
+                        test.SetText(b.ToString());
 
                         switch (test.ShowDialog())
                         {
