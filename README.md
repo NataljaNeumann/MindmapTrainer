@@ -5,7 +5,7 @@ Français, Español, Português, Italiano, Deutsch, По русски, Polski, �
 
 <hr/>
 
-If you have a picture that needs to be described for correct answer. Place a reference to it in first subpoint.
+If you have a picture that needs to be described for correct answer, then place a reference to it in first subpoint.
 
 ![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
