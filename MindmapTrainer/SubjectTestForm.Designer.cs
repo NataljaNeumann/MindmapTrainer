@@ -121,6 +121,7 @@ namespace MindmapTrainer
             this.MinimizeBox = false;
             this.Name = "SubjectTestForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.HelpRequested += new System.Windows.Forms.HelpEventHandler(this.OnHelpRequested);
             ((System.ComponentModel.ISupportInitialize)(this.m_ctlMainPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
