@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddNode" xml:space="preserve">
-    <value>Add Node</value>
+  <data xml:space="preserve" name="AddNode">
+    <value>མཐུད་མཚམས་ཁ་སྣོན།</value>
   </data>
-  <data name="DetachNode" xml:space="preserve">
-    <value>Detach Node</value>
+  <data xml:space="preserve" name="DetachNode">
+    <value>མཐུད་མཚམས་བགོས་པ།</value>
   </data>
-  <data name="EditNode" xml:space="preserve">
-    <value>Edit Node</value>
+  <data xml:space="preserve" name="EditNode">
+    <value>རྩོམ་སྒྲིག་སྦྲེལ་མཐུད།</value>
   </data>
-  <data name="ErrorSavingFile" xml:space="preserve">
-    <value>Error while saving file</value>
+  <data xml:space="preserve" name="ErrorSavingFile">
+    <value>ཡིག་ཆ་ཉར་ཚགས་བྱེད་མ་ཐུབ། </value>
   </data>
 </root>

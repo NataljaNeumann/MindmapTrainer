@@ -117,16 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AddNode" xml:space="preserve">
-    <value>Add Node</value>
+  <data xml:space="preserve" name="AddNode">
+    <value>노드 추가</value>
   </data>
-  <data name="DetachNode" xml:space="preserve">
-    <value>Detach Node</value>
+  <data xml:space="preserve" name="DetachNode">
+    <value>분할 노드</value>
   </data>
-  <data name="EditNode" xml:space="preserve">
-    <value>Edit Node</value>
+  <data xml:space="preserve" name="EditNode">
+    <value>노드 편집</value>
   </data>
-  <data name="ErrorSavingFile" xml:space="preserve">
-    <value>Error while saving file</value>
+  <data xml:space="preserve" name="ErrorSavingFile">
+    <value>파일을 저장하지 못했습니다. </value>
   </data>
 </root>
