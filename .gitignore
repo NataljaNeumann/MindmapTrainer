@@ -4,3 +4,5 @@ MindmapTrainer/bin/Debug/**
 MindmapTrainer/bin/*.zip
 *.user
 *.suo
+*.exe
+*.csv
