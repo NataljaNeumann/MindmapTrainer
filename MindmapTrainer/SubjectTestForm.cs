@@ -353,6 +353,28 @@ namespace MindmapTrainer
             DialogResult = DialogResult.Cancel;
         }
 
+
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the F1 key
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void OnHelpRequested(object oSender, HelpEventArgs oEventArgs)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(
+                    System.IO.Path.Combine(Application.StartupPath, "Readme.html"));
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show(oEx.Message);
+            }
+
+        }
+
         #region side image injection part
         //===================================================================================================
         /// <summary>
@@ -595,5 +617,6 @@ namespace MindmapTrainer
             }
         }
         #endregion
+
     }
 }
