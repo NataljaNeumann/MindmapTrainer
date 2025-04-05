@@ -169,4 +169,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Trener mape uma</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Promjena prikaza </value>
+  </data>
 </root>

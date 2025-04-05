@@ -163,4 +163,7 @@
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
     <value>Файли карт розуму|*.MindMap.xml</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Змінити вигляд </value>
+  </data>
 </root>

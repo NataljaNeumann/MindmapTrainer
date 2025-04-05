@@ -163,4 +163,7 @@
   <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
     <value>Zihin Haritası Dosyaları|*.MindMap.xml</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Görünümü değiştir </value>
+  </data>
 </root>

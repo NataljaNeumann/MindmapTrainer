@@ -199,4 +199,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་མཁན།</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>མཐོང་སྣང་བརྗེ་སྒྱུར། </value>
+  </data>
 </root>

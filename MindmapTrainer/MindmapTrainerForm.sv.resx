@@ -163,4 +163,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Mind map tränare</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Ändra vy </value>
+  </data>
 </root>

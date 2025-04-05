@@ -169,4 +169,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Тренер за умствена мапа</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Променете го приказот </value>
+  </data>
 </root>

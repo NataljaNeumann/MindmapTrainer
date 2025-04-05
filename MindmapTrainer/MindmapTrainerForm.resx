@@ -196,7 +196,7 @@
     <value>76, 20</value>
   </data>
   <data name="m_ctlToggleGUI.Text" xml:space="preserve">
-    <value>Toggle GUI</value>
+    <value>Toggle view</value>
   </data>
   <data name="m_oMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>

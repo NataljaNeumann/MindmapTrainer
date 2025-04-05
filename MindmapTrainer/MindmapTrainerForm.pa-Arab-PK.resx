@@ -202,4 +202,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>مائنڈ میپ ٹرینر</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>نظارہ بدلو </value>
+  </data>
 </root>

@@ -166,4 +166,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>ਮਨ ਦਾ ਨਕਸ਼ਾ ਟ੍ਰੇਨਰ</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>ਦ੍ਰਿਸ਼ ਬਦਲੋ </value>
+  </data>
 </root>

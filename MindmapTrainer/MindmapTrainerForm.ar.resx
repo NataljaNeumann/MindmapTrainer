@@ -210,4 +210,7 @@
   <data name="$this.Text" xml:space="preserve">
     <value>مدرب الخرائط الذهنية</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>تبديل العرض </value>
+  </data>
 </root>
