@@ -17,10 +17,10 @@
       in form of mind maps: collect the points that you need to know and to remeber in a list, and let the program train you. The software will present the subjects, 
       while you yourself decide, if you could recalled the points correctly. The usual training is done in text form, but you can also use pictures. 
       If you have a picture that needs to be described for correct answer, then place a reference to it in first subpoint.
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎If you have one picture as assignment and another one as answer then you can place a reference to answer picture in second subpoint.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 Following references to pictures are supported:
 1. A full path to the picture.
@@ -42,10 +42,10 @@ Following references to pictures are supported:
       Le logiciel présentera les sujets et vous permettra de déterminer si vous avez bien mémorisé les points. L'entraînement se fait généralement sous forme de texte, 
       mais vous pouvez également utiliser des images. Si vous avez une image à décrire pour obtenir une réponse correcte, ajoutez-y une référence dans le premier sous-point.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Si vous avez une image comme devoir et une autre comme réponse, vous pouvez ajouter une référence à l'image de réponse dans le deuxième sous-point.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Les références suivantes aux images sont prises en charge :
 1. Indication du chemin complet vers l'image.
@@ -68,10 +68,10 @@ Following references to pictures are supported:
       La formación habitual se realiza en formato de texto, pero también puedes usar imágenes.
       Si tienes una imagen que necesita ser descrita para obtener la respuesta correcta, incluye una referencia a ella en el primer subpunto.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Si tiene una imagen como tarea y otra como respuesta, puede incluir una referencia a la imagen de la respuesta en el segundo subpunto.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Se admiten las siguientes referencias a imágenes:
 1. Especificar la ruta completa de la imagen.
@@ -94,10 +94,10 @@ Following references to pictures are supported:
       O treino normal é feito em formato de texto, mas também pode utilizar imagens.
       Se tiver uma imagem que precisa de ser descrita para uma resposta correta, coloque uma referência à mesma no primeiro subponto.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Se tiver uma imagem como tarefa e outra como resposta, pode colocar uma referência para a imagem da resposta no segundo subponto.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎As seguintes referências a imagens são suportadas:
 1. Especificação de um caminho completo para a imagem.
@@ -120,10 +120,10 @@ Following references to pictures are supported:
       L'allenamento usuale avviene in forma di testo, ma puoi anche usare immagini.
       Se hai un'immagine che deve essere descritta per una risposta corretta, inserisci un riferimento ad essa nel primo sottopunto.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Se hai un'immagine come compito e un'altra come risposta, puoi inserire un riferimento all'immagine di risposta nel secondo sottopunto.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Sono supportati i seguenti riferimenti alle immagini:
 1. Specifica di un percorso completo all'immagine.
@@ -146,10 +146,10 @@ Following references to pictures are supported:
       Üblicherweise erfolgt das Training in Textform, Sie können aber auch Bilder verwenden.
       Wenn Sie ein Bild haben, das für die richtige Antwort beschrieben werden muss, verweisen Sie im ersten Unterpunkt darauf.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Wenn Sie ein Bild als Aufgabe und ein weiteres als Antwort haben, können Sie im zweiten Unterpunkt einen Verweis auf das Antwortbild einfügen.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Folgende Bildverweise werden unterstützt:
 1. Angabe des vollständigen Pfads zum Bild.
@@ -172,10 +172,10 @@ Following references to pictures are supported:
       Обычное обучение проводится в текстовой форме, но вы также можете использовать изображения.
       Если у вас есть изображение, которое нужно описать для правильного ответа, то разместите ссылку на него в первом подпункте.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Если у вас есть одна картинка в качестве задания, а другая в качестве ответа, то вы можете разместить ссылку на картинку ответа во втором подпункте.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Поддерживаются следующие ссылки на картинки:
 1. Указание полного пути к картинке.
@@ -198,10 +198,10 @@ Following references to pictures are supported:
       Zwykłe szkolenie odbywa się w formie tekstowej, ale możesz również użyć obrazków.
       Jeśli masz obrazek, który należy opisać, aby uzyskać poprawną odpowiedź, umieść do niego odniesienie w pierwszym podpunkcie.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Jeśli masz jeden obrazek jako zadanie i drugi jako odpowiedź, możesz umieścić odniesienie do obrazka odpowiedzi w drugim podpunkcie.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Obsługiwane są następujące odniesienia do obrazków:
 1. Określenie pełnej ścieżki do obrazka.
@@ -224,10 +224,10 @@ Following references to pictures are supported:
       θα μπορούσατε να θυμηθείτε σωστά τα σημεία. Η συνηθισμένη εκπαίδευση γίνεται σε μορφή κειμένου, αλλά μπορείτε να χρησιμοποιήσετε και εικόνες.
       Εάν έχετε μια εικόνα που πρέπει να περιγραφεί για σωστή απάντηση, τότε τοποθετήστε μια αναφορά σε αυτήν στο πρώτο υποσημείο.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Εάν έχετε μια εικόνα ως ανάθεση και μια άλλη ως απάντηση, μπορείτε να τοποθετήσετε μια αναφορά στην εικόνα απάντησης στο δεύτερο υποσημείο.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Υποστηρίζονται οι ακόλουθες αναφορές σε εικόνες:
 1. Προδιαγραφή μιας πλήρους διαδρομής προς την εικόνα.
@@ -250,10 +250,10 @@ Following references to pictures are supported:
       De gebruikelijke training wordt gedaan in tekstvorm, maar je kunt ook afbeeldingen gebruiken.
       Als je een afbeelding hebt die beschreven moet worden voor het juiste antwoord, plaats dan een verwijzing ernaar in het eerste subpunt.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Als u één afbeelding als opdracht hebt en een andere als antwoord, kunt u een verwijzing naar de antwoordafbeelding in het tweede subpunt plaatsen.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎De volgende verwijzingen naar afbeeldingen worden ondersteund:
 1. Specificatie van een volledig pad naar de afbeelding.
@@ -276,10 +276,10 @@ Following references to pictures are supported:
       Den sædvanlige træning foregår i tekstform, men du kan også bruge billeder.
       Hvis du har et billede, der skal beskrives for korrekt svar, så placer en henvisning til det i første underpunkt.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Hvis du har et billede som opgave og et andet som svar, kan du placere en reference til svarbillede i andet underpunkt.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Følgende referencer til billeder understøttes:
 1. Specifikation af en fuld sti til billedet.
@@ -302,10 +302,10 @@ Following references to pictures are supported:
       Tavallinen koulutus tehdään tekstimuodossa, mutta voit käyttää myös kuvia.
       Jos sinulla on kuva, jota on kuvailtava oikean vastauksen saamiseksi, laita siihen viittaus ensimmäiseen alakohtaan.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Jos sinulla on yksi kuva tehtävänä ja toinen vastauksena, voit sijoittaa viittauksen vastauskuvaan toiseen alakohtaan.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Seuraavia viittauksia kuviin tuetaan:
 1. Kuvan täydellisen polun määrittely.
@@ -328,10 +328,10 @@ Following references to pictures are supported:
       Den vanliga utbildningen sker i textform, men du kan även använda bilder.
       Om du har en bild som behöver beskrivas för korrekt svar, hänvisa sedan till den i första underpunkten.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎If you have one picture as assignment and another one as answer then you can place a reference to answer picture in second subpoint.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Following references to pictures are supported:
 1. A full path to the picture.
@@ -354,10 +354,10 @@ Following references to pictures are supported:
       Normal eğitim metin biçiminde yapılır, ancak resimler de kullanabilirsiniz.
       Doğru cevap için tanımlanması gereken bir resminiz varsa, ilk alt noktaya buna bir referans yerleştirin.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎Eğer ödev olarak bir resminiz ve cevap olarak başka bir resminiz varsa, ikinci alt noktada cevap resmine bir referans yerleştirebilirsiniz.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎Resimlere aşağıdaki referanslar desteklenmektedir:
 1. Resme giden tam bir yolun belirtilmesi.
@@ -379,10 +379,10 @@ Following references to pictures are supported:
       通常的训练以文本形式进行，但您也可以使用图片。
       如果您有需要描述以得到正确答案的图片，请在第一个子点中引用它。
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎如果您有一张图片作为作业，另一张图片作为答案，那么您可以在第二个子点中放置对答案图片的引用。
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎支持以下图片引用：
 1. 指定图片的完整路径。
@@ -405,10 +405,10 @@ Following references to pictures are supported:
       而您自己決定。通常的訓練都是以文字形式進行，但也可以使用圖片。
       如果您有一張需要描述才能獲得正確答案的圖片，請在第一個子點中放置對其的引用。
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎如果您有一張圖片作為作業，另一張圖片作為答案，那麼您可以在第二個子點中放置對答案圖片的引用。
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎支援以下圖片引用：
 1. 圖片的完整路徑規範。
@@ -431,10 +431,10 @@ Following references to pictures are supported:
       ポイントを正しく思い出せたかどうかを自分で判断します。通常のトレーニングはテキスト形式で行われますが、画像を使用することもできます。
       正解のために説明する必要がある画像がある場合は、最初のサブポイントにその画像への参照を配置します。
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎課題として 1 枚の写真があり、回答として別の写真がある場合は、2 番目のサブポイントに回答の写真への参照を配置できます。
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎次の写真への参照がサポートされています:
 1. 写真へのフル パスの指定。
@@ -456,10 +456,10 @@ Following references to pictures are supported:
       소프트웨어가 과목을 제시하고, 요점을 올바르게 기억했는지 스스로 판단합니다. 일반적인 훈련은 텍스트 형식으로 이루어지지만 그림을 사용할 수도 있습니다.
       정답을 위해 설명해야 하는 그림이 있는 경우 첫 번째 하위 항목에 참조를 넣습니다.
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎과제로 한 장의 사진을, 답안으로 다른 사진을 사용하는 경우 두 번째 하위 항목에 답안 사진에 대한 참조를 넣을 수 있습니다.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎다음과 같은 사진 참조가 지원됩니다.
 1. 사진에 대한 전체 경로 지정.
@@ -481,10 +481,10 @@ Following references to pictures are supported:
       सॉफ्टवेयर विषयों को प्रस्तुत करेगा, जबकि आप स्वयं तय करेंगे कि क्या आप बिंदुओं को सही ढंग से याद कर पाए हैं। सामान्य प्रशिक्षण पाठ के रूप में किया जाता है, लेकिन आप चित्रों का उपयोग भी कर सकते हैं। 
       यदि आपके पास कोई चित्र है जिसे सही उत्तर के लिए वर्णित करने की आवश्यकता है, तो पहले उप-बिंदु में इसका संदर्भ दें।
     
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎यदि आपके पास असाइनमेंट के रूप में एक चित्र है और उत्तर के रूप में दूसरा है, तो आप दूसरे उप-बिंदु में उत्तर चित्र का संदर्भ दे सकते हैं।
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‎चित्रों के लिए निम्नलिखित संदर्भ समर्थित हैं:
 1. चित्र के लिए पूर्ण पथ का विनिर्देशन।
@@ -507,10 +507,10 @@ Following references to pictures are supported:
         عادةً ما يتم التدريب على شكل نص، ولكن يمكنك أيضًا استخدام الصور.
         إذا كانت لديك صورة تحتاج إلى وصف للإجابة الصحيحة، فضع إشارة إليها في النقطة الفرعية الأولى.
       
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‎إذا كانت لديك صورة كواجب وأخرى كإجابة، فيمكنك وضع مرجع لصورة الإجابة في النقطة الفرعية الثانية.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‏المراجع التالية للصور مدعومة:
 1. تحديد مسار كامل للصورة.
@@ -533,10 +533,10 @@ Following references to pictures are supported:
         התוכנה תציג את הנושאים, בזמן שאתה בעצמך מחליט, אם אתה יכול לזכור את הנקודות בצורה נכונה. ההדרכה הרגילה מתבצעת בצורת טקסט, אך ניתן להשתמש גם בתמונות.
         אם יש לך תמונה שצריך לתאר כדי לקבל תשובה נכונה, הכנס אליה הפניה בסעיף המשנה הראשון.
       
-![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71))  
+![MindMapTrainer-Sample1](https://github.com/user-attachments/assets/5d21d45b-519a-43fa-a92c-1a453f88ea71)
 
 ‏אם יש לך תמונה אחת בתור מטלה ועוד אחת בתור תשובה אז אתה יכול לשים הפניה לתמונת תשובה בסעיף משנה שני.
-![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c))  
+![MindMapTrainer-Sample2](https://github.com/user-attachments/assets/4cd989c6-ad2c-40f6-83c0-5163e850aa3c)
 
 ‏ההפניות הבאות לתמונות נתמכות:
 1. מפרט של נתיב מלא לתמונה.
@@ -552,72 +552,72 @@ Following references to pictures are supported:
 
 <hr/>
 # Keywords for all the langages:
-* Gratis Windows-program vir eksamenvoorbereiding. Gratis breinkaart opleiding app.
-* ለፈተና ዝግጅት ነፃ የዊንዶውስ ፕሮግራም. ነጻ የአእምሮ ካርታ ስልጠና መተግበሪያ.
-* برنامج ويندوز مجاني للتحضير للامتحانات. تطبيق مجاني للتدريب على الخرائط الذهنية.
-* Անվճար Windows ծրագիր քննությունների նախապատրաստման համար։ Մտքի քարտեզի ուսուցման անվճար հավելված:
-* Pulsuz Windows proqramı imtahana hazırlıq üçün. Pulsuz ağıl xəritəsi təlim proqramı.
-* Бясплатная праграма для windows для падрыхтоўкі да іспытаў. Бясплатнае навучальнае прыкладанне для разумовых карт.
-* Besplatan Windows program za pripremu ispita. Besplatna aplikacija za obuku mapa uma.
-* Безплатна Windows програма за подготовка за изпити. Безплатно приложение за обучение по мисловна карта.
-* 用於考試準備的免費 Windows 程式。免費心智圖訓練應用程式。
-* 用于考试准备的免费 Windows 程序。免费思维导图培训应用程序。
-* Gratis Windows-program til eksamensforberedelse. Gratis mindmap træning app.
-* Kostenloses Windows-Programm für Prüfungsvorbereitungen. Kostenlose Mindmap-Trainings-App.
-* Free Windows program for exam preparation. Free mind mapping training app.
-* Tasuta Windowsi programm eksamiteks valmistumiseks. Tasuta mõttekaardi koolitusrakendus.
-* Ilmainen Windows-ohjelma kokeisiin valmistautumiseen. Ilmainen mielenkarttaharjoitussovellus.
-* Programme Windows gratuit pour la préparation aux examens. Application gratuite de formation sur les cartes mentales.
-* უფასო Windows პროგრამა გამოცდისთვის მოსამზადებლად. უფასო გონების რუქის სასწავლო აპლიკაცია.
-* Δωρεάν πρόγραμμα Windows για προετοιμασία εξετάσεων. Δωρεάν εφαρμογή εκπαίδευσης μυαλού χάρτη.
-* תוכנית Windows בחינם להכנה לבחינה. אפליקציית אימון מפות חשיבה בחינם.
-* परीक्षा की तैयारी के लिए निःशुल्क विंडोज़ प्रोग्राम। निःशुल्क माइंड मैप प्रशिक्षण ऐप।
-* Mmemme Windows efu maka nkwadebe ule. Ngwa ọzụzụ maapụ uche efu.
-* Program Windows gratis untuk persiapan ujian. Aplikasi pelatihan peta pikiran gratis.
-* Ókeypis Windows forrit til að undirbúa próf. Ókeypis hugarkortsþjálfunarforrit.
-* Programma Windows gratuito per la preparazione agli esami. App gratuita per allenarsi con mappe mentali.
-* 試験準備のための無料の Windows プログラム。無料のマインドマップトレーニングアプリ。
-* Емтиханға дайындалуға арналған тегін Windows бағдарламасы. Ақыл картасын оқытуға арналған ақысыз қолданба.
-* Programa gratuït de Windows per a la preparació d'exàmens. Aplicació gratuïta d'entrenament de mapes mentals.
-* កម្មវិធី Windows ឥតគិតថ្លៃសម្រាប់ត្រៀមប្រឡង។ កម្មវិធីបណ្តុះបណ្តាលផែនទីចិត្តដោយឥតគិតថ្លៃ។
-* Экзаменге даярдануу үчүн акысыз Windows программасы. Акысыз акыл картасын окутуу колдонмо.
-* 시험 준비를 위한 무료 Windows 프로그램입니다. 무료 마인드맵 훈련 앱.
-* Besplatni Windows program za pripremu ispita. Besplatna aplikacija za obuku umnih mapa.
-* Bernameya Windows-ê ya belaş ji bo amadekirina azmûnê. Serlêdana perwerdehiya nexşeya hişê belaş.
-* Bezmaksas Windows programma eksāmenu sagatavošanai. Bezmaksas domu karšu apmācības lietotne.
-* Nemokama programa windows pasiruošti egzaminams. Nemokama minčių žemėlapio mokymo programa.
-* Program Windows percuma untuk persediaan peperiksaan. Aplikasi latihan peta minda percuma.
-* Бесплатна Windows програма за подготовка на испит. Бесплатна апликација за обука на мапи на умот.
-* Шалгалтанд бэлтгэх үнэгүй Windows програм. Оюун санааны газрын зураг сургалтын үнэгүй програм.
-* Gratis Windows-programma voor examenvoorbereiding. Gratis mindmap-trainingsapp.
-* Gratis Windows-program for eksamensforberedelse. Gratis app for tankekarttrening.
-* د ازموینې چمتو کولو لپاره وړیا وینډوز برنامه. د وړیا ذهن نقشې روزنې ایپ.
-* برنامه رایگان ویندوز برای آمادگی امتحان. اپلیکیشن رایگان آموزش نقشه ذهن.
-* Darmowy program Windows do przygotowania do egzaminu. Bezpłatna aplikacja do treningu mapy myśli.
-* Programa gratuito do Windows para preparação para exames. Aplicativo gratuito de treinamento de mapas mentais.
-* Programa gratuito do Windows para preparação para exames. Aplicação gratuita de treinamento de mapas mentais.
-* ਪ੍ਰੀਖਿਆ ਦੀ ਤਿਆਰੀ ਲਈ ਮੁਫਤ ਵਿੰਡੋਜ਼ ਪ੍ਰੋਗਰਾਮ। ਮੁਫਤ ਦਿਮਾਗ ਦਾ ਨਕਸ਼ਾ ਸਿਖਲਾਈ ਐਪ.
-* امتحان دی تیاری لئی مفت ونڈوز پروگرام۔ مفت مائنڈ میپ ٹریننگ ایپ۔
-* Program Windows gratuit pentru pregătirea examenului. Aplicație gratuită de antrenament pentru hărți mentale.
-* Бесплатная программа для Windows для подготовки к экзаменам. Бесплатное приложение для обучения интеллект-картам.
-* परीक्षायाः सज्जतायै निःशुल्कं विण्डोज कार्यक्रमः। निःशुल्क मन मानचित्र प्रशिक्षण एप्लिकेशन।
-* Gratis Windows-program för att förbereda examen. Gratis app för träning av tankekarta.
-* Бесплатан Виндовс програм за припрему испита. Бесплатна апликација за обуку мапа ума.
-* Bezplatný program Windows na prípravu na skúšku. Bezplatná aplikácia na tréning myšlienkových máp.
-* Brezplačni Windows program za pripravo na izpit. Brezplačna aplikacija za usposabljanje z miselnimi zemljevidi.
-* Barnaamijka Daaqadaha bilaashka ah ee diyaarinta imtixaanka. App-ka tababarka maskaxda ee bilaashka ah.
-* Programa gratuito de Windows para preparación de exámenes. Aplicación gratuita para entrenar mapas mentales.
-* Барномаи ройгони Windows барои омодагӣ ба имтиҳонҳо. Барномаи омӯзишии харитаи ақл.
-* โปรแกรม Windows ฟรีสำหรับเตรียมสอบ แอพฝึกอบรมแผนที่ความคิดฟรี
-* ཡིག་རྒྱུགས་གྲ་སྒྲིག་ཆེད་དུ་རིན་མེད་ཝིན་ཌོ་ལས་རིམ། སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་མཉེན་ཆས།
-* ንፈተና ምድላው ዝኸውን ነጻ ፕሮግራም ዊንዶውስ። ነጻ ናይ ኣእምሮ ካርታ ስልጠና ኣፕ።
-* Bezplatný program Windows pro přípravu na zkoušku. Bezplatná aplikace pro trénink myšlenkových map.
-* Sınava hazırlık için ücretsiz Windows programı. Ücretsiz zihin haritası eğitimi uygulaması.
-* Synaga taýýarlyk üçin mugt Windows programmasy. Mugt akyl kartasy okuw programmasy.
-* Безкоштовна програма Windows для підготовки до іспитів. Безкоштовний навчальний додаток для розумових карт.
-* Ingyenes Windows program a vizsgára való felkészüléshez. Ingyenes gondolattérkép képzési alkalmazás.
-* Imtihonga tayyorgarlik ko'rish uchun bepul Windows dasturi. Bepul aql xaritasi o'quv dasturi.
-* Chương trình Windows miễn phí để luyện thi. Ứng dụng đào tạo bản đồ tư duy miễn phí.
-* Prograamu Windows buy maye ngir waajal examen. Aplikaasioŋu tàggat kàrtu xel bu amul fayda.
-* Eto Windows ọfẹ fun igbaradi idanwo. Free okan map ikẹkọ app.
-* Porogaramu yubuntu ya Windows yo gutegura ibizamini. Porogaramu yubumenyi bwikarita yubuntu.
+- Gratis Windows-program vir eksamenvoorbereiding. Gratis breinkaart opleiding app.
+- ለፈተና ዝግጅት ነፃ የዊንዶውስ ፕሮግራም. ነጻ የአእምሮ ካርታ ስልጠና መተግበሪያ.
+- برنامج ويندوز مجاني للتحضير للامتحانات. تطبيق مجاني للتدريب على الخرائط الذهنية.
+- Անվճար Windows ծրագիր քննությունների նախապատրաստման համար։ Մտքի քարտեզի ուսուցման անվճար հավելված:
+- Pulsuz Windows proqramı imtahana hazırlıq üçün. Pulsuz ağıl xəritəsi təlim proqramı.
+- Бясплатная праграма для windows для падрыхтоўкі да іспытаў. Бясплатнае навучальнае прыкладанне для разумовых карт.
+- Besplatan Windows program za pripremu ispita. Besplatna aplikacija za obuku mapa uma.
+- Безплатна Windows програма за подготовка за изпити. Безплатно приложение за обучение по мисловна карта.
+- 用於考試準備的免費 Windows 程式。免費心智圖訓練應用程式。
+- 用于考试准备的免费 Windows 程序。免费思维导图培训应用程序。
+- Gratis Windows-program til eksamensforberedelse. Gratis mindmap træning app.
+- Kostenloses Windows-Programm für Prüfungsvorbereitungen. Kostenlose Mindmap-Trainings-App.
+- Free Windows program for exam preparation. Free mind mapping training app.
+- Tasuta Windowsi programm eksamiteks valmistumiseks. Tasuta mõttekaardi koolitusrakendus.
+- Ilmainen Windows-ohjelma kokeisiin valmistautumiseen. Ilmainen mielenkarttaharjoitussovellus.
+- Programme Windows gratuit pour la préparation aux examens. Application gratuite de formation sur les cartes mentales.
+- უფასო Windows პროგრამა გამოცდისთვის მოსამზადებლად. უფასო გონების რუქის სასწავლო აპლიკაცია.
+- Δωρεάν πρόγραμμα Windows για προετοιμασία εξετάσεων. Δωρεάν εφαρμογή εκπαίδευσης μυαλού χάρτη.
+- תוכנית Windows בחינם להכנה לבחינה. אפליקציית אימון מפות חשיבה בחינם.
+- परीक्षा की तैयारी के लिए निःशुल्क विंडोज़ प्रोग्राम। निःशुल्क माइंड मैप प्रशिक्षण ऐप।
+- Mmemme Windows efu maka nkwadebe ule. Ngwa ọzụzụ maapụ uche efu.
+- Program Windows gratis untuk persiapan ujian. Aplikasi pelatihan peta pikiran gratis.
+- Ókeypis Windows forrit til að undirbúa próf. Ókeypis hugarkortsþjálfunarforrit.
+- Programma Windows gratuito per la preparazione agli esami. App gratuita per allenarsi con mappe mentali.
+- 試験準備のための無料の Windows プログラム。無料のマインドマップトレーニングアプリ。
+- Емтиханға дайындалуға арналған тегін Windows бағдарламасы. Ақыл картасын оқытуға арналған ақысыз қолданба.
+- Programa gratuït de Windows per a la preparació d'exàmens. Aplicació gratuïta d'entrenament de mapes mentals.
+- កម្មវិធី Windows ឥតគិតថ្លៃសម្រាប់ត្រៀមប្រឡង។ កម្មវិធីបណ្តុះបណ្តាលផែនទីចិត្តដោយឥតគិតថ្លៃ។
+- Экзаменге даярдануу үчүн акысыз Windows программасы. Акысыз акыл картасын окутуу колдонмо.
+- 시험 준비를 위한 무료 Windows 프로그램입니다. 무료 마인드맵 훈련 앱.
+- Besplatni Windows program za pripremu ispita. Besplatna aplikacija za obuku umnih mapa.
+- Bernameya Windows-ê ya belaş ji bo amadekirina azmûnê. Serlêdana perwerdehiya nexşeya hişê belaş.
+- Bezmaksas Windows programma eksāmenu sagatavošanai. Bezmaksas domu karšu apmācības lietotne.
+- Nemokama programa windows pasiruošti egzaminams. Nemokama minčių žemėlapio mokymo programa.
+- Program Windows percuma untuk persediaan peperiksaan. Aplikasi latihan peta minda percuma.
+- Бесплатна Windows програма за подготовка на испит. Бесплатна апликација за обука на мапи на умот.
+- Шалгалтанд бэлтгэх үнэгүй Windows програм. Оюун санааны газрын зураг сургалтын үнэгүй програм.
+- Gratis Windows-programma voor examenvoorbereiding. Gratis mindmap-trainingsapp.
+- Gratis Windows-program for eksamensforberedelse. Gratis app for tankekarttrening.
+- د ازموینې چمتو کولو لپاره وړیا وینډوز برنامه. د وړیا ذهن نقشې روزنې ایپ.
+- برنامه رایگان ویندوز برای آمادگی امتحان. اپلیکیشن رایگان آموزش نقشه ذهن.
+- Darmowy program Windows do przygotowania do egzaminu. Bezpłatna aplikacja do treningu mapy myśli.
+- Programa gratuito do Windows para preparação para exames. Aplicativo gratuito de treinamento de mapas mentais.
+- Programa gratuito do Windows para preparação para exames. Aplicação gratuita de treinamento de mapas mentais.
+- ਪ੍ਰੀਖਿਆ ਦੀ ਤਿਆਰੀ ਲਈ ਮੁਫਤ ਵਿੰਡੋਜ਼ ਪ੍ਰੋਗਰਾਮ। ਮੁਫਤ ਦਿਮਾਗ ਦਾ ਨਕਸ਼ਾ ਸਿਖਲਾਈ ਐਪ.
+- امتحان دی تیاری لئی مفت ونڈوز پروگرام۔ مفت مائنڈ میپ ٹریننگ ایپ۔
+- Program Windows gratuit pentru pregătirea examenului. Aplicație gratuită de antrenament pentru hărți mentale.
+- Бесплатная программа для Windows для подготовки к экзаменам. Бесплатное приложение для обучения интеллект-картам.
+- परीक्षायाः सज्जतायै निःशुल्कं विण्डोज कार्यक्रमः। निःशुल्क मन मानचित्र प्रशिक्षण एप्लिकेशन।
+- Gratis Windows-program för att förbereda examen. Gratis app för träning av tankekarta.
+- Бесплатан Виндовс програм за припрему испита. Бесплатна апликација за обуку мапа ума.
+- Bezplatný program Windows na prípravu na skúšku. Bezplatná aplikácia na tréning myšlienkových máp.
+- Brezplačni Windows program za pripravo na izpit. Brezplačna aplikacija za usposabljanje z miselnimi zemljevidi.
+- Barnaamijka Daaqadaha bilaashka ah ee diyaarinta imtixaanka. App-ka tababarka maskaxda ee bilaashka ah.
+- Programa gratuito de Windows para preparación de exámenes. Aplicación gratuita para entrenar mapas mentales.
+- Барномаи ройгони Windows барои омодагӣ ба имтиҳонҳо. Барномаи омӯзишии харитаи ақл.
+- โปรแกรม Windows ฟรีสำหรับเตรียมสอบ แอพฝึกอบรมแผนที่ความคิดฟรี
+- ཡིག་རྒྱུགས་གྲ་སྒྲིག་ཆེད་དུ་རིན་མེད་ཝིན་ཌོ་ལས་རིམ། སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་མཉེན་ཆས།
+- ንፈተና ምድላው ዝኸውን ነጻ ፕሮግራም ዊንዶውስ። ነጻ ናይ ኣእምሮ ካርታ ስልጠና ኣፕ።
+- Bezplatný program Windows pro přípravu na zkoušku. Bezplatná aplikace pro trénink myšlenkových map.
+- Sınava hazırlık için ücretsiz Windows programı. Ücretsiz zihin haritası eğitimi uygulaması.
+- Synaga taýýarlyk üçin mugt Windows programmasy. Mugt akyl kartasy okuw programmasy.
+- Безкоштовна програма Windows для підготовки до іспитів. Безкоштовний навчальний додаток для розумових карт.
+- Ingyenes Windows program a vizsgára való felkészüléshez. Ingyenes gondolattérkép képzési alkalmazás.
+- Imtihonga tayyorgarlik ko'rish uchun bepul Windows dasturi. Bepul aql xaritasi o'quv dasturi.
+- Chương trình Windows miễn phí để luyện thi. Ứng dụng đào tạo bản đồ tư duy miễn phí.
+- Prograamu Windows buy maye ngir waajal examen. Aplikaasioŋu tàggat kàrtu xel bu amul fayda.
+- Eto Windows ọfẹ fun igbaradi idanwo. Free okan map ikẹkọ app.
+- Porogaramu yubuntu ya Windows yo gutegura ibizamini. Porogaramu yubumenyi bwikarita yubuntu.
