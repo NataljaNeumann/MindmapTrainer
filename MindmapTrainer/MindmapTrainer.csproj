@@ -1010,6 +1010,7 @@
   if NOT EXIST "$(TargetDir)ZZ_SOURCE_CODE_ZZ" (
     mkdir  "$(TargetDir)ZZ_SOURCE_CODE_ZZ"
     mkdir  "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)"
+    mkdir  "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\Properties"
   )
   copy /Y "$(SolutionDir)*.sln" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\"
   copy /Y "$(SolutionDir)LICENSE.TXT" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\"
@@ -1020,7 +1021,11 @@
   copy /Y "$(ProjectDir)*.cs" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\"
   copy /Y "$(ProjectDir)*.ico" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\"
   copy /Y "$(ProjectDir)*.jpg" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\"
+  copy /Y "$(ProjectDir)*.html" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\"
   copy /Y "$(ProjectDir)*.resx" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\"
+  copy /Y "$(ProjectDir)\Properties\*.resx" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\Properties\"
+  copy /Y "$(ProjectDir)\Properties\*.cs" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\Properties\"
+  copy /Y "$(ProjectDir)\Properties\*.settings" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\Properties\"
   copy /Y "$(ProjectDir)*.settings" "$(TargetDir)ZZ_SOURCE_CODE_ZZ\$(ProjectName)\"
   cd /D "$(TargetDir)ZZ_SOURCE_CODE_ZZ"
   tar.exe -cf "..\source_code.tar" *.*
