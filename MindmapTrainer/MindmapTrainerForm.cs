@@ -167,7 +167,8 @@ namespace MindmapTrainer
             public IEnumerable<IMindmapNode> Elements
             {
                 get {
-                    if (m_oTrainerForm != null && m_strText != null && m_oTrainerForm.m_oMindMap.ContainsKey(m_strText))
+                    if (m_oTrainerForm != null && m_strText != null && 
+                        m_oTrainerForm.m_oMindMap.ContainsKey(m_strText))
                     {
                         foreach (string text in m_oTrainerForm.m_oMindMap[m_strText].Keys)
                         {
@@ -183,7 +184,10 @@ namespace MindmapTrainer
             /// Add an element to sub-element
             /// </summary>
             /// <param name="strText">The name(text) of the element</param>
-            public void AddElement(string strText)
+            //===============================================================================================
+            public void AddElement(
+                string strText
+                )
             {
                 if (m_oTrainerForm != null && m_strText != null)
                 {
@@ -214,7 +218,10 @@ namespace MindmapTrainer
             /// <param name="strOldText">Old name of subelement</param>
             /// <param name="strNewText">New name of subelement</param>
             //===============================================================================================
-            public void RenameElement(string strOldText, string strNewText)
+            public void RenameElement(
+                string strOldText, 
+                string strNewText
+                )
             {
                 if (m_oTrainerForm != null && m_strText != null)
                 {
@@ -291,7 +298,9 @@ namespace MindmapTrainer
             /// </summary>
             /// <param name="strName">The name(text) of subelement</param>
             //===============================================================================================
-            public void DetachElement(string strName)
+            public void DetachElement(
+                string strName
+                )
             {
                 if (m_oTrainerForm != null && m_strText != null)
                 {
@@ -378,10 +387,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is execuded then the hidden accept button is triggered
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void hiddenAcceptButton_Click(object sender, EventArgs e)
+        private void hiddenAcceptButton_Click(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
 
             if (m_ctlTreeView.Visible)
@@ -436,10 +448,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user clicks 'New'
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void newMindmapToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newMindmapToolStripMenuItem_Click(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             m_dlgSaveFileDialog1.FileName = "";
             m_dlgSaveFileDialog1.DefaultExt = ".MindMap.xml";
@@ -476,10 +491,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user clicks on 'open'
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             m_dlgOpenFileDialog1.FileName = "";
             m_dlgOpenFileDialog1.DefaultExt = ".MindMap.xml";
@@ -578,24 +596,24 @@ namespace MindmapTrainer
 
             try
             {
-                using (System.IO.StreamWriter w = 
+                using (System.IO.StreamWriter oWriter = 
                     new System.IO.StreamWriter(m_strFilePath, false, Encoding.UTF8))
                 {
-                    w.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
-                    w.WriteLine("<mindmap>");
-                    w.WriteLine("  <start>{0}</start>", PrepareForXml(m_strRootNodeName));
+                    oWriter.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+                    oWriter.WriteLine("<mindmap>");
+                    oWriter.WriteLine("  <start>{0}</start>", PrepareForXml(m_strRootNodeName));
                     foreach (KeyValuePair<string, Dictionary<string, bool>> pair in m_oMindMap)
                     {
-                        w.Write("  <subject name=\"{0}\" training=\"{1}\" correct=\"{2}\">", 
+                        oWriter.Write("  <subject name=\"{0}\" training=\"{1}\" correct=\"{2}\">", 
                             PrepareForXml(pair.Key), m_oTrainingResults[pair.Key], m_oCorrectAnswers[pair.Key]);
                         foreach (string strElement in pair.Value.Keys)
                         {
-                            w.WriteLine();
-                            w.Write("    <element>{0}</element>", PrepareForXml(strElement));
+                            oWriter.WriteLine();
+                            oWriter.Write("    <element>{0}</element>", PrepareForXml(strElement));
                         }
-                        w.WriteLine("</subject>");
+                        oWriter.WriteLine("</subject>");
                     }
-                    w.WriteLine("</mindmap>");
+                    oWriter.WriteLine("</mindmap>");
                 }
             }
             catch (Exception ex)
@@ -633,9 +651,11 @@ namespace MindmapTrainer
         /// <param name="text">Text to convert to XML representation</param>
         /// <returns>Converted text</returns>
         //===================================================================================================
-        string PrepareForXml(string text)
+        string PrepareForXml(
+            string strText
+            )
         {
-            return text.Replace("&", "&amp;").Replace("\"","&quot;")
+            return strText.Replace("&", "&amp;").Replace("\"","&quot;")
                 .Replace("<", "&lt;").Replace(">", "&gt;");
         }
 
@@ -644,31 +664,37 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when mouse moves over the window for making more random numbers
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void MindmapTrainerForm_MouseMove(object sender, MouseEventArgs e)
+        private void MindmapTrainerForm_MouseMove(
+            object oSender, 
+            MouseEventArgs oEventArgs
+            )
         {
             // make randoms less deterministic, whenever possible
             if (m_oRandomGenerator != null)
                 m_oRandomGenerator = new Random(m_oRandomGenerator.Next() + 
                     ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
-                    DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond + (e.X & 3) * 256);
+                    DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond + (oEventArgs.X & 3) * 256);
             if (m_oRandomGenerator2 != null)
                 m_oRandomGenerator2 = new Random(m_oRandomGenerator2.Next() + 
                     (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                     DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + 
-                    DateTime.UtcNow.DayOfYear + (e.Y & 3) * 256);
+                    DateTime.UtcNow.DayOfYear + (oEventArgs.Y & 3) * 256);
         }
 
         //===================================================================================================
         /// <summary>
         /// This is executed when user clicks the 'Training' button
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
         //===================================================================================================
-        private void trainingToolStripMenuItem_Click(object sender, EventArgs e)
+        private void trainingToolStripMenuItem_Click(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             bool bNewView = false;
             try
@@ -725,10 +751,13 @@ namespace MindmapTrainer
         /// <summary>
         /// This is executed when user clicks the 'Intensive training' menu item
         /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">Event args</param>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oArgs">Event args</param>
         //===================================================================================================
-        private void intensivelyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void intensivelyToolStripMenuItem_Click(
+            object oSender, 
+            EventArgs oArgs
+            )
         {
             bool bNewView = false;
             try
@@ -743,42 +772,42 @@ namespace MindmapTrainer
                 {
                     bRepeat = false;
                     // decide, if we will train one subject randomly, or one that needs additional training
-                    int rnd = m_oRandomGenerator.Next();
-                    m_oRandomGenerator = new Random(rnd + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                    int nRnd = m_oRandomGenerator.Next();
+                    m_oRandomGenerator = new Random(nRnd + ((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                         DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond);
 
-                    if ((m_nTotalErrors > 0) && (rnd % 100 < 50))
+                    if ((m_nTotalErrors > 0) && (nRnd % 100 < 50))
                     {
                         // there we train one of the subjects that need additional training
-                        int rnd2 = m_oRandomGenerator2.Next();
-                        m_oRandomGenerator2 = new Random(rnd + rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                        int nRnd2 = m_oRandomGenerator2.Next();
+                        m_oRandomGenerator2 = new Random(nRnd + nRnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                             DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
-                        int selectedError = rnd2 % m_nTotalErrors;
+                        int nSelectedError = nRnd2 % m_nTotalErrors;
 
                         m_bSkipLastTrained = m_oMindMap.Count > 10;
 
-                        int wordIndex = -1;
+                        int nWordIndex = -1;
                         using (SortedDictionary<string, string>.ValueCollection.Enumerator 
-                            values = m_oTrainingResults.Values.GetEnumerator())
+                            oValues = m_oTrainingResults.Values.GetEnumerator())
                         {
-                            while (selectedError >= 0 && values.MoveNext())
+                            while (nSelectedError >= 0 && oValues.MoveNext())
                             {
-                                wordIndex += 1;
-                                if (values.Current.Contains("0"))
+                                nWordIndex += 1;
+                                if (oValues.Current.Contains("0"))
                                 {
-                                    selectedError -= values.Current.Length - values.Current.Replace("0", "").Length + 1;
+                                    nSelectedError -= oValues.Current.Length - oValues.Current.Replace("0", "").Length + 1;
                                 }
                             }
 
-                            bRepeat = TrainSubject(wordIndex);
+                            bRepeat = TrainSubject(nWordIndex);
                         }
                     }
                     else
                     {
                         // there we train one of the words
-                        int rnd2 = m_oRandomGenerator2.Next();
-                        m_oRandomGenerator2 = new Random(rnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
+                        int nRnd2 = m_oRandomGenerator2.Next();
+                        m_oRandomGenerator2 = new Random(nRnd2 + (((DateTime.UtcNow.Hour * 60 + DateTime.UtcNow.Minute) * 60 + 
                             DateTime.UtcNow.Second) * 1000 + DateTime.UtcNow.Millisecond) * 365 + DateTime.UtcNow.DayOfYear);
 
 
@@ -799,15 +828,15 @@ namespace MindmapTrainer
                             iTotalWeights += weight;
                         };
 
-                        int selectedWeight = rnd2 % iTotalWeights;
+                        int selectedWeight = nRnd2 % iTotalWeights;
 
-                        int wordIndex = -1;
+                        int nWordIndex = -1;
                         using (SortedDictionary<string, int>.ValueCollection.Enumerator 
                             values = m_oCorrectAnswers.Values.GetEnumerator())
                         {
                             while (selectedWeight >= 0 && values.MoveNext())
                             {
-                                wordIndex += 1;
+                                nWordIndex += 1;
 
                                 int weight = mean + 3 - values.Current;
 
@@ -819,7 +848,7 @@ namespace MindmapTrainer
 
                             m_bSkipLastTrained = m_oTrainingResults.Count > 5;
 
-                            bRepeat = TrainSubject(wordIndex);
+                            bRepeat = TrainSubject(nWordIndex);
                         }
                     }
                 }
@@ -841,49 +870,51 @@ namespace MindmapTrainer
         /// <param name="index">Index of the subject</param>
         /// <returns>true iff training shall continue</returns>
         //===================================================================================================
-        private bool TrainSubject(int index)
+        private bool TrainSubject(
+            int nIndex
+            )
         {
 
             bool bContinue = false;
             bool bCorrect = false;
-            foreach (KeyValuePair<string, string> pair in m_oTrainingResults)
+            foreach (KeyValuePair<string, string> oPair in m_oTrainingResults)
             {
-                if (0 == index--)
+                if (0 == nIndex--)
                 {
                     if (m_bSkipLastTrained)
                     {
                         foreach (string s in m_oLastTrainedSubjects)
                         {
                             // if we trained this subject recently, then try to skip it
-                            if (s.Equals(pair.Key))
+                            if (s.Equals(oPair.Key))
                                 if (m_oRandomGenerator2.Next(100) > 0)
                                     return true;
                         };
                     }
 
                     // add the subject to the list of recently trained rotate the list
-                    m_oLastTrainedSubjects.AddFirst(pair.Key); 
+                    m_oLastTrainedSubjects.AddFirst(oPair.Key); 
                     if (m_oLastTrainedSubjects.Count > 5)
                         m_oLastTrainedSubjects.RemoveLast();
 
 
-                    string subject = pair.Key;
-                    using (SubjectTestForm test = new SubjectTestForm())
+                    string subject = oPair.Key;
+                    using (SubjectTestForm dlgTest = new SubjectTestForm())
                     {
-                        test.MouseMove += new System.Windows.Forms.MouseEventHandler(
+                        dlgTest.MouseMove += new System.Windows.Forms.MouseEventHandler(
                             this.MindmapTrainerForm_MouseMove);
 
-                        test.m_lblSubject.Text = subject + ":";
+                        dlgTest.m_lblSubject.Text = subject + ":";
                         StringBuilder b = new StringBuilder();
-                        foreach (string s in m_oMindMap[pair.Key].Keys)
+                        foreach (string s in m_oMindMap[oPair.Key].Keys)
                             if (b.Length>0)
                                 b.AppendFormat("\r\n> {0}", s);
                             else
                                 b.AppendFormat("> {0}", s);
 
-                        test.SetText(b.ToString());
+                        dlgTest.SetText(b.ToString());
 
-                        switch (test.ShowDialog())
+                        switch (dlgTest.ShowDialog())
                         {
                             case DialogResult.Yes:
                                 bContinue = true;
@@ -900,16 +931,16 @@ namespace MindmapTrainer
 
                         if (bContinue)
                         {
-                            string prevResults = m_oTrainingResults[subject];
-                            string newResults = (bCorrect ? "1" : "0") + prevResults.Substring(0, 
-                                prevResults.Length<5?prevResults.Length:5);
-                            m_oTrainingResults[subject] = newResults;
-                            m_nTotalErrors += newResults.Length - newResults.Replace("0", "").Length - 
-                                (prevResults.Length - prevResults.Replace("0", "").Length);
+                            string strPrevResults = m_oTrainingResults[subject];
+                            string strNewResults = (bCorrect ? "1" : "0") + strPrevResults.Substring(0, 
+                                strPrevResults.Length<5?strPrevResults.Length:5);
+                            m_oTrainingResults[subject] = strNewResults;
+                            m_nTotalErrors += strNewResults.Length - strNewResults.Replace("0", "").Length - 
+                                (strPrevResults.Length - strPrevResults.Replace("0", "").Length);
 
                             // if the result was correct and we didn't repeat it because of 
                             // earlier mistakes, then increment the number of correct answers
-                            if (bCorrect && prevResults.IndexOf('0')<0)
+                            if (bCorrect && strPrevResults.IndexOf('0')<0)
                                 m_oCorrectAnswers[subject]++;
 
                             EnableDisableMenu();                        
@@ -941,7 +972,9 @@ namespace MindmapTrainer
         /// <param name="sender">Sender object</param>
         /// <param name="e">Event args</param>
         //===================================================================================================
-        private void aboutMenuItem_Click(object sender, EventArgs e)
+        private void aboutMenuItem_Click(
+            object oSender, 
+            EventArgs oEventArgs)
         {
             using (AboutForm form = new AboutForm())
             {
@@ -956,44 +989,93 @@ namespace MindmapTrainer
         /// <param name="sender">Sender object</param>
         /// <param name="e">Event args</param>
         //===================================================================================================
-        private void licenseMenuItem_Click(object sender, EventArgs e)
+        private void licenseMenuItem_Click(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             System.Diagnostics.Process.Start("https://www.gnu.org/licenses/gpl-2.0.html");
         }
 
-        private void m_ctlTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+
+        private void m_ctlTreeView_AfterSelect(object oSender, TreeViewEventArgs oEventArgs)
         {
 
         }
 
-        private void m_ctlTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user clicks the F1 key
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void OnHelpRequested(
+            object oSender, 
+            HelpEventArgs oEventArgs
+            )
         {
-            if (e.Button == MouseButtons.Right)
+            try
+            {
+                System.Diagnostics.Process.Start(
+                    System.IO.Path.Combine(Application.StartupPath, "Readme.html"));
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show(oEx.Message);
+            }
+
+        }
+
+
+        //===================================================================================================
+        /// <summary>
+        /// Thiss is executed when a tree node is clicked
+        /// </summary>
+        /// <param name="oSender">Sender objectt</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void m_ctlTreeView_NodeMouseClick(
+            object oSender, 
+            TreeNodeMouseClickEventArgs oEventArgs
+            )
+        {
+            if (oEventArgs.Button == MouseButtons.Right)
             {
                 ContextMenu contextMenu = new ContextMenu();
                 MenuItem addNodeMenuItem = new MenuItem(Properties.Resources.AddNode);
-                addNodeMenuItem.Click += (s, args) => StartEditingNewNode(e.Node);
+                addNodeMenuItem.Click += (s, args) => StartEditingNewNode(oEventArgs.Node);
                 contextMenu.MenuItems.Add(addNodeMenuItem);
 
-                if (e.Node.Parent != null)
+                if (oEventArgs.Node.Parent != null)
                 {
                     MenuItem detachNodeMenuItem = new MenuItem(Properties.Resources.DetachNode);
-                    detachNodeMenuItem.Click += (s, args) => DetachNode(e.Node);
+                    detachNodeMenuItem.Click += (s, args) => DetachNode(oEventArgs.Node);
                     contextMenu.MenuItems.Add(detachNodeMenuItem);
 
                     MenuItem editNodeMenuItem = new MenuItem(Properties.Resources.EditNode);
-                    editNodeMenuItem.Click += (s, args) => EditNode(e.Node);
+                    editNodeMenuItem.Click += (s, args) => EditNode(oEventArgs.Node);
                     contextMenu.MenuItems.Add(editNodeMenuItem);
                 }
 
-                contextMenu.Show(m_ctlTreeView, e.Location);
+                contextMenu.Show(m_ctlTreeView, oEventArgs.Location);
             }
         }
 
-        private void m_ctlTreeView_BeforeExpand(object sender, TreeViewCancelEventArgs e)
+        //===================================================================================================
+        /// <summary>
+        /// Executed before a node is expanded to load its children
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void m_ctlTreeView_BeforeExpand(
+            object oSender, 
+            TreeViewCancelEventArgs oEventArgs
+            )
         {
 
-            TreeNode node = e.Node;
+            TreeNode node = oEventArgs.Node;
             if (node.Nodes[0].Text == "Loading...")
             {
                 node.Nodes.Clear(); // Remove the placeholder node
@@ -1007,27 +1089,49 @@ namespace MindmapTrainer
             }*/
         }
 
-        private void LoadChildNodes(TreeNode parentNode)
+
+        //===================================================================================================
+        /// <summary>
+        /// Loads child nodes of a parent node
+        /// </summary>
+        /// <param name="oParentNode">Parent node</param>
+        //===================================================================================================
+        private void LoadChildNodes(
+            TreeNode oParentTreeNode
+            )
         {
-            if (m_oMindMap.ContainsKey(parentNode.Text))
+            if (m_oMindMap.ContainsKey(oParentTreeNode.Text))
             {
-                foreach (string text in m_oMindMap[parentNode.Text].Keys)
+                foreach (string strText in m_oMindMap[oParentTreeNode.Text].Keys)
                 {
-                    TreeNode childNode = new TreeNode(text) { Tag = new MindMapNode(this, (MindMapNode)parentNode.Tag, text) };
-                    if (m_oMindMap.ContainsKey(text) && m_oMindMap[text].Keys.Count>0)
+                    TreeNode oChildTreeNode = new TreeNode(strText) 
+                    { 
+                        Tag = new MindMapNode(this, (MindMapNode)oParentTreeNode.Tag, strText) 
+                    };
+
+                    if (m_oMindMap.ContainsKey(strText) && m_oMindMap[strText].Keys.Count>0)
                     {
-                        childNode.Nodes.Add(new TreeNode("Loading...")); // Add placeholder node for child nodes
+                        // Add placeholder node for child nodes
+                        oChildTreeNode.Nodes.Add(new TreeNode("Loading...")); 
                     }
-                    parentNode.Nodes.Add(childNode);
+                    oParentTreeNode.Nodes.Add(oChildTreeNode);
                 }
             }
         }
 
 
 
-        private void CollapseAllNodes(TreeNode node)
+        //===================================================================================================
+        /// <summary>
+        /// Collapses all nodes of a tree node
+        /// </summary>
+        /// <param name="oTreeNode">Tree node to collapse</param>
+        //===================================================================================================
+        private void CollapseAllNodes(
+            TreeNode oTreeNode
+            )
         {
-            foreach (TreeNode subNode in node.Nodes)
+            foreach (TreeNode subNode in oTreeNode.Nodes)
             {
                 subNode.Collapse();
                 CollapseAllNodes(subNode);
@@ -1035,37 +1139,62 @@ namespace MindmapTrainer
         }
 
 
-        private void StartEditingNewNode(TreeNode parentNode)
+
+        //===================================================================================================
+        /// <summary>
+        /// Starts editing a newly created node
+        /// </summary>
+        /// <param name="oParentNode">Parent node of a new node</param>
+        //===================================================================================================
+        private void StartEditingNewNode(
+            TreeNode oParentNode
+            )
         {
             m_bTreeViewInEditNodeMode = false;
-            MindMapNode parentNodeData = (MindMapNode)parentNode.Tag;
+            MindMapNode parentNodeData = (MindMapNode)oParentNode.Tag;
             MindMapNode newNodeData = new MindMapNode(this, parentNodeData, "");
-            parentNode.Expand();
+            oParentNode.Expand();
 
             TreeNode newNode = new TreeNode() { Tag = newNodeData };
-            parentNode.Nodes.Add(newNode);
-            parentNode.Expand();
+            oParentNode.Nodes.Add(newNode);
+            oParentNode.Expand();
 
             ShowTextBoxForNode(newNode);
             m_tbxEditNodeText.Text = "";
             m_tbxEditNodeText.Tag = newNode;
         }
 
-        private void EditNode(TreeNode node)
+
+        //===================================================================================================
+        /// <summary>
+        /// Starts editing a tree node
+        /// </summary>
+        /// <param name="oTreeNode"></param>
+        //===================================================================================================
+        private void EditNode(TreeNode oTreeNode)
         {
             m_bTreeViewInEditNodeMode = true;
-            ShowTextBoxForNode(node);
+            ShowTextBoxForNode(oTreeNode);
 
-            m_tbxEditNodeText.Text = node.Text;
-            m_tbxEditNodeText.Tag = node;
+            m_tbxEditNodeText.Text = oTreeNode.Text;
+            m_tbxEditNodeText.Tag = oTreeNode;
         }
 
-        private void ShowTextBoxForNode(TreeNode node)
+
+        //===================================================================================================
+        /// <summary>
+        /// Shows a text box for editing a node text
+        /// </summary>
+        /// <param name="oTreeNode">Tree node for editing</param>
+        //===================================================================================================
+        private void ShowTextBoxForNode(
+            TreeNode oTreeNode
+            )
         {
-            if (node == null) return;
+            if (oTreeNode == null) return;
 
             // Get the bounds of the node
-            Rectangle nodeBounds = node.Bounds;
+            Rectangle nodeBounds = oTreeNode.Bounds;
 
             // Determine the width of the textbox
             int textBoxWidth = Math.Max(nodeBounds.Width, 200); // Enforce minimum width of 200
@@ -1093,32 +1222,70 @@ namespace MindmapTrainer
             m_tbxEditNodeText.Focus();
         }
 
-        private void DetachNode(TreeNode currentNode)
-        {
-            if (currentNode.Parent != null)
-            {
-                ((MindMapNode)currentNode.Parent.Tag).DetachElement(currentNode.Text);
 
-                currentNode.Parent.Nodes.Remove(currentNode);
+        //===================================================================================================
+        /// <summary>
+        /// Detaches a node from mindmap, however it still can remain in the data
+        /// </summary>
+        /// <param name="oCurrentNode">The tree view node to detach</param>
+        //===================================================================================================
+        private void DetachNode(
+            TreeNode oCurrentNode
+            )
+        {
+            if (oCurrentNode.Parent != null)
+            {
+                ((MindMapNode)oCurrentNode.Parent.Tag).DetachElement(oCurrentNode.Text);
+
+                oCurrentNode.Parent.Nodes.Remove(oCurrentNode);
             }
         }
 
-        private void m_ctlTreeView_KeyDown(object sender, KeyEventArgs e)
+
+        //===================================================================================================
+        /// <summary>
+        /// This is execute when user presses a key in the tree view
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void m_ctlTreeView_KeyDown(
+            object oSender, 
+            KeyEventArgs oEventArgs
+            )
         {
-            if (e.KeyCode == Keys.Enter && m_ctlTreeView.SelectedNode != null)
+            if (oEventArgs.KeyCode == Keys.Enter && m_ctlTreeView.SelectedNode != null)
             {
                 EditNode(m_ctlTreeView.SelectedNode);
             }
         }
 
-        private void m_tbxEditNodeText_KeyDown(object sender, KeyEventArgs e)
+
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user types a key in the text box of new GUI.
+        /// It was designed to catch the Enter key, but doesn't work.
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void m_tbxEditNodeText_KeyDown(
+            object oSender, 
+            KeyEventArgs oEventArgs
+            )
         {
-            if (e.KeyCode == Keys.Enter)
+            if (oEventArgs.KeyCode == Keys.Enter)
             {
-                hiddenAcceptButton_Click(sender, EventArgs.Empty);
+                hiddenAcceptButton_Click(oSender, EventArgs.Empty);
             }
         }
 
+
+        //===================================================================================================
+        /// <summary>
+        /// Populates the tree view
+        /// </summary>
+        //===================================================================================================
         private void PopulateTreeView()
         {
             m_ctlTreeView.Nodes.Clear();
@@ -1129,9 +1296,11 @@ namespace MindmapTrainer
                 TreeNode oTreeNode = new TreeNode(m_strRootNodeName);
                 oTreeNode.Tag = new MindMapNode(this, null, m_strRootNodeName);
                 m_ctlTreeView.Nodes.Add(oTreeNode);
-                if (m_oMindMap.ContainsKey(m_strRootNodeName) && m_oMindMap[m_strRootNodeName].Keys.Count > 0)
+                if (m_oMindMap.ContainsKey(m_strRootNodeName) && 
+                    m_oMindMap[m_strRootNodeName].Keys.Count > 0)
                 {
-                    oTreeNode.Nodes.Add(new TreeNode("Loading...")); // Add placeholder node for child nodes
+                    // Add placeholder node for child nodes
+                    oTreeNode.Nodes.Add(new TreeNode("Loading...")); 
                 }
             }
             else
@@ -1140,17 +1309,36 @@ namespace MindmapTrainer
             }
         }
 
-        private void AddSubNodes(TreeNode treeNode, MindMapNode node)
+
+        //===================================================================================================
+        /// <summary>
+        /// Adds sbnodes of a node to the tree view
+        /// </summary>
+        /// <param name="oTreeNode">Tree node for filling</param>
+        /// <param name="oNode">Mindmap node for taking subelements</param>
+        //===================================================================================================
+        private void AddSubNodes(
+            TreeNode oTreeNode, 
+            MindMapNode oNode
+            )
         {
-            foreach (var subNode in node.Elements)
+            foreach (var subNode in oNode.Elements)
             {
                 TreeNode subTreeNode = new TreeNode(subNode.Text);
                 subTreeNode.Tag = subNode;
-                treeNode.Nodes.Add(subTreeNode);
+                oTreeNode.Nodes.Add(subTreeNode);
             }
         }
 
-        private void OnToggleGUIClick(object sender, EventArgs e)
+
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when user toggles view in menu
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void OnToggleGUIClick(object oSender, EventArgs oEventArgs)
         {
             if (m_ctlTreeView.Visible)
             {
@@ -1171,7 +1359,17 @@ namespace MindmapTrainer
             }
         }
 
-        private void OnNodeEditTextBoxFocusLeft(object oSender, EventArgs e)
+        //===================================================================================================
+        /// <summary>
+        /// This is executed when focus leaves the text box of the new GUI
+        /// </summary>
+        /// <param name="oSender">Sender object</param>
+        /// <param name="oEventArgs">Event args</param>
+        //===================================================================================================
+        private void OnNodeEditTextBoxFocusLeft(
+            object oSender, 
+            EventArgs oEventArgs
+            )
         {
             m_tbxEditNodeText.Visible = false;
             hiddenAcceptButton_Click(this, EventArgs.Empty);
