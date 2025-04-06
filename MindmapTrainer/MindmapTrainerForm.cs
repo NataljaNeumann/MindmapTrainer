@@ -196,7 +196,7 @@ namespace MindmapTrainer
 
                     if (!m_oTrainerForm.m_oTrainingResults.ContainsKey(m_strText))
                     {
-                        m_oTrainerForm.m_oTrainingResults[m_strText] = "111011";
+                        m_oTrainerForm.m_oTrainingResults[m_strText] = "111110";
                         m_oTrainerForm.m_nTotalErrors += 1;
                     }
 
@@ -469,7 +469,7 @@ namespace MindmapTrainer
                     m_dlgSaveFileDialog1.FileName.LastIndexOf('\\')+1).Replace(".MindMap.xml","");
                 m_strFilePath = m_dlgSaveFileDialog1.FileName;
                 m_oMindMap[m_strRootNodeName] = new Dictionary<string, bool>();
-                m_oTrainingResults[m_strRootNodeName] = "111011";
+                m_oTrainingResults[m_strRootNodeName] = "111110";
                 m_nTotalErrors = 1;
                 m_oCorrectAnswers[m_strRootNodeName] = 0;
 
@@ -531,7 +531,7 @@ namespace MindmapTrainer
                         }
                         m_oMindMap[e2.InnerText] = elements;
 
-                        m_oTrainingResults[e2.InnerText] = "111011";
+                        m_oTrainingResults[e2.InnerText] = "111110";
                         foreach (System.Xml.XmlNode e5 in e4.SelectNodes("@training"))
                         {
                             string s = e5.InnerText;
