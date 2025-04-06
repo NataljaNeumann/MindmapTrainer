@@ -550,7 +550,7 @@ Following references to pictures are supported:
 ‏[האם אתה צריך תמיכה?](https://github.com/NataljaNeumann/MindmapTrainer/issues)  
 [ויקי](https://github.com/NataljaNeumann/MindmapTrainer/wiki)
 
-<hr/>
+
 # Keywords for all the langages:
 - Gratis Windows-program vir eksamenvoorbereiding. Gratis breinkaart opleiding app.
 - ለፈተና ዝግጅት ነፃ የዊንዶውስ ፕሮግራም. ነጻ የአእምሮ ካርታ ስልጠና መተግበሪያ.
