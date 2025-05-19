@@ -183,6 +183,10 @@ namespace MindmapTrainer
                         int nNewPictureWidth = oOriginalImage.Width;
                         int nNewPictureHeight = oOriginalImage.Height;
 
+                        // increase max height, if there aren't that many points to show
+                        if (astrLines.Length < 5)
+                            nMaxPictureHeight = nMaxPictureHeight * 3 / 2;
+
                         if (nNewPictureWidth > nMaxPictureWidth)
                         {
                             float scaleFactor = (float)nMaxPictureWidth / nNewPictureWidth;
