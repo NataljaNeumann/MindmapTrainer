@@ -1,5 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <html><head><style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ccc;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 900px; 
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: auto; 
+            position: relative;         
+        }
         .note-ltr {
             position: relative;
             border-left: 5px solid blue;
@@ -35,6 +51,7 @@
     </style>
   </head>
   <body>
+    <div class="container">
     <h1 dir="ltr" lang="en">Mindmap Trainer</h1>
     <br/>
     <a href="https://github.com/NataljaNeumann/MindmapTrainer" target="_new" dir="ltr" lang="en">Latest MindmapTrainer Sources and Releases</a>
@@ -677,5 +694,6 @@
     </p>
 
     </font>
+    </div>
   </body>
 </html>
