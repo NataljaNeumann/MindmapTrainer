@@ -319,7 +319,7 @@
     <value>m_ctlMindmapNodeView</value>
   </data>
   <data name="&gt;&gt;m_ctlMindmapNodeView.Type" xml:space="preserve">
-    <value>MindmapTrainer.MindmapNodeView, MindmapTrainer, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>MindmapTrainer.MindmapNodeView, MindmapTrainer, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;m_ctlMindmapNodeView.Parent" xml:space="preserve">
     <value>m_ctlPanel</value>
@@ -359,6 +359,15 @@
   </metadata>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>Mind Map Files|*.MindMap.xml</value>
+  </data>
+  <metadata name="m_dlgOpenFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>472, 17</value>
+  </metadata>
+  <data name="m_dlgOpenFileDialog2.Filter" xml:space="preserve">
+    <value>Pictures (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|All files|*.*</value>
+  </data>
+  <data name="m_dlgOpenFileDialog2.Title" xml:space="preserve">
+    <value>Add picture</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -453,6 +462,12 @@
     <value>m_dlgOpenFileDialog1</value>
   </data>
   <data name="&gt;&gt;m_dlgOpenFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_dlgOpenFileDialog2.Name" xml:space="preserve">
+    <value>m_dlgOpenFileDialog2</value>
+  </data>
+  <data name="&gt;&gt;m_dlgOpenFileDialog2.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

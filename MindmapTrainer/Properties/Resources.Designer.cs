@@ -70,6 +70,15 @@ namespace MindmapTrainer.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Add Picture ähnelt.
+        /// </summary>
+        internal static string AddPicture {
+            get {
+                return ResourceManager.GetString("AddPicture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Detach Node ähnelt.
         /// </summary>
         internal static string DetachNode {

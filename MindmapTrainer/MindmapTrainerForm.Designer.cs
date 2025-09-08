@@ -63,6 +63,7 @@ namespace MindmapTrainer
             this.m_ctlMindmapNodeView = new MindmapTrainer.MindmapNodeView();
             this.m_dlgSaveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.m_dlgOpenFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.m_dlgOpenFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.m_oMenuStrip.SuspendLayout();
             this.m_ctlPanel.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +182,11 @@ namespace MindmapTrainer
             this.m_dlgOpenFileDialog1.FileName = "openFileDialog1";
             resources.ApplyResources(this.m_dlgOpenFileDialog1, "m_dlgOpenFileDialog1");
             // 
+            // m_dlgOpenFileDialog2
+            // 
+            resources.ApplyResources(this.m_dlgOpenFileDialog2, "m_dlgOpenFileDialog2");
+            this.m_dlgOpenFileDialog2.RestoreDirectory = true;
+            // 
             // MindmapTrainerForm
             // 
             this.AcceptButton = this.m_btnHiddenAcceptButton;
@@ -219,6 +225,7 @@ namespace MindmapTrainer
         private System.Windows.Forms.TreeView m_ctlTreeView;
         private System.Windows.Forms.TextBox m_tbxEditNodeText;
         private System.Windows.Forms.ToolStripMenuItem m_ctlToggleGUI;
+        private System.Windows.Forms.OpenFileDialog m_dlgOpenFileDialog2;
     }
 }
 

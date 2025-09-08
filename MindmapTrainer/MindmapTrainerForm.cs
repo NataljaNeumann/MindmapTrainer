@@ -378,7 +378,8 @@ namespace MindmapTrainer
             }
 
             m_ctlTreeView.RightToLeft = RightToLeftLayout ? RightToLeft.Yes : RightToLeft.No;
-
+            m_dlgOpenFileDialog2.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            m_dlgOpenFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             EnableDisableMenu();
         }
 
@@ -1056,7 +1057,15 @@ namespace MindmapTrainer
                     MenuItem editNodeMenuItem = new MenuItem(Properties.Resources.EditNode);
                     editNodeMenuItem.Click += (s, args) => EditNode(oEventArgs.Node);
                     contextMenu.MenuItems.Add(editNodeMenuItem);
+
+                    if (oEventArgs.Node.Nodes.Count < 2)
+                    {
+                        MenuItem addPictureMenuItem = new MenuItem(Properties.Resources.AddPicture);
+                        addPictureMenuItem.Click += (s, args) => SelectPicture(oEventArgs.Node);
+                        contextMenu.MenuItems.Add(addPictureMenuItem);
+                    }
                 }
+
 
                 contextMenu.Show(m_ctlTreeView, oEventArgs.Location);
             }
@@ -1076,7 +1085,7 @@ namespace MindmapTrainer
         {
 
             TreeNode node = oEventArgs.Node;
-            if (node.Nodes[0].Text == "Loading...")
+            if (node.Nodes[0].Text.Equals("Loading..."))
             {
                 node.Nodes.Clear(); // Remove the placeholder node
                 LoadChildNodes(node);
@@ -1180,6 +1189,45 @@ namespace MindmapTrainer
             m_tbxEditNodeText.Tag = oTreeNode;
         }
 
+
+        //===================================================================================================
+        /// <summary>
+        /// Starts editing a tree node
+        /// </summary>
+        /// <param name="oParentNode"></param>
+        //===================================================================================================
+        private void SelectPicture(TreeNode oParentNode)
+        {
+            if (m_dlgOpenFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                m_bTreeViewInEditNodeMode = false;
+                MindMapNode parentNodeData = (MindMapNode)oParentNode.Tag;
+                MindMapNode newNodeData = new MindMapNode(this, parentNodeData, "");
+                oParentNode.Expand();
+
+                TreeNode newNode = new TreeNode() { Tag = newNodeData };
+                oParentNode.Nodes.Add(newNode);
+                oParentNode.Expand();
+
+                ShowTextBoxForNode(newNode);
+
+                string strFileName = m_dlgOpenFileDialog2.FileName;
+                if (strFileName.StartsWith(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)))
+                {
+                    strFileName = strFileName.Substring(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments).Length);
+                    if (strFileName.StartsWith("\\"))
+                        strFileName = strFileName.Substring(1);
+                } else
+                if (strFileName.StartsWith(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures)))
+                {
+                    strFileName = strFileName.Substring(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures).Length);
+                    if (strFileName.StartsWith("\\"))
+                        strFileName = strFileName.Substring(1);
+                };
+                m_tbxEditNodeText.Text = strFileName;
+                m_tbxEditNodeText.Tag = newNode;
+            }
+        }
 
         //===================================================================================================
         /// <summary>
