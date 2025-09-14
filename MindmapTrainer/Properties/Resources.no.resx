@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Kunne ikke lagre filen </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Legg til et bilde </value>
+  </data>
 </root>

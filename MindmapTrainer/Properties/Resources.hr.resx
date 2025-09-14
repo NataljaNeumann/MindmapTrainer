@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Spremanje datoteke nije uspjelo </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Dodaj sliku </value>
+  </data>
 </root>

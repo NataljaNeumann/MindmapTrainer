@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Falha ao salvar o arquivo </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Adicionar uma imagem</value>
+  </data>
 </root>

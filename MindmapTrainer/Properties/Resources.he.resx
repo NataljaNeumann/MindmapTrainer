@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>שמירת הקובץ נכשלה </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>הוסף תמונה</value>
+  </data>
 </root>

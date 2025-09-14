@@ -121,7 +121,7 @@
     <value>Add Node</value>
   </data>
   <data name="AddPicture" xml:space="preserve">
-    <value>Add Picture</value>
+    <value>Add an image</value>
   </data>
   <data name="DetachNode" xml:space="preserve">
     <value>Detach Node</value>

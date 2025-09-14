@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Kon nie lêer stoor nie </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Voeg 'n prent by</value>
+  </data>
 </root>

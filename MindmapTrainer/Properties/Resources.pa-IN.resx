@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>ਫ਼ਾਈਲ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>ਇੱਕ ਤਸਵੀਰ ਸ਼ਾਮਲ ਕਰੋ </value>
+  </data>
 </root>

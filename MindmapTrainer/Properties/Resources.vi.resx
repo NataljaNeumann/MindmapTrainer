@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Lỗi lưu tập tin </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Thêm hình ảnh </value>
+  </data>
 </root>

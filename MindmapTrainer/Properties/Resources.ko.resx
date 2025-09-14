@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>파일을 저장하지 못했습니다. </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>이미지 추가 </value>
+  </data>
 </root>

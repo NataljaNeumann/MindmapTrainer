@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>ཡིག་ཆ་ཉར་ཚགས་བྱེད་མ་ཐུབ། </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>པར་རིས་ཁ་སྣོན་བྱེད་པ།</value>
+  </data>
 </root>

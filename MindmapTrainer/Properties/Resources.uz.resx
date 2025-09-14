@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Faylni saqlashda xatolik yuz berdi </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Rasm qo'shing </value>
+  </data>
 </root>

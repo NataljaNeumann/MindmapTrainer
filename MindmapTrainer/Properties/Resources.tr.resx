@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Dosya kaydedilirken hata oluştu </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Resim ekle </value>
+  </data>
 </root>

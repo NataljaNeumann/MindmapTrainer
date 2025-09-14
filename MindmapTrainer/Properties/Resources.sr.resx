@@ -129,4 +129,7 @@
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Грешка при чувању датотеке </value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Додај слику </value>
+  </data>
 </root>
