@@ -172,4 +172,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Vaihda näkymää </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Kuvat (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Kaikki tiedostot|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Lisää kuva </value>
+  </data>
 </root>

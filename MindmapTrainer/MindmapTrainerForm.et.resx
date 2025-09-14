@@ -166,4 +166,16 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Muuda vaadet </value>
   </data>
+  <data xml:space="preserve" name="m_dlgSaveFileDialog1.Filter">
+    <value>Mõttekaardi failid|*.MindMap.xml</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog1.Filter">
+    <value>Mõttekaardi failid|*.MindMap.xml</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Pildid (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Kõik failid|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Lisa pilt </value>
+  </data>
 </root>

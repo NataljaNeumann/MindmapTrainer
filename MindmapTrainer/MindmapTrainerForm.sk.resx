@@ -172,4 +172,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Zmeniť pohľad </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Obrázky (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Všetky súbory|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Pridať obrázok </value>
+  </data>
 </root>

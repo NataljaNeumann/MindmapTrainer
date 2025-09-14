@@ -146,7 +146,7 @@
     <value>Okuw</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl + I.</value>
+    <value>Ctrl+I</value>
   </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
@@ -183,5 +183,11 @@
   </data>
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Görnüşi üýtgediň </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Suratlar (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|fileshli faýllar|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Surat goşuň </value>
   </data>
 </root>

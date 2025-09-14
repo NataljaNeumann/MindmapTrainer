@@ -172,4 +172,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Пераключыць прагляд </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Выявы (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Усе файлы|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Дадаць малюнак</value>
+  </data>
 </root>

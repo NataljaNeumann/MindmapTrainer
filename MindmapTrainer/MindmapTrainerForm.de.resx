@@ -170,4 +170,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Ansicht umschalten</value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Bilder (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Alle Dateien|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Bild hinzufügen</value>
+  </data>
 </root>

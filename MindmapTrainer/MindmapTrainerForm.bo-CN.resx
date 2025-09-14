@@ -202,4 +202,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>མཐོང་སྣང་བརྗེ་སྒྱུར། </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>པར་རིས་ (*.jpg;*.jpeg;*.png)|*.jpg;*.jpg;*.png|ཡིག་ཆ་ཚང་མ།|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>པར་རིས་ཁ་སྣོན་བྱེད་པ།</value>
+  </data>
 </root>

@@ -169,4 +169,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Mens tabula lanista</value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Imagines (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Omnia documenta|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Adde imaginem </value>
+  </data>
 </root>

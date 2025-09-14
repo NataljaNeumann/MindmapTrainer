@@ -172,4 +172,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Көрүнүштү өзгөртүү </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Сүрөттөр (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Бардык файлдар|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Сүрөт кошуу</value>
+  </data>
 </root>

@@ -169,4 +169,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>ਦ੍ਰਿਸ਼ ਬਦਲੋ </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>ਤਸਵੀਰਾਂ (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|ਸਾਰੀਆਂ ਫਾਈਲਾਂ|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>ਇੱਕ ਤਸਵੀਰ ਸ਼ਾਮਲ ਕਰੋ </value>
+  </data>
 </root>

@@ -166,4 +166,16 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Ändra vy </value>
   </data>
+  <data xml:space="preserve" name="m_dlgSaveFileDialog1.Filter">
+    <value>Tankekartfiler|*.MindMap.xml</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog1.Filter">
+    <value>Tankekartfiler|*.MindMap.xml</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Bilder (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Alla filer|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Lägg till en bild </value>
+  </data>
 </root>

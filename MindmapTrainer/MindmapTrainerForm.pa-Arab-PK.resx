@@ -205,4 +205,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>نظارہ بدلو </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>تصویراں (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|ساریاں فائلاں|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>اک تصویر شامل کرو </value>
+  </data>
 </root>

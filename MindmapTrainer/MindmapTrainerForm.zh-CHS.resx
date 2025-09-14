@@ -190,4 +190,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>更改视图 </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>图片 (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|所有文件|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>添加图片 </value>
+  </data>
 </root>

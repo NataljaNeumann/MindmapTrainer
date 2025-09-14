@@ -166,4 +166,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Ko'rinishni o'zgartirish </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Rasmlar (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Barcha fayllar|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Rasm qo'shing </value>
+  </data>
 </root>

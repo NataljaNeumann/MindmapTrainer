@@ -172,4 +172,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Canvia la vista </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Imatges (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Tots els fitxers|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Afegeix una imatge</value>
+  </data>
 </root>

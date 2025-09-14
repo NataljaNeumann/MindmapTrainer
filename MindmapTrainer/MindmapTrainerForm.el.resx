@@ -172,4 +172,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Εναλλαγή προβολής </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Εικόνες (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Όλα τα αρχεία|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Προσθήκη εικόνας</value>
+  </data>
 </root>

@@ -166,4 +166,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Змінити вигляд </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Зображення (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Усі файли|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Додати зображення </value>
+  </data>
 </root>

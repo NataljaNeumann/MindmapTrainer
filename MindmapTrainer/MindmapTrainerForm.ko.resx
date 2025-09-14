@@ -190,4 +190,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>보기 전환 </value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>이미지(*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|모든 파일|*.* </value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>이미지 추가 </value>
+  </data>
 </root>

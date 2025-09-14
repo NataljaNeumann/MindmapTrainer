@@ -169,4 +169,10 @@
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Breyta sýn</value>
   </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
+    <value>Myndir (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Allar skrár|*.*</value>
+  </data>
+  <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
+    <value>Bæta við mynd</value>
+  </data>
 </root>
