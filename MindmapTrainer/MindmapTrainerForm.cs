@@ -1050,6 +1050,13 @@ namespace MindmapTrainer
 
                 if (oEventArgs.Node.Parent != null)
                 {
+                    if (oEventArgs.Node.Nodes.Count < 2)
+                    {
+                        MenuItem addPictureMenuItem = new MenuItem(Properties.Resources.AddPicture);
+                        addPictureMenuItem.Click += (s, args) => SelectPicture(oEventArgs.Node);
+                        contextMenu.MenuItems.Add(addPictureMenuItem);
+                    }
+
                     MenuItem detachNodeMenuItem = new MenuItem(Properties.Resources.DetachNode);
                     detachNodeMenuItem.Click += (s, args) => DetachNode(oEventArgs.Node);
                     contextMenu.MenuItems.Add(detachNodeMenuItem);
@@ -1058,12 +1065,6 @@ namespace MindmapTrainer
                     editNodeMenuItem.Click += (s, args) => EditNode(oEventArgs.Node);
                     contextMenu.MenuItems.Add(editNodeMenuItem);
 
-                    if (oEventArgs.Node.Nodes.Count < 2)
-                    {
-                        MenuItem addPictureMenuItem = new MenuItem(Properties.Resources.AddPicture);
-                        addPictureMenuItem.Click += (s, args) => SelectPicture(oEventArgs.Node);
-                        contextMenu.MenuItems.Add(addPictureMenuItem);
-                    }
                 }
 
 
