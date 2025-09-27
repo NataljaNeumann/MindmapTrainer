@@ -2,6 +2,8 @@ MindmapTrainer/obj/**
 MindmapTrainer/bin/Release/**
 MindmapTrainer/bin/Debug/**
 MindmapTrainer/bin/*.zip
+**\.vs\**
+Backup\**
 *.user
 *.suo
 *.exe
