@@ -19,7 +19,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -995,7 +997,26 @@ namespace MindmapTrainer
             EventArgs oEventArgs
             )
         {
-            System.Diagnostics.Process.Start("https://www.gnu.org/licenses/gpl-2.0.html");
+            string strUrl = "https://www.gnu.org/licenses/gpl-2.0.html";
+            try
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    Process.Start(new ProcessStartInfo(strUrl) { UseShellExecute = true });
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    Process.Start("xdg-open", strUrl);
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                {
+                    Process.Start("open", strUrl);
+                }
+            }
+            catch (Exception oEx)
+            {
+                MessageBox.Show("Could not open browser: " + oEx.Message);
+            }
         }
 
 
@@ -1043,27 +1064,27 @@ namespace MindmapTrainer
         {
             if (oEventArgs.Button == MouseButtons.Right)
             {
-                ContextMenu contextMenu = new ContextMenu();
-                MenuItem addNodeMenuItem = new MenuItem(Properties.Resources.AddNode);
+                ContextMenuStrip contextMenu = new ContextMenuStrip();
+                ToolStripMenuItem addNodeMenuItem = new ToolStripMenuItem(Properties.Resources.AddNode);
                 addNodeMenuItem.Click += (s, args) => StartEditingNewNode(oEventArgs.Node);
-                contextMenu.MenuItems.Add(addNodeMenuItem);
+                contextMenu.Items.Add(addNodeMenuItem);
 
                 if (oEventArgs.Node.Parent != null)
                 {
                     if (oEventArgs.Node.Nodes.Count < 2)
                     {
-                        MenuItem addPictureMenuItem = new MenuItem(Properties.Resources.AddPicture);
+                        ToolStripMenuItem addPictureMenuItem = new ToolStripMenuItem(Properties.Resources.AddPicture);
                         addPictureMenuItem.Click += (s, args) => SelectPicture(oEventArgs.Node);
-                        contextMenu.MenuItems.Add(addPictureMenuItem);
+                        contextMenu.Items.Add(addPictureMenuItem);
                     }
 
-                    MenuItem detachNodeMenuItem = new MenuItem(Properties.Resources.DetachNode);
+                    ToolStripMenuItem detachNodeMenuItem = new ToolStripMenuItem(Properties.Resources.DetachNode);
                     detachNodeMenuItem.Click += (s, args) => DetachNode(oEventArgs.Node);
-                    contextMenu.MenuItems.Add(detachNodeMenuItem);
+                    contextMenu.Items.Add(detachNodeMenuItem);
 
-                    MenuItem editNodeMenuItem = new MenuItem(Properties.Resources.EditNode);
+                    ToolStripMenuItem editNodeMenuItem = new ToolStripMenuItem(Properties.Resources.EditNode);
                     editNodeMenuItem.Click += (s, args) => EditNode(oEventArgs.Node);
-                    contextMenu.MenuItems.Add(editNodeMenuItem);
+                    contextMenu.Items.Add(editNodeMenuItem);
 
                 }
 

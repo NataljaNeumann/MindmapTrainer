@@ -137,26 +137,14 @@
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
     <value>Info</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Strg+I</value>
-  </data>
   <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Intensiv</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Strg+N</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Neu</value>
   </data>
-  <data name="m_ctlOpenToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Ctrl+O</value>
-  </data>
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Öffnen</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>Strg+T</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Trainieren</value>
