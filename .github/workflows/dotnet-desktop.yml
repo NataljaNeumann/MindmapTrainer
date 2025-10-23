@@ -469,7 +469,7 @@ jobs:
 
           foreach ($f in $files) {
             $name = $f.Name
-            $uri = "$uploadUrl?name=$([System.Uri]::EscapeDataString($name))"
+            $uri = "${uploadUrl}?name=$([System.Uri]::EscapeDataString(${name}))"
             Write-Host "Uploading $($f.FullName) to $uri"
             $bytes = [System.IO.File]::ReadAllBytes($f.FullName)
             try {
