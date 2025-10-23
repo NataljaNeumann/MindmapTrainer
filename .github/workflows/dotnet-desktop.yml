@@ -191,7 +191,7 @@ jobs:
           $files = @()
           foreach ($pattern in $patterns) {
             $found = Get-ChildItem -Path . -Recurse -File -Filter $pattern -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
-            if ($found -and ($found -notmatch "\\bin\\")) {
+            if ($found -and ($found -notmatch "\\bin\\") -and ($found -notmatch "\\obj\\")) {
               $files += $found
             }
           }
