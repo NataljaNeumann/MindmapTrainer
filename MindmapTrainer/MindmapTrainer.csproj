@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
     <PackageIcon>MindmapTrainer.ico</PackageIcon>
     <Copyright>Copyright © 2024-2025 NataljaNeumann@gmx.de</Copyright>
     <Version>$(AssemblyVersion)</Version>
