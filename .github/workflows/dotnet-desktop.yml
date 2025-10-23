@@ -383,7 +383,7 @@ jobs:
               Invoke-RestMethod -Uri $uri -Method Post -Headers @{ Authorization = "token $env:GITHUB_TOKEN"; "Content-Type" = "application/zip" } -Body $bytes
               Write-Host "Uploaded $name"
             } catch {
-              Write-Error "Failed to upload $name: $($_.Exception.Message)"
+              Write-Error ("Failed to upload ${name}: " + $_.Exception.Message)
               exit 1
             }
           }
