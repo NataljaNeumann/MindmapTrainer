@@ -263,8 +263,11 @@ jobs:
             $authorsSinceTag = Get-AuthorsUnique("")
           }
           if ($commitsSinceTag.Count -eq 0) { $commitsSinceTag = @("- (no commits found)") }
-          if ($authorsSinceTag.Count -gt 1) { $commitsSinceTag += ("Authors: *" + ($authorsSinceTag -join ", ") + "*") }
-          else if ($authorsSinceTag.Count -gt 0) { $commitsSinceTag += ("Author: *" + ($authorsSinceTag -join ", ") + "*") }
+          if ($authorsSinceTag.Count -gt 1) { 
+            $commitsSinceTag += ("Authors: *" + ($authorsSinceTag -join ", ") + "*") 
+          } elseif ($authorsSinceTag.Count -gt 0) { 
+            $commitsSinceTag += ("Author: *" + ($authorsSinceTag -join ", ") + "*") 
+          }
 
           # Part B: commits with same major.minor
           $sameMinorCommits = @()
@@ -295,8 +298,8 @@ jobs:
 
           if ($sameMinorCommits.Count -eq 0) { $sameMinorCommits = @("- (no commits found)") }
           if ($sameMinorAuthors.Count -gt 1) { $sameMinorCommits += ("Author(s): *" + ($sameMinorAuthors -join ", ") + "*") }
-          else if ($sameMinorAuthors.Count -gt 0) { $sameMinorCommits += ("Author(s): *" + ($sameMinorAuthors -join ", ") + "*") }
-
+          elseif ($sameMinorAuthors.Count -gt 0) { $sameMinorCommits += ("Author(s): *" + ($sameMinorAuthors -join ", ") + "*") }
+          
           $releaseBody = "### Changes since ($prevTag):`n"
           $releaseBody += ($commitsSinceTag -join "`n")
           $releaseBody += "`n`n### Changes of $major.$minor:`n"
