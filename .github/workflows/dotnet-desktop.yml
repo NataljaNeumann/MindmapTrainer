@@ -302,7 +302,7 @@ jobs:
           
           $releaseBody = "### Changes since ($prevTag):`n"
           $releaseBody += ($commitsSinceTag -join "`n")
-          $releaseBody += "`n`n### Changes of $major.$minor:`n"
+          $releaseBody += "`n`n### Changes of ${major}.${minor}:`n"
           $releaseBody += ($sameMinorCommits -join "`n")
 
           # Publish as multiline step output
