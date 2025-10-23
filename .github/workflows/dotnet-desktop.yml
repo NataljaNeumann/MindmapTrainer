@@ -145,25 +145,25 @@ jobs:
         uses: NuGet/setup-nuget@v2
 
       - name: Restore NuGet packages
-        run: nuget restore VokabelTrainer.sln
+        run: nuget restore ${{ env.APP_NAME }}.sln
 
       # - name: Download SNK file from secrets
       #   run: |
       #     $snkBytes = [System.Convert]::FromBase64String("${{ secrets.SNK_FILE }}")
-      #     [System.IO.File]::WriteAllBytes("VokabelTrainer/MyKey.snk", $snkBytes)
+      #     [System.IO.File]::WriteAllBytes("${{ env.APP_NAME }}/MyKey.snk", $snkBytes)
 
       # - name: Build and sign with SNK
-      #   run: msbuild VokabelTrainer.sln /p:Configuration=Release /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=MyKey.snk
+      #   run: msbuild ${{ env.APP_NAME }}.sln /p:Configuration=Release /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=MyKey.snk
 
 
       # - name: Download PFX file from secrets
       #   run: |
       #     $pfxBytes = [System.Convert]::FromBase64String("${{ secrets.PFX_FILE }}")
-      #     [System.IO.File]::WriteAllBytes("VokabelTrainer/MyCert.pfx", $pfxBytes)
+      #     [System.IO.File]::WriteAllBytes("${{ env.APP_NAME }}/MyCert.pfx", $pfxBytes)
 
       # - name: Sign executable with PFX
       #   run: |
-      #     & "C:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe" sign /f VokabelTrainer/MyCert.pfx /p ${{ secrets.PFX_PASSWORD }} /tr http://timestamp.digicert.com /td sha256 /fd sha256 VokabelTrainer/bin/Release/VokabelTrainer.exe
+      #     & "C:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe" sign /f ${{ env.APP_NAME }}/MyCert.pfx /p ${{ secrets.PFX_PASSWORD }} /tr http://timestamp.digicert.com /td sha256 /fd sha256 ${{ env.APP_NAME }}/bin/Release/${{ env.APP_NAME }}.exe
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
@@ -187,8 +187,8 @@ jobs:
       #- name: Upload built zip archive
       #  uses: actions/upload-artifact@v4
       #  with:
-      #    name: VokabelTrainer-zip
-      #    path: VokabelTrainer/bin/VokabelTrainer.zip
+      #    name: ${{ env.APP_NAME }}-zip
+      #    path: ${{ env.APP_NAME }}/bin/${{ env.APP_NAME }}.zip
 
       - name: Rename output zip to include version
         shell: pwsh
