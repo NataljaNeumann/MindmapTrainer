@@ -317,7 +317,7 @@ jobs:
             # collect commits from all tags that share the same major.minor up to HEAD
             $matchingTags = @()
             foreach ($t in $tags) {
-              if ($t -match '.*v(\d+)[\._-](\d+)[\._-](\d+)[\._-](\d+)') {
+              if ($t -match '.*v(\d+)[\._-](\d+)(?:[\._-]\d+)?(?:[\._-]\d+)?[\.]?') {
                 $tagMajor = $matches[1]; $tagMinor = $matches[2]
               } else { continue }
               if ($tagMajor -eq $major -and $tagMinor -eq $minor) { $matchingTags += $t }
