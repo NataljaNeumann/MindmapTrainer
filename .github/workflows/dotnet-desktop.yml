@@ -296,8 +296,14 @@ jobs:
             $authorsSinceTag = Get-AuthorsUnique("")
           }
 
+
+          # Prepend '- ' to each commit in commitsSinceTag
+          if ($commitsSinceTag.Count -eq 0) { $commitsSinceTag = @("(no commits found)") }
+          if ($commitsSinceTag.Count -gt 0) {
+            $commitsSinceTag = $commitsSinceTag | ForEach-Object { "- $_" }
+          }
+
           # Append author(s) Part A
-          if ($commitsSinceTag.Count -eq 0) { $commitsSinceTag = @("- (no commits found)") }
           if ($authorsSinceTag.Count -gt 1) { 
             $commitsSinceTag += ("`nAuthors: *" + ($authorsSinceTag -join ", ") + "*") 
           } elseif ($authorsSinceTag.Count -gt 0) { 
@@ -331,8 +337,13 @@ jobs:
             }
           }
 
+          # Prepend '- ' to each commit in sameMinorCommits
+          if ($sameMinorCommits.Count -eq 0) { $sameMinorCommits = @("(no commits found)") }
+          if ($sameMinorCommits.Count -gt 0) {
+            $sameMinorCommits = $sameMinorCommits | ForEach-Object { "- $_" }
+          }
+
           # Append author(s) Part B
-          if ($sameMinorCommits.Count -eq 0) { $sameMinorCommits = @("- (no commits found)") }
           if ($sameMinorAuthors.Count -gt 1) { $sameMinorCommits += ("`nAuthors: *" + ($sameMinorAuthors -join ", ") + "*") }
           elseif ($sameMinorAuthors.Count -gt 0) { $sameMinorCommits += ("`nAuthor: *" + ($sameMinorAuthors -join ", ") + "*") }
           
@@ -437,8 +448,8 @@ jobs:
             exit 0
           }
 
-          # Clean upload URL (remove template part like {?name,label})
-          $uploadUrl = $uploadUrlTemplate -replace '\{.*$',''
+          # Clean upload URL (remove template part like {?name,label} and ensure valid URI)
+          $uploadUrl = $uploadUrlTemplate -replace '\{\?name,label\}$','' -replace '\{.*$',''
 
           $pattern = Join-Path -Path $app -ChildPath "bin/*v$version.zip"
           Write-Host "Searching for files matching: $pattern"
