@@ -1,4 +1,4 @@
-﻿// Vokabel-Trainer v1.0
+﻿// Mindmap-Trainer v1.0
 // Copyright (C) 2019 NataljaNeumann@gmx.de
 //
 // This program is free software; you can redistribute it and/or
