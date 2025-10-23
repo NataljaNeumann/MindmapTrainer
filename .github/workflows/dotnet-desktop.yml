@@ -305,9 +305,9 @@ jobs:
 
           # Append author(s) Part A
           if ($authorsSinceTag.Count -gt 1) { 
-            $commitsSinceTag += ("`nAuthors: *" + ($authorsSinceTag -join ", ") + "*") 
+            $commitsSinceTag += ("`n`nAuthors: *" + ($authorsSinceTag -join ", ") + "*") 
           } elseif ($authorsSinceTag.Count -gt 0) { 
-            $commitsSinceTag += ("`nAuthor: *" + ($authorsSinceTag -join ", ") + "*") 
+            $commitsSinceTag += ("`n`nAuthor: *" + ($authorsSinceTag -join ", ") + "*") 
           }
 
           # Part B: commits with same major.minor
@@ -325,12 +325,12 @@ jobs:
               if ($tagMajor -eq $major -and $tagMinor -eq $minor) { $matchingTags += $t }
             }
 
-            # If we found matching tags, compute commits since the newest matching tag; else use all commits
+            # If we found matching tags, compute commits since the oldest matching tag; else use all commits
             if ($matchingTags.Count -gt 0) {
-              # newest matching tag is the first in $tags that matched (tags already sorted by creatordate)
-              $newestMatchingTag = $matchingTags[0]
-              $sameMinorCommits = Get-Commits("$newestMatchingTag..HEAD")
-              $sameMinorAuthors = Get-AuthorsUnique("$newestMatchingTag..HEAD")
+              # oldest matching tag is the last in $tags that matched (tags already sorted by creatordate)
+              $oldestMatchingTag = $matchingTags[$matchingTags.Count - 1]
+              $sameMinorCommits = Get-Commits("$oldestMatchingTag..HEAD")
+              $sameMinorAuthors = Get-AuthorsUnique("$oldestMatchingTag..HEAD")
             } else {
               $sameMinorCommits = Get-Commits("")
               $sameMinorAuthors = Get-AuthorsUnique("")
@@ -344,8 +344,8 @@ jobs:
           }
 
           # Append author(s) Part B
-          if ($sameMinorAuthors.Count -gt 1) { $sameMinorCommits += ("`nAuthors: *" + ($sameMinorAuthors -join ", ") + "*") }
-          elseif ($sameMinorAuthors.Count -gt 0) { $sameMinorCommits += ("`nAuthor: *" + ($sameMinorAuthors -join ", ") + "*") }
+          if ($sameMinorAuthors.Count -gt 1) { $sameMinorCommits += ("`n`nAuthors: *" + ($sameMinorAuthors -join ", ") + "*") }
+          elseif ($sameMinorAuthors.Count -gt 0) { $sameMinorCommits += ("`n`nAuthor: *" + ($sameMinorAuthors -join ", ") + "*") }
           
           $releaseBody = "### Changes since ($prevTag):`n"
           $releaseBody += ($commitsSinceTag -join "`n")
