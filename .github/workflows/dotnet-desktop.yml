@@ -442,6 +442,7 @@ jobs:
           $app = $env:APP_NAME
           $version = $env:VERSION
           $uploadUrlTemplate = $env:UPLOAD_URL
+          Write-Host "UPLOAD_URL template: $uploadUrlTemplate"
 
           if (-not $uploadUrlTemplate) {
             Write-Host "No upload_url from create_release; nothing to upload."
@@ -449,7 +450,13 @@ jobs:
           }
 
           # Clean upload URL (remove template part like {?name,label} and ensure valid URI)
-          $uploadUrl = $uploadUrlTemplate -replace '\{\?name,label\}$','' -replace '\{.*$',''
+          $uploadUrl = $uploadUrlTemplate -replace '\{\?name,label\}$',''
+          Write-Host "Cleaned UPLOAD_URL: $uploadUrl"
+
+          if (-not $uploadUrl) {
+            Write-Host "Upload URL is empty after cleaning. Exiting."
+            exit 1
+          }
 
           $pattern = Join-Path -Path $app -ChildPath "bin/*v$version.zip"
           Write-Host "Searching for files matching: $pattern"
