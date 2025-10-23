@@ -1,0 +1,386 @@
+name: Build .NET Desktop
+
+env:
+  APP_NAME: MindmapTrainer
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Increment build number in AssemblyInfo.cs
+        id: increment
+        shell: pwsh
+        run: |
+          # Use the application name from the workflow env
+          $app = $env:APP_NAME
+
+          Write-Host "Using application name: $app"
+
+          # Find project files and AssemblyInfo files
+          $projFiles = Get-ChildItem -Path . -Recurse -File -Include *.csproj,*.vbproj,*.fsproj -ErrorAction SilentlyContinue
+          $assemblyFiles = Get-ChildItem -Path . -Recurse -File -Filter AssemblyInfo.cs -ErrorAction SilentlyContinue
+
+          $newVersion = $null
+
+          function Increment-Version($major, $minor, $build, $revision) {
+            $build = [int]$build + 1
+            return "$major.$minor.$build.$revision"
+          }
+
+          # Try to find version in project files first
+          foreach ($proj in $projFiles) {
+            $text = Get-Content -Raw -LiteralPath $proj.FullName
+            if ($text -match '<Version>\s*(\d+)\.(\d+)\.(\d+)\.(\d+)\s*</Version>') {
+              $newVersion = Increment-Version $matches[1] $matches[2] $matches[3] $matches[4]
+              Write-Host "Found <Version> in $($proj.FullName) -> $newVersion"
+              break
+            }
+            if ($text -match '<AssemblyVersion>\s*(\d+)\.(\d+)\.(\d+)\.(\d+)\s*</AssemblyVersion>') {
+              $newVersion = Increment-Version $matches[1] $matches[2] $matches[3] $matches[4]
+              Write-Host "Found <AssemblyVersion> in $($proj.FullName) -> $newVersion"
+              break
+            }
+            if ($text -match '<FileVersion>\s*(\d+)\.(\d+)\.(\d+)\.(\d+)\s*</FileVersion>') {
+              $newVersion = Increment-Version $matches[1] $matches[2] $matches[3] $matches[4]
+              Write-Host "Found <FileVersion> in $($proj.FullName) -> $newVersion"
+              break
+            }
+          }
+
+          # If not found in project files, look inside AssemblyInfo.cs files
+          if (-not $newVersion) {
+            foreach ($a in $assemblyFiles) {
+              $lines = Get-Content -LiteralPath $a.FullName
+              foreach ($line in $lines) {
+                if ($line -match 'AssemblyVersion\("(\d+)\.(\d+)\.(\d+)\.(\d+)"\)') {
+                  $newVersion = Increment-Version $matches[1] $matches[2] $matches[3] $matches[4]
+                  Write-Host "Found AssemblyVersion in $($a.FullName) -> $newVersion"
+                  break
+                }
+                if ($line -match 'AssemblyFileVersion\("(\d+)\.(\d+)\.(\d+)\.(\d+)"\)') {
+                  $newVersion = Increment-Version $matches[1] $matches[2] $matches[3] $matches[4]
+                  Write-Host "Found AssemblyFileVersion in $($a.FullName) -> $newVersion"
+                  break
+                }
+              }
+              if ($newVersion) { break }
+            }
+          }
+
+          if (-not $newVersion) {
+            Write-Error "Couldn't find any version information in project files or AssemblyInfo.cs"
+            exit 1
+          }
+
+          # Update project files: <Version>, <AssemblyVersion>, <FileVersion>
+          foreach ($proj in $projFiles) {
+            $path = $proj.FullName
+            $text = Get-Content -Raw -LiteralPath $path
+
+            $changed = $false
+
+            if ($text -match '<Version>\s*(\d+\.\d+\.\d+\.\d+)\s*</Version>') {
+              $text = $text -replace '<Version>\s*\d+\.\d+\.\d+\.\d+\s*</Version>', "<Version>$newVersion</Version>"
+              $changed = $true
+            } else {
+              # Insert <Version> into the first PropertyGroup if none exists
+              if ($text -match '(?s)(<PropertyGroup[^>]*>)') {
+                $text = $text -replace '(?s)(<PropertyGroup[^>]*>)', "`$1`n    <Version>$newVersion</Version>"
+                $changed = $true
+              }
+            }
+
+            # Replace AssemblyVersion and FileVersion tags if present
+            if ($text -match '<AssemblyVersion>\s*\d+\.\d+\.\d+\.\d+\s*</AssemblyVersion>') {
+              $text = $text -replace '<AssemblyVersion>\s*\d+\.\d+\.\d+\.\d+\s*</AssemblyVersion>', "<AssemblyVersion>$newVersion</AssemblyVersion>"
+              $changed = $true
+            }
+            if ($text -match '<FileVersion>\s*\d+\.\d+\.\d+\.\d+\s*</FileVersion>') {
+              $text = $text -replace '<FileVersion>\s*\d+\.\d+\.\d+\.\d+\s*</FileVersion>', "<FileVersion>$newVersion</FileVersion>"
+              $changed = $true
+            }
+
+            if ($changed) {
+              Set-Content -LiteralPath $path -Value $text -Encoding UTF8
+              Write-Host "Updated $path"
+            }
+          }
+
+          # Update AssemblyInfo.cs files found anywhere
+          foreach ($a in $assemblyFiles) {
+            $path = $a.FullName
+            $lines = Get-Content -LiteralPath $path
+            $newLines = @()
+            foreach ($line in $lines) {
+              if ($line -match 'AssemblyVersion\("(\d+)\.(\d+)\.(\d+)\.(\d+)"\)') {
+                $newLines += "[assembly: AssemblyVersion(`"$newVersion`")]"
+              } elseif ($line -match 'AssemblyFileVersion\("(\d+)\.(\d+)\.(\d+)\.(\d+)"\)') {
+                $newLines += "[assembly: AssemblyFileVersion(`"$newVersion`")]"
+              } else {
+                $newLines += $line
+              }
+            }
+            Set-Content -LiteralPath $path -Value $newLines -Encoding UTF8
+            Write-Host "Updated $path"
+          }
+
+          # publish the version as a step output in the new ($GITHUB_OUTPUT) format
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "version=$newVersion"
+
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v2
+
+      - name: Restore NuGet packages
+        run: nuget restore VokabelTrainer.sln
+
+      # - name: Download SNK file from secrets
+      #   run: |
+      #     $snkBytes = [System.Convert]::FromBase64String("${{ secrets.SNK_FILE }}")
+      #     [System.IO.File]::WriteAllBytes("VokabelTrainer/MyKey.snk", $snkBytes)
+
+      # - name: Build and sign with SNK
+      #   run: msbuild VokabelTrainer.sln /p:Configuration=Release /p:SignAssembly=true /p:AssemblyOriginatorKeyFile=MyKey.snk
+
+
+      # - name: Download PFX file from secrets
+      #   run: |
+      #     $pfxBytes = [System.Convert]::FromBase64String("${{ secrets.PFX_FILE }}")
+      #     [System.IO.File]::WriteAllBytes("VokabelTrainer/MyCert.pfx", $pfxBytes)
+
+      # - name: Sign executable with PFX
+      #   run: |
+      #     & "C:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe" sign /f VokabelTrainer/MyCert.pfx /p ${{ secrets.PFX_PASSWORD }} /tr http://timestamp.digicert.com /td sha256 /fd sha256 VokabelTrainer/bin/Release/VokabelTrainer.exe
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
+      #  with:
+      #    vs-version: '17.8'
+
+      - name: Build solution
+        run: msbuild VokabelTrainer.sln /p:Configuration=Release
+      # /verbosity:diag
+
+
+      # commit after build, so there are no tags from failing commits
+      - name: Commit version change
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Set version to ${{ steps.increment.outputs.version }}"
+          add: '**/Properties/AssemblyInfo.cs **/*.csproj **/*.vbproj **/*.fsproj'
+          github_token: ${{ secrets.GH_TOKEN }}
+
+
+      #- name: Upload built zip archive
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    name: VokabelTrainer-zip
+      #    path: VokabelTrainer/bin/VokabelTrainer.zip
+
+      - name: Rename output zip to include version
+        shell: pwsh
+        run: |
+          $version = '${{ steps.increment.outputs.version }}'
+          $app = $env:APP_NAME
+          $src = Join-Path -Path $app -ChildPath "bin/$($app).zip"
+          $dest = Join-Path -Path $app -ChildPath "bin/$($app)-v$version.zip"
+          if (-not (Test-Path $src)) {
+            Write-Host "Source zip not found: $src (skipping rename)"
+            if (Test-Path $dest) { Write-Host "Dest zip found: $dest (skipping rename)" }
+          } else {
+            if (Test-Path $dest) { Remove-Item $dest -Force }
+            Move-Item -Path $src -Destination $dest -Force
+            Write-Host "Renamed $src -> $dest"
+          }
+
+      - name: Upload built zip archive(s) as workflow artifact(s)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.APP_NAME }}-v${{ steps.increment.outputs.version }}
+          path: ${{ env.APP_NAME }}/bin/*v${{ steps.increment.outputs.version }}.zip
+
+      - name: Generate release notes (commits since last tag and same major.minor)
+        id: generate_release_notes
+        shell: pwsh
+        run: |
+          $version = '${{ steps.increment.outputs.version }}'
+
+          # Ensure tags are available
+          git fetch --tags
+
+          # Get tags sorted by creation date (newest first)
+          $tags = git for-each-ref --sort=-creatordate --format '%(refname:short)' refs/tags | ForEach-Object { $_ }
+
+          $prevTag = if ($tags.Length -gt 0) { $tags[0] } else { "" }
+
+          # Parse current major.minor from incremented version
+          $major = $null; $minor = $null
+          if ($version -match '^(\d+)\.(\d+)\.(\d+)\.(\d+)$') {
+            $major = $matches[1]; $minor = $matches[2]
+          }
+
+          function Get-Commits($range) {
+            if ([string]::IsNullOrEmpty($range)) {
+              $list = git log --pretty=format:'%s' --no-merges
+            } else {
+              $list = git log $range --pretty=format:'%s' --no-merges
+            }
+            if (-not $list) { return @() }
+            $lines = $list -split "`n" | Where-Object { $_ -notmatch 'Set version to' }
+            return ,$lines
+          }
+
+          function Get-AuthorsUnique($range) {
+            if ([string]::IsNullOrEmpty($range)) {
+              $list = git log --pretty=format:'%an' --no-merges
+            } else {
+              $list = git log $range --pretty=format:'%an' --no-merges
+            }
+            if (-not $list) { return @() }
+            $authors = $list -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" } | Select-Object -Unique
+            return ,$authors
+          }
+
+          # Part A: commits since last tag
+          if ($prevTag -ne "") {
+            $commitsSinceTag = Get-Commits("$prevTag..HEAD")
+            $authorsSinceTag = Get-AuthorsUnique("$prevTag..HEAD")
+          } else {
+            $commitsSinceTag = Get-Commits("")
+            $authorsSinceTag = Get-AuthorsUnique("")
+          }
+          if ($commitsSinceTag.Count -eq 0) { $commitsSinceTag = @("- (no commits found)") }
+          if ($authorsSinceTag.Count -gt 1) { $commitsSinceTag += ("Authors: *" + ($authorsSinceTag -join ", ") + "*") }
+          else if ($authorsSinceTag.Count -gt 0) { $commitsSinceTag += ("Author: *" + ($authorsSinceTag -join ", ") + "*") }
+
+          # Part B: commits with same major.minor
+          $sameMinorCommits = @()
+          $sameMinorAuthors = @()
+          if ($major -ne $null -and $minor -ne $null) {
+            # collect commits from all tags that share the same major.minor up to HEAD
+            $matchingTags = @()
+            foreach ($t in $tags) {
+              if ($t -match 'v(\d+)[\._-](\d+)[\._-](\d+)[\._-](\d+)') {
+                $tagMajor = $matches[1]; $tagMinor = $matches[2]
+              } elseif ($t -match '.*_v(\d+)\.(\d+)\.(\d+)\.(\d+)') {
+                $tagMajor = $matches[1]; $tagMinor = $matches[2]
+              } else { continue }
+              if ($tagMajor -eq $major -and $tagMinor -eq $minor) { $matchingTags += $t }
+            }
+
+            # If we found matching tags, compute commits since the newest matching tag; else use all commits
+            if ($matchingTags.Count -gt 0) {
+              # newest matching tag is the first in $tags that matched (tags already sorted by creatordate)
+              $newestMatchingTag = $matchingTags[0]
+              $sameMinorCommits = Get-Commits("$newestMatchingTag..HEAD")
+              $sameMinorAuthors = Get-AuthorsUnique("$newestMatchingTag..HEAD")
+            } else {
+              $sameMinorCommits = Get-Commits("")
+              $sameMinorAuthors = Get-AuthorsUnique("")
+            }
+          }
+
+          if ($sameMinorCommits.Count -eq 0) { $sameMinorCommits = @("- (no commits found)") }
+          if ($sameMinorAuthors.Count -gt 1) { $sameMinorCommits += ("Author(s): *" + ($sameMinorAuthors -join ", ") + "*") }
+          else if ($sameMinorAuthors.Count -gt 0) { $sameMinorCommits += ("Author(s): *" + ($sameMinorAuthors -join ", ") + "*") }
+
+          $releaseBody = "### Changes since ($prevTag):`n"
+          $releaseBody += ($commitsSinceTag -join "`n")
+          $releaseBody += "`n`n### Changes of $major.$minor:`n"
+          $releaseBody += ($sameMinorCommits -join "`n")
+
+          # Publish as multiline step output
+          [System.IO.File]::AppendAllText($env:GITHUB_OUTPUT, "release_body<<EOF`n$releaseBody`nEOF`n")
+
+      - name: Create and push tag
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # ensure history & tags are present
+          # Only run --unshallow if the repo is actually shallow to avoid the harmless fatal
+          if (Test-Path -Path ".git\shallow") {
+            git fetch --unshallow --tags || git fetch --tags
+          } else {
+            git fetch --tags
+          }
+
+          $tag = "$($env:APP_NAME)_v${{ steps.increment.outputs.version }}"
+          if (git rev-parse --verify $tag 2>$null) {
+             Write-Host "Tag $tag already exists; skipping"
+          } else {
+             git tag -a $tag -m "Release $tag"
+             git push origin refs/tags/$tag
+             Write-Host "Created and pushed tag $tag"
+          }
+
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ env.APP_NAME }}_v${{ steps.increment.outputs.version }}
+          release_name: ${{ env.APP_NAME }} v${{ steps.increment.outputs.version }}
+          body: ${{ steps.generate_release_notes.outputs.release_body }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Upload release asset(s) (all bin/*v<version>.zip)
+        shell: pwsh
+        env:
+          UPLOAD_URL: ${{ steps.create_release.outputs.upload_url }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          APP_NAME: ${{ env.APP_NAME }}
+          VERSION: ${{ steps.increment.outputs.version }}
+        run: |
+          $app = $env:APP_NAME
+          $version = $env:VERSION
+          $uploadUrlTemplate = $env:UPLOAD_URL
+
+          if (-not $uploadUrlTemplate) {
+            Write-Host "No upload_url from create_release; nothing to upload."
+            exit 0
+          }
+
+          # Clean upload URL (remove template part like {?name,label})
+          $uploadUrl = $uploadUrlTemplate -replace '\{.*$',''
+
+          $pattern = Join-Path -Path $app -ChildPath "bin/*v$version.zip"
+          Write-Host "Searching for files matching: $pattern"
+
+          $files = Get-ChildItem -Path $pattern -File -ErrorAction SilentlyContinue
+          if (-not $files -or $files.Count -eq 0) {
+            Write-Host "No files found to upload to release for pattern: $pattern"
+            exit 0
+          }
+
+          foreach ($f in $files) {
+            $name = $f.Name
+            $uri = "$uploadUrl?name=$([System.Uri]::EscapeDataString($name))"
+            Write-Host "Uploading $($f.FullName) to $uri"
+            $bytes = [System.IO.File]::ReadAllBytes($f.FullName)
+            try {
+              Invoke-RestMethod -Uri $uri -Method Post -Headers @{ Authorization = "token $env:GITHUB_TOKEN"; "Content-Type" = "application/zip" } -Body $bytes
+              Write-Host "Uploaded $name"
+            } catch {
+              Write-Error "Failed to upload $name: $($_.Exception.Message)"
+              exit 1
+            }
+          }
