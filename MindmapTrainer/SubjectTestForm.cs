@@ -21,10 +21,12 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using System.IO;
 
 namespace MindmapTrainer
 {
@@ -369,8 +371,27 @@ namespace MindmapTrainer
         {
             try
             {
-                System.Diagnostics.Process.Start(
-                    System.IO.Path.Combine(Application.StartupPath, "Readme.html"));
+                string strUrl = System.IO.Path.Combine(Application.StartupPath, "Readme.html");
+                try
+                {
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        Process.Start(new ProcessStartInfo(strUrl) { UseShellExecute = true });
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                    {
+                        Process.Start("xdg-open", strUrl);
+                    }
+                    else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    {
+                        Process.Start("open", strUrl);
+                    }
+                }
+                catch (Exception oEx)
+                {
+                    MessageBox.Show("Could not open browser: " + oEx.Message);
+                }
+
             }
             catch (Exception oEx)
             {
