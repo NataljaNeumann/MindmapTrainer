@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>མཐུད་མཚམས་ཁ་སྣོན།</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>པར་རིས་ཁ་སྣོན་བྱེད་པ།</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>མཐུད་མཚམས་བགོས་པ།</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>ཡིག་ཆ་ཉར་ཚགས་བྱེད་མ་ཐུབ། </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>པར་རིས་ཁ་སྣོན་བྱེད་པ།</value>
   </data>
 </root>

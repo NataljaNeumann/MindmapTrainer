@@ -118,6 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Trener mape uma</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 22</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>O treneru mentalnih mapa</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 20</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>informacija</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 20</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Intenzivno</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 22</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Licenca (GPL v2)</value>
+  </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
@@ -130,52 +157,25 @@
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Otvoriti</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Promjena prikaza </value>
+  </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 20</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Trening</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 20</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intenzivno</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 22</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>O treneru mentalnih mapa</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 22</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Licenca (GPL v2)</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 20</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>informacija</value>
-  </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Datoteke umnih mapa|*.MindMap.xml</value>
-  </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>Datoteke umnih mapa|*.MindMap.xml</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Trener mape uma</value>
-  </data>
-  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
-    <value>Promjena prikaza </value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
     <value>Slike (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Sve datoteke|*.*</value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
     <value>Dodaj sliku </value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Datoteke umnih mapa|*.MindMap.xml</value>
   </data>
 </root>

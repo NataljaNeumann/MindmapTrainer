@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>បន្ថែមថ្នាំង</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>បន្ថែមរូបភាព </value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>បំបែកថ្នាំង</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>បរាជ័យក្នុងការរក្សាទុកឯកសារ </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>បន្ថែមរូបភាព </value>
   </data>
 </root>

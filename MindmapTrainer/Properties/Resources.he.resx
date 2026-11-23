@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>הוסף צומת</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>הוסף תמונה</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>צומת מפוצל</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>שמירת הקובץ נכשלה </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>הוסף תמונה</value>
   </data>
 </root>

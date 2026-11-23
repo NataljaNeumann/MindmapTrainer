@@ -118,23 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
-  </data>
-  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Nieuw</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 20</value>
-  </data>
-  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
-    <value>opleiding</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Intensief</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Mindmap trainer</value>
   </data>
   <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 22</value>
@@ -142,37 +127,52 @@
   <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
     <value>Over Mindmap Trainer</value>
   </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Licentie (GPL v2)</value>
-  </data>
   <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 20</value>
   </data>
   <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
     <value>informatie</value>
   </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Mindmap-bestanden|*.MindMap.xml</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
   </data>
-  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
-    <value>Mindmap-bestanden|*.MindMap.xml</value>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Intensief</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Mindmap trainer</value>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Licentie (GPL v2)</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="m_ctlNewMindmapToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Nieuw</value>
+  </data>
+  <data xml:space="preserve" name="m_ctlOpenToolStripMenuItem.Text">
+    <value>&amp;Openen</value>
   </data>
   <data xml:space="preserve" name="m_ctlToggleGUI.Text">
     <value>Weergave wijzigen </value>
   </data>
-  <data xml:space="preserve" name="m_ctlOpenToolStripMenuItem.Text">
-    <value>&amp;Openen</value>
+  <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 20</value>
+  </data>
+  <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
+    <value>opleiding</value>
+  </data>
+  <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
+    <value>Mindmap-bestanden|*.MindMap.xml</value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
     <value>Afbeeldingen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Alle bestanden|*.*</value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
     <value>Een afbeelding toevoegen</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Mindmap-bestanden|*.MindMap.xml</value>
   </data>
 </root>

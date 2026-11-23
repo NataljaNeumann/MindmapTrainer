@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Bæta við hnút</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Bæta við mynd</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Kljúfur hnútur</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Mistókst að vista skrána </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Bæta við mynd</value>
   </data>
 </root>

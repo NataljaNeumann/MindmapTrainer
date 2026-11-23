@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Добавете възел</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Добавяне на изображение</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Разделен възел</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Неуспешно записване на файла </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Добавяне на изображение</value>
   </data>
 </root>

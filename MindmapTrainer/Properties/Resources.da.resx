@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Tilføj node</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Tilføj et billede</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Split node</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Filen kunne ikke gemmes </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Tilføj et billede</value>
   </data>
 </root>

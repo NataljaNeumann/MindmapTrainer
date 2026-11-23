@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>MindmapTrainer v1.0
-Mualliflik huquqi © 2024-2025 NataljaNeumann@gmx.de
-
-Bu dastur bepul dastur hisoblanadi; Free Software Foundation tomonidan e'lon qilingan GNU General Public License shartlari asosida uni qayta tarqatishingiz va/yoki o'zgartirishingiz mumkin; Litsenziyaning 2-versiyasi yoki (sizning xohishingizga ko'ra) har qanday keyingi versiyasi.
-
-Ushbu dastur foydali bo'ladi degan umidda tarqatiladi, lekin HECH QANDAY KAFOLATSIZ; SOVLASH MUVOFIQligi yoki MAQSUS MAQSADGA MUVOFIQligi haqidagi nazarda tutilgan kafolatisiz ham.  Batafsil ma'lumot uchun GNU General Public License-ga qarang.
-
-Siz ushbu dastur bilan birga GNU General Public License nusxasini olishingiz kerak edi; boʻlmasa,  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -154,5 +143,16 @@ Siz ushbu dastur bilan birga GNU General Public License nusxasini olishingiz ker
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Aql xaritasi murabbiyidan</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>MindmapTrainer v1.0
+Mualliflik huquqi © 2024-2025 NataljaNeumann@gmx.de
+
+Bu dastur bepul dastur hisoblanadi; Free Software Foundation tomonidan e'lon qilingan GNU General Public License shartlari asosida uni qayta tarqatishingiz va/yoki o'zgartirishingiz mumkin; Litsenziyaning 2-versiyasi yoki (sizning xohishingizga ko'ra) har qanday keyingi versiyasi.
+
+Ushbu dastur foydali bo'ladi degan umidda tarqatiladi, lekin HECH QANDAY KAFOLATSIZ; SOVLASH MUVOFIQligi yoki MAQSUS MAQSADGA MUVOFIQligi haqidagi nazarda tutilgan kafolatisiz ham.  Batafsil ma'lumot uchun GNU General Public License-ga qarang.
+
+Siz ushbu dastur bilan birga GNU General Public License nusxasini olishingiz kerak edi; boʻlmasa,  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+</value>
   </data>
 </root>

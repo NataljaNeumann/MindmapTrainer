@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Оюуны газрын зургийн дасгалжуулагчийн тухай</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>MindmapTrainer v1.0
 Зохиогчийн эрх (C) 2024-2025 NataljaNeumann@gmx.de
@@ -127,8 +130,5 @@
 
 Та энэ програмын хамт GNU нийтийн нийтийн лицензийн хуулбарыг хүлээн авсан байх ёстой; Хэрэв үгүй ​​бол хаягаар бичээрэй Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Оюуны газрын зургийн дасгалжуулагчийн тухай</value>
   </data>
 </root>

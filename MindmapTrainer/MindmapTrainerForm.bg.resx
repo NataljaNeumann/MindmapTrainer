@@ -118,6 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Text" xml:space="preserve">
+    <value>Обучител на мисловна карта</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 22</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>Относно треньора за мисловни карти</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 20</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>информация</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 20</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Интензивен</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 22</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>Лиценз (GPL v2)</value>
+  </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>
   </data>
@@ -130,52 +157,25 @@
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Отвори</value>
   </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>Превключване на изгледа </value>
+  </data>
   <data name="m_ctlTrainingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 20</value>
   </data>
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>Упражнение</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 20</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Интензивен</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 22</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>Относно треньора за мисловни карти</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 22</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>Лиценз (GPL v2)</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 20</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>информация</value>
-  </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>Файлове с мисловни карти|*.MindMap.xml</value>
-  </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>Файлове с мисловни карти|*.MindMap.xml</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Обучител на мисловна карта</value>
-  </data>
-  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
-    <value>Превключване на изгледа </value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
     <value>Изображения (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png|Всички файлове|*.*</value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
     <value>Добавяне на изображение</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>Файлове с мисловни карти|*.MindMap.xml</value>
   </data>
 </root>

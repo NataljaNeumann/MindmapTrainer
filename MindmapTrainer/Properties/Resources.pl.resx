@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Dodaj węzeł</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Dodaj obraz </value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Podziel węzeł</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Nie udało się zapisać pliku </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Dodaj obraz </value>
   </data>
 </root>

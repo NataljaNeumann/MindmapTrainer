@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>اضافه کردن گره</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>افزودن تصویر</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>تقسیم گره</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>فایل ذخیره نشد </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>افزودن تصویر</value>
   </data>
 </root>

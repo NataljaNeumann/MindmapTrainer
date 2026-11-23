@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>MindmapTrainer v1.0
-Bản quyền © 2024-2025 NataljaNeumann@gmx.de
-
-Chương trình này là phần mềm miễn phí; bạn có thể phân phối lại và/hoặc sửa đổi nó theo các điều khoản của GNU Giấy phép Công cộng Chung do Free Software Foundation xuất bản; phiên bản 2 của Giấy phép hoặc (tùy theo lựa chọn của bạn) bất kỳ phiên bản nào mới hơn.
-
-Chương trình này được phân phối với hy vọng rằng nó sẽ hữu ích, nhưng KHÔNG CÓ BẤT KỲ ĐẢM BẢO NÀO; thậm chí không có sự bảo đảm ngụ ý về KHẢ NĂNG BÁN hoặc SỰ PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ.  Xem Giấy phép Công cộng GNU để biết thêm chi tiết.
-
-Bạn hẳn đã nhận được một bản sao Giấy phép Công cộng GNU cùng với chương trình này; nếu không, hãy viết thư cho  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -154,5 +143,16 @@ Bạn hẳn đã nhận được một bản sao Giấy phép Công cộng GNU c
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Giới thiệu về Huấn luyện viên Bản đồ Tư duy</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>MindmapTrainer v1.0
+Bản quyền © 2024-2025 NataljaNeumann@gmx.de
+
+Chương trình này là phần mềm miễn phí; bạn có thể phân phối lại và/hoặc sửa đổi nó theo các điều khoản của GNU Giấy phép Công cộng Chung do Free Software Foundation xuất bản; phiên bản 2 của Giấy phép hoặc (tùy theo lựa chọn của bạn) bất kỳ phiên bản nào mới hơn.
+
+Chương trình này được phân phối với hy vọng rằng nó sẽ hữu ích, nhưng KHÔNG CÓ BẤT KỲ ĐẢM BẢO NÀO; thậm chí không có sự bảo đảm ngụ ý về KHẢ NĂNG BÁN hoặc SỰ PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ.  Xem Giấy phép Công cộng GNU để biết thêm chi tiết.
+
+Bạn hẳn đã nhận được một bản sao Giấy phép Công cộng GNU cùng với chương trình này; nếu không, hãy viết thư cho  Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+</value>
   </data>
 </root>

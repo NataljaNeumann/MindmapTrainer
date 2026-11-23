@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Ajouter un nœud</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Ajouter une image </value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Nœud divisé</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Échec de l'enregistrement du fichier </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Ajouter une image </value>
   </data>
 </root>

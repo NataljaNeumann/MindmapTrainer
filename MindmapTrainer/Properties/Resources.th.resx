@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>เพิ่มโหนด</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>เพิ่มรูปภาพ </value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>แยกโหนด</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>เกิดข้อผิดพลาดในการบันทึกไฟล์ </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>เพิ่มรูปภาพ </value>
   </data>
 </root>

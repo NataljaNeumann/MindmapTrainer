@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Дадаць вузел</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Дадаць малюнак</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Падзяліць вузел</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Не ўдалося захаваць файл </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Дадаць малюнак</value>
   </data>
 </root>

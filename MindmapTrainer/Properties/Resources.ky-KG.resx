@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Түйүн кошуу</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Сүрөт кошуу</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>Бөлүнгөн түйүн</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Файл сакталбай калды </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Сүрөт кошуу</value>
   </data>
 </root>

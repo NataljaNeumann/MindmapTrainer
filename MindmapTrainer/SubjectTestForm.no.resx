@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Vise</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Korrekt</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Uriktig</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Eksamens tema</value>
   </data>
   <data name="m_btnCanel.Text" xml:space="preserve">
     <value>Kansellere</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Eksamens tema</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>Korrekt</value>
+  </data>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>Vise</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>Uriktig</value>
   </data>
 </root>

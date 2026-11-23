@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>أضف عقدة</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>أضف صورة</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>عقدة الانقسام</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>فشل حفظ الملف </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>أضف صورة</value>
   </data>
 </root>

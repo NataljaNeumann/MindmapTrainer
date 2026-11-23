@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>Ցույց տալ</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>Ճիշտ</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>Սխալ</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Քննության թեմա</value>
   </data>
   <data name="m_btnCanel.Text" xml:space="preserve">
     <value>Չեղարկել</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Քննության թեմա</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>Ճիշտ</value>
+  </data>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>Ցույց տալ</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>Սխալ</value>
   </data>
 </root>

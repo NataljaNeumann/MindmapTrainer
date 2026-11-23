@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>За тренерот за умствена мапа</value>
+  </data>
   <data name="label1.Text" xml:space="preserve">
     <value>MindmapTrainer v1.0
 Авторски права (C) 2024-2025 NataljaNeumann@gmx.de
@@ -127,8 +130,5 @@
 
 Требаше да добиете копија од GNU Општата јавна лиценца заедно со оваа програма; ако не, пишете доFree Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>За тренерот за умствена мапа</value>
   </data>
 </root>

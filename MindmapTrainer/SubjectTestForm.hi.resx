@@ -118,32 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 27.75pt</value>
-  </data>
-  <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
-  </data>
-  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 24</value>
-  </data>
-  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.75pt</value>
-  </data>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>दिखाओ</value>
-  </data>
-  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.75pt</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>सही</value>
-  </data>
-  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.75pt</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>ग़लत</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>परीक्षा विषय</value>
   </data>
   <data name="m_btnCanel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 15.75pt</value>
@@ -154,7 +130,31 @@
   <data name="m_btnCanel.Text" xml:space="preserve">
     <value>रद्द करना</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>परीक्षा विषय</value>
+  <data name="m_btnCorrectResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15.75pt</value>
+  </data>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>सही</value>
+  </data>
+  <data name="m_btnShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15.75pt</value>
+  </data>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>दिखाओ</value>
+  </data>
+  <data name="m_btnWrongResult.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15.75pt</value>
+  </data>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>ग़लत</value>
+  </data>
+  <data name="m_lblElements.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 14.25pt</value>
+  </data>
+  <data name="m_lblElements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 24</value>
+  </data>
+  <data name="m_lblSubject.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 27.75pt</value>
   </data>
 </root>

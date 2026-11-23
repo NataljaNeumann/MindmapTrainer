@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="m_btnShow.Text" xml:space="preserve">
-    <value>לְהַצִיג</value>
-  </data>
-  <data name="m_btnCorrectResult.Text" xml:space="preserve">
-    <value>נָכוֹן</value>
-  </data>
-  <data name="m_btnWrongResult.Text" xml:space="preserve">
-    <value>לֹא נָכוֹן</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>נושא הבחינה</value>
+  </data>
   <data name="m_btnCanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>555, 302</value>
   </data>
   <data name="m_btnCanel.Text" xml:space="preserve">
     <value>לְבַטֵל</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="m_btnCorrectResult.Text" xml:space="preserve">
+    <value>נָכוֹן</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="m_btnShow.Text" xml:space="preserve">
+    <value>לְהַצִיג</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>נושא הבחינה</value>
+  <data name="m_btnWrongResult.Text" xml:space="preserve">
+    <value>לֹא נָכוֹן</value>
   </data>
 </root>

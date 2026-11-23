@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>Tambahkan simpul</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>Tambahkan gambar</value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>simpul terpisah</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>Gagal menyimpan file </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>Tambahkan gambar</value>
   </data>
 </root>

@@ -120,6 +120,9 @@
   <data xml:space="preserve" name="AddNode">
     <value>نوډ اضافه کړئ</value>
   </data>
+  <data xml:space="preserve" name="AddPicture">
+    <value>یو انځور اضافه کړئ </value>
+  </data>
   <data xml:space="preserve" name="DetachNode">
     <value>تقسیم نوډ</value>
   </data>
@@ -128,8 +131,5 @@
   </data>
   <data xml:space="preserve" name="ErrorSavingFile">
     <value>د فایل خوندي کولو کې پاتې راغلی </value>
-  </data>
-  <data xml:space="preserve" name="AddPicture">
-    <value>یو انځور اضافه کړئ </value>
   </data>
 </root>

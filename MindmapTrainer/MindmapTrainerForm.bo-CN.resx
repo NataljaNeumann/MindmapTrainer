@@ -118,8 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 20.25pt</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15.75pt</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་མཁན།</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 42</value>
+  </data>
+  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
+    <value>སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་བྱེད་མཁན་གྱི་སྐོར།</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 41</value>
+  </data>
+  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>ཆ་འཕྲིན</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
+    <value>ཚོད་འཛིན།+I</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 41</value>
+  </data>
+  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
+    <value>ཤུགས་ཆེ་བ།</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 42</value>
+  </data>
+  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
+    <value>ཆོག་མཆན་(GPL v2)</value>
+  </data>
+  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 60</value>
   </data>
   <data name="m_ctlNewMindmapToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value>ཚོད་འཛིན་+N</value>
@@ -139,6 +172,15 @@
   <data name="m_ctlOpenToolStripMenuItem.Text" xml:space="preserve">
     <value>འབྱེད</value>
   </data>
+  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 48</value>
+  </data>
+  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 411</value>
+  </data>
+  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
+    <value>མཐོང་སྣང་བརྗེ་སྒྱུར། </value>
+  </data>
   <data name="m_ctlTrainingToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
     <value>ཚོད་འཛིན།+T</value>
   </data>
@@ -148,64 +190,22 @@
   <data name="m_ctlTrainingToolStripMenuItem.Text" xml:space="preserve">
     <value>སྦྱོང་བརྡར</value>
   </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.ShortcutKeyDisplayString" xml:space="preserve">
-    <value>ཚོད་འཛིན།+I</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 41</value>
-  </data>
-  <data name="m_ctlIntensiveToolStripMenuItem.Text" xml:space="preserve">
-    <value>ཤུགས་ཆེ་བ།</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 42</value>
-  </data>
-  <data name="m_ctlAboutMenuItem.Text" xml:space="preserve">
-    <value>སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་བྱེད་མཁན་གྱི་སྐོར།</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 42</value>
-  </data>
-  <data name="m_ctlLicenseMenuItem.Text" xml:space="preserve">
-    <value>ཆོག་མཆན་(GPL v2)</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 41</value>
-  </data>
-  <data name="m_ctlAboutToolStripMenuItem.Text" xml:space="preserve">
-    <value>ཆ་འཕྲིན</value>
-  </data>
-  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 45</value>
-  </data>
-  <data name="m_ctlMindmapNodeView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 60</value>
-  </data>
-  <data name="m_ctlPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 48</value>
-  </data>
-  <data name="m_ctlPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>707, 411</value>
-  </data>
-  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
-    <value>སེམས་ཀྱི་ས་ཁྲའི་ཡིག་ཆ།|*.MindMap.xml</value>
-  </data>
   <data name="m_dlgOpenFileDialog1.Filter" xml:space="preserve">
     <value>སེམས་ཀྱི་ས་ཁྲའི་ཡིག་ཆ།|*.MindMap.xml</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15.75pt</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>སེམས་ཀྱི་ས་ཁྲའི་སྦྱོང་བརྡར་མཁན།</value>
-  </data>
-  <data xml:space="preserve" name="m_ctlToggleGUI.Text">
-    <value>མཐོང་སྣང་བརྗེ་སྒྱུར། </value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Filter">
     <value>པར་རིས་ (*.jpg;*.jpeg;*.png)|*.jpg;*.jpg;*.png|ཡིག་ཆ་ཚང་མ།|*.*</value>
   </data>
   <data xml:space="preserve" name="m_dlgOpenFileDialog2.Title">
     <value>པར་རིས་ཁ་སྣོན་བྱེད་པ།</value>
+  </data>
+  <data name="m_dlgSaveFileDialog1.Filter" xml:space="preserve">
+    <value>སེམས་ཀྱི་ས་ཁྲའི་ཡིག་ཆ།|*.MindMap.xml</value>
+  </data>
+  <data name="m_oMenuStrip.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 20.25pt</value>
+  </data>
+  <data name="m_oMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>707, 45</value>
   </data>
 </root>
