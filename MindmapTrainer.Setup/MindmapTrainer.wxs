@@ -1,0 +1,282 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+  <Package Name="MindmapTrainer" Language="1033" Version="1.1.9.0" Manufacturer="NataljaNeumann@gmx.de" UpgradeCode="2EBBD575-5697-493A-B80A-C0E62DFF10EB" Scope="perMachine">
+    <MajorUpgrade DowngradeErrorMessage="A newer version of MindmapTrainer has already been installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="PublisherFolder" Name="NataljaNeumann">
+          <Directory Id="INSTALLFOLDER" Name="MindmapTrainer" />
+        </Directory>
+      </Directory>
+    </Directory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="WindowsMenuFolder" Name="MindmapTrainer" />
+    </StandardDirectory>
+    <StandardDirectory Id="DesktopFolder" />
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.MindmapTrainer.TargetDir)license.rtf" />
+    <ui:WixUI Id="WixUI_InstallDir" InstallDirectory="INSTALLFOLDER" />
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="_" Guid="29077EC5-2DD6-4E33-9116-19287C10C73E">
+        <File Id="license_rtf" Source="$(var.MindmapTrainer.TargetDir)license.rtf" />
+        <File Id="license_txt" Source="$(var.MindmapTrainer.TargetDir)license.txt" />
+        <File Id="MindmapTrainerHeader_jpg" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer-Header.jpg" />
+        <File Id="MindmapTrainerSidebar1_jpg" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer-Sidebar1.jpg" />
+        <File Id="MindmapTrainerSidebar2_jpg" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer-Sidebar2.jpg" />
+        <File Id="MindmapTrainer_deps_json" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer.deps.json" />
+        <File Id="MindmapTrainer_dll" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer.dll" />
+        <File Id="MindmapTrainer_exe" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer.exe" KeyPath="yes" />
+        <File Id="MindmapTrainer_runtimeconfig_json" Source="$(var.MindmapTrainer.TargetDir)MindmapTrainer.runtimeconfig.json" />
+        <File Id="Readme_html" Source="$(var.MindmapTrainer.TargetDir)Readme.html" />
+        <File Id="source_code_tar_zip" Source="$(var.MindmapTrainer.TargetDir)source_code.tar.zip" />
+      </Component>
+      <Component Id="af" Guid="2AD1BE7D-1D56-448A-A8C4-E8C4D00BDCED" Subdirectory="af">
+        <File Id="af_resources_dll" Source="$(var.MindmapTrainer.TargetDir)af\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ar" Guid="E74716EA-DB54-4343-8B2D-761C1A18B48A" Subdirectory="ar">
+        <File Id="ar_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ar\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="az" Guid="8D138D1A-16A6-44FC-BA9B-4B391CE769AB" Subdirectory="az">
+        <File Id="az_resources_dll" Source="$(var.MindmapTrainer.TargetDir)az\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="be" Guid="1D9D39A9-D454-4F96-8AC0-20A2D9E42D99" Subdirectory="be">
+        <File Id="be_resources_dll" Source="$(var.MindmapTrainer.TargetDir)be\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="bg" Guid="CFBA54AE-3F95-4D75-AA8A-CA57C14AF1E8" Subdirectory="bg">
+        <File Id="bg_resources_dll" Source="$(var.MindmapTrainer.TargetDir)bg\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="boCN" Guid="8C2791E2-BBCF-4672-A117-58CCCCB581A0" Subdirectory="bo-CN">
+        <File Id="boCN_resources_dll" Source="$(var.MindmapTrainer.TargetDir)bo-CN\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="bsLatnBA" Guid="4D781B23-E9FF-4838-AB69-A72D4F4CDB99" Subdirectory="bs-Latn-BA">
+        <File Id="bsLatnBA_resources_dll" Source="$(var.MindmapTrainer.TargetDir)bs-Latn-BA\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ca" Guid="886E64FF-B6C1-40B1-B4C8-421E977B4DC5" Subdirectory="ca">
+        <File Id="ca_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ca\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="cs" Guid="B2701137-6383-40B0-8EA9-DB39E9566C73" Subdirectory="cs">
+        <File Id="cs_resources_dll" Source="$(var.MindmapTrainer.TargetDir)cs\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="da" Guid="D989B8CE-7053-4068-B182-340F270A9433" Subdirectory="da">
+        <File Id="da_resources_dll" Source="$(var.MindmapTrainer.TargetDir)da\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="de" Guid="C9C12B58-025D-44B4-9E72-A9DD17FF4839" Subdirectory="de">
+        <File Id="de_resources_dll" Source="$(var.MindmapTrainer.TargetDir)de\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="el" Guid="37191E7F-FE85-43FC-86D9-F8C310C836F2" Subdirectory="el">
+        <File Id="el_resources_dll" Source="$(var.MindmapTrainer.TargetDir)el\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="es" Guid="2FCA85F2-0366-42F3-AC51-2056980F0DA1" Subdirectory="es">
+        <File Id="es_resources_dll" Source="$(var.MindmapTrainer.TargetDir)es\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="et" Guid="ED9A738C-1D12-495B-B0B3-C334A63E59CC" Subdirectory="et">
+        <File Id="et_resources_dll" Source="$(var.MindmapTrainer.TargetDir)et\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="fa" Guid="BA49BA16-6EAA-4951-A74A-906294E4A32E" Subdirectory="fa">
+        <File Id="fa_resources_dll" Source="$(var.MindmapTrainer.TargetDir)fa\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="fi" Guid="B855854F-92CA-4802-A3B1-890F198F492B" Subdirectory="fi">
+        <File Id="fi_resources_dll" Source="$(var.MindmapTrainer.TargetDir)fi\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="fr" Guid="40056B80-B6E5-49D4-BD79-8EF0E0E50366" Subdirectory="fr">
+        <File Id="fr_resources_dll" Source="$(var.MindmapTrainer.TargetDir)fr\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="he" Guid="209D50B1-9072-4A3C-8EE8-7A2474D12C07" Subdirectory="he">
+        <File Id="he_resources_dll" Source="$(var.MindmapTrainer.TargetDir)he\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="hi" Guid="234FE69D-0DD7-40B6-B819-C9E8EE90B0D0" Subdirectory="hi">
+        <File Id="hi_resources_dll" Source="$(var.MindmapTrainer.TargetDir)hi\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="hr" Guid="5E2524E7-2C36-4E5E-A617-9632E54812B3" Subdirectory="hr">
+        <File Id="hr_resources_dll" Source="$(var.MindmapTrainer.TargetDir)hr\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="hu" Guid="E52A918B-B309-4419-AB59-5BBAD30D9840" Subdirectory="hu">
+        <File Id="hu_resources_dll" Source="$(var.MindmapTrainer.TargetDir)hu\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="hy" Guid="1F0C29EC-4E71-41E7-B2FE-82F4FF9BE93F" Subdirectory="hy">
+        <File Id="hy_resources_dll" Source="$(var.MindmapTrainer.TargetDir)hy\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="id" Guid="53F7F454-39B4-465B-B59F-52F465A90295" Subdirectory="id">
+        <File Id="id_resources_dll" Source="$(var.MindmapTrainer.TargetDir)id\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="is" Guid="CA20320A-5C0C-4ECA-9884-F9931D1CA6FA" Subdirectory="is">
+        <File Id="is_resources_dll" Source="$(var.MindmapTrainer.TargetDir)is\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="it" Guid="AC1AC0C8-BE1D-4D36-B02C-0368E5F8A370" Subdirectory="it">
+        <File Id="it_resources_dll" Source="$(var.MindmapTrainer.TargetDir)it\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ja" Guid="5A6790E1-9BD1-419B-9ACB-AE04F110027D" Subdirectory="ja">
+        <File Id="ja_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ja\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ka" Guid="64D28B13-6A05-45C4-9088-87B3EDD99895" Subdirectory="ka">
+        <File Id="ka_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ka\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="kk" Guid="0DA687DD-09BD-4C2B-AD12-594F26C6B631" Subdirectory="kk">
+        <File Id="kk_resources_dll" Source="$(var.MindmapTrainer.TargetDir)kk\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="kmKH" Guid="A0EEA363-B8A9-49F8-89C2-F3626ED03E53" Subdirectory="km-KH">
+        <File Id="kmKH_resources_dll" Source="$(var.MindmapTrainer.TargetDir)km-KH\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ko" Guid="CF87A508-A3C0-4FD1-96C2-EC9FC028A7C2" Subdirectory="ko">
+        <File Id="ko_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ko\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="kyKG" Guid="8847C5A2-00A4-4270-880E-F654738833F9" Subdirectory="ky-KG">
+        <File Id="kyKG_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ky-KG\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="lt" Guid="E6F54531-3A1B-445E-8453-7CC7EB3018CE" Subdirectory="lt">
+        <File Id="lt_resources_dll" Source="$(var.MindmapTrainer.TargetDir)lt\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="lv" Guid="16F4BB69-41F5-4C3E-9592-1CEE612C888F" Subdirectory="lv">
+        <File Id="lv_resources_dll" Source="$(var.MindmapTrainer.TargetDir)lv\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="mk" Guid="6BF3BFF4-69ED-4B75-947F-2C046C7B2D65" Subdirectory="mk">
+        <File Id="mk_resources_dll" Source="$(var.MindmapTrainer.TargetDir)mk\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="mnMN" Guid="299CAC37-A9C5-44E3-9576-33D62BFF93E5" Subdirectory="mn-MN">
+        <File Id="mnMN_resources_dll" Source="$(var.MindmapTrainer.TargetDir)mn-MN\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ms" Guid="B2195351-35DB-4C25-8828-913A661FEB5B" Subdirectory="ms">
+        <File Id="ms_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ms\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="nl" Guid="E722A98A-34C4-4793-91F5-8E25E20F67BC" Subdirectory="nl">
+        <File Id="nl_resources_dll" Source="$(var.MindmapTrainer.TargetDir)nl\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="no" Guid="7155ED8C-9A8C-44C7-96EF-19F1C927A8F2" Subdirectory="no">
+        <File Id="no_resources_dll" Source="$(var.MindmapTrainer.TargetDir)no\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="paArabPK" Guid="BC03A95D-D8F2-49E7-8D40-E381052AC46C" Subdirectory="pa-Arab-PK">
+        <File Id="paArabPK_resources_dll" Source="$(var.MindmapTrainer.TargetDir)pa-Arab-PK\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="paIN" Guid="A968FB69-5BF9-4F5B-B51C-6E1F2BD411B8" Subdirectory="pa-IN">
+        <File Id="paIN_resources_dll" Source="$(var.MindmapTrainer.TargetDir)pa-IN\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="pl" Guid="C9FAEF93-F200-494F-BB5D-4365E9D39207" Subdirectory="pl">
+        <File Id="pl_resources_dll" Source="$(var.MindmapTrainer.TargetDir)pl\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="psAF" Guid="31FB3145-DA6D-4D20-8604-151DEFC9A582" Subdirectory="ps-AF">
+        <File Id="psAF_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ps-AF\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="pt" Guid="44FAE650-A704-49BA-9094-4F968F8BCE1A" Subdirectory="pt">
+        <File Id="pt_resources_dll" Source="$(var.MindmapTrainer.TargetDir)pt\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ro" Guid="F1E5A435-30EF-4C80-BCD1-C4CC88CEC336" Subdirectory="ro">
+        <File Id="ro_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ro\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="ru" Guid="1B20CAA9-14B3-466A-9450-83853208DACD" Subdirectory="ru">
+        <File Id="ru_resources_dll" Source="$(var.MindmapTrainer.TargetDir)ru\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="sa" Guid="C84068A1-0C45-4B3F-9A9E-94E7457F9AEB" Subdirectory="sa">
+        <File Id="sa_resources_dll" Source="$(var.MindmapTrainer.TargetDir)sa\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="sk" Guid="8286038C-47F8-42C7-B3C4-A75801599E1F" Subdirectory="sk">
+        <File Id="sk_resources_dll" Source="$(var.MindmapTrainer.TargetDir)sk\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="sl" Guid="177906FF-42F7-4DD4-9171-AFA3C3593CB8" Subdirectory="sl">
+        <File Id="sl_resources_dll" Source="$(var.MindmapTrainer.TargetDir)sl\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="sr" Guid="C4A13D85-D2D1-466C-A571-8503361DE2D8" Subdirectory="sr">
+        <File Id="sr_resources_dll" Source="$(var.MindmapTrainer.TargetDir)sr\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="sv" Guid="272F8E0C-70A2-4D19-92B7-B1F2ED7CD827" Subdirectory="sv">
+        <File Id="sv_resources_dll" Source="$(var.MindmapTrainer.TargetDir)sv\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="tgCyrlTJ" Guid="312C1F90-D3B6-4951-AE09-85EAD80ABBBB" Subdirectory="tg-Cyrl-TJ">
+        <File Id="tgCyrlTJ_resources_dll" Source="$(var.MindmapTrainer.TargetDir)tg-Cyrl-TJ\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="th" Guid="76A6972A-5251-4D57-AA9B-3BBC9EA2BB00" Subdirectory="th">
+        <File Id="th_resources_dll" Source="$(var.MindmapTrainer.TargetDir)th\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="tkTM" Guid="7FF0B206-3CB7-4591-A07C-1F76DD737DF8" Subdirectory="tk-TM">
+        <File Id="tkTM_resources_dll" Source="$(var.MindmapTrainer.TargetDir)tk-TM\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="tr" Guid="30E7E528-010B-4502-8133-2554625E4203" Subdirectory="tr">
+        <File Id="tr_resources_dll" Source="$(var.MindmapTrainer.TargetDir)tr\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="uk" Guid="DFAC3708-E47A-4B91-A6AF-0C4AC00F9AF4" Subdirectory="uk">
+        <File Id="uk_resources_dll" Source="$(var.MindmapTrainer.TargetDir)uk\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="uz" Guid="49FEC084-D608-4DFA-BD14-C907523AA81F" Subdirectory="uz">
+        <File Id="uz_resources_dll" Source="$(var.MindmapTrainer.TargetDir)uz\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="vi" Guid="18D48CF7-E369-4A24-80B0-26158CEED0E9" Subdirectory="vi">
+        <File Id="vi_resources_dll" Source="$(var.MindmapTrainer.TargetDir)vi\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="zhCHS" Guid="A0C6CA89-729F-40CD-812D-2B73B26ACDC8" Subdirectory="zh-CHS">
+        <File Id="zhCHS_resources_dll" Source="$(var.MindmapTrainer.TargetDir)zh-CHS\MindmapTrainer.resources.dll" />
+      </Component>
+      <Component Id="zhCHT" Guid="EE479995-E696-444F-BBC8-F045B58ACDFE" Subdirectory="zh-CHT">
+        <File Id="zhCHT_resources_dll" Source="$(var.MindmapTrainer.TargetDir)zh-CHT\MindmapTrainer.resources.dll" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="WindowsMenuFolder">
+      <Component Id="WindowsMenuShortcuts" Guid="2BE37C65-6E49-4FBA-ACA8-0DCB7049D022">
+        <RemoveFolder Id="RemoveWindowsMenuFolder" Directory="WindowsMenuFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\NataljaNeumann\MindmapTrainer" Name="Installed" Type="integer" Value="1" KeyPath="yes" />
+        <Shortcut Id="MindmapTrainer_exe_pfx" Directory="WindowsMenuFolder" Name="Mindmap Trainer" Target="[INSTALLFOLDER]MindmapTrainer.exe" WorkingDirectory="INSTALLFOLDER" />
+        <Shortcut Id="MindmapTrainer_exe_2_pfx" Directory="DesktopFolder" Name="Mindmap Trainer" Target="[INSTALLFOLDER]MindmapTrainer.exe" WorkingDirectory="INSTALLFOLDER" />
+      </Component>
+    </DirectoryRef>
+    <Feature Id="MindmapTrainer" Title="MindmapTrainer" Level="1">
+      <ComponentRef Id="WindowsMenuShortcuts" />
+      <ComponentRef Id="_" />
+      <ComponentRef Id="af" />
+      <ComponentRef Id="ar" />
+      <ComponentRef Id="az" />
+      <ComponentRef Id="be" />
+      <ComponentRef Id="bg" />
+      <ComponentRef Id="boCN" />
+      <ComponentRef Id="bsLatnBA" />
+      <ComponentRef Id="ca" />
+      <ComponentRef Id="cs" />
+      <ComponentRef Id="da" />
+      <ComponentRef Id="de" />
+      <ComponentRef Id="el" />
+      <ComponentRef Id="es" />
+      <ComponentRef Id="et" />
+      <ComponentRef Id="fa" />
+      <ComponentRef Id="fi" />
+      <ComponentRef Id="fr" />
+      <ComponentRef Id="he" />
+      <ComponentRef Id="hi" />
+      <ComponentRef Id="hr" />
+      <ComponentRef Id="hu" />
+      <ComponentRef Id="hy" />
+      <ComponentRef Id="id" />
+      <ComponentRef Id="is" />
+      <ComponentRef Id="it" />
+      <ComponentRef Id="ja" />
+      <ComponentRef Id="ka" />
+      <ComponentRef Id="kk" />
+      <ComponentRef Id="kmKH" />
+      <ComponentRef Id="ko" />
+      <ComponentRef Id="kyKG" />
+      <ComponentRef Id="lt" />
+      <ComponentRef Id="lv" />
+      <ComponentRef Id="mk" />
+      <ComponentRef Id="mnMN" />
+      <ComponentRef Id="ms" />
+      <ComponentRef Id="nl" />
+      <ComponentRef Id="no" />
+      <ComponentRef Id="paArabPK" />
+      <ComponentRef Id="paIN" />
+      <ComponentRef Id="pl" />
+      <ComponentRef Id="psAF" />
+      <ComponentRef Id="pt" />
+      <ComponentRef Id="ro" />
+      <ComponentRef Id="ru" />
+      <ComponentRef Id="sa" />
+      <ComponentRef Id="sk" />
+      <ComponentRef Id="sl" />
+      <ComponentRef Id="sr" />
+      <ComponentRef Id="sv" />
+      <ComponentRef Id="tgCyrlTJ" />
+      <ComponentRef Id="th" />
+      <ComponentRef Id="tkTM" />
+      <ComponentRef Id="tr" />
+      <ComponentRef Id="uk" />
+      <ComponentRef Id="uz" />
+      <ComponentRef Id="vi" />
+      <ComponentRef Id="zhCHS" />
+      <ComponentRef Id="zhCHT" />
+    </Feature>
+  </Package>
+</Wix>
