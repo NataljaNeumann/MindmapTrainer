@@ -1,7 +1,7 @@
-MindmapTrainer/obj/**
-MindmapTrainer/bin/Release/**
-MindmapTrainer/bin/Debug/**
-MindmapTrainer/bin/*.zip
+**/obj/**
+**/Release/**
+**/Debug/**
+**/*.zip
 **/.vs/**
 Backup/**
 *.user
