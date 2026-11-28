@@ -1,5 +1,5 @@
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
-  <Package Name="MindmapTrainer" Language="1033" Version="1.1.11.0" Manufacturer="NataljaNeumann@gmx.de" UpgradeCode="2EBBD575-5697-493A-B80A-C0E62DFF10EB" Scope="perMachine">
+  <Package Name="MindmapTrainer" Language="1033" Version="1.1.12.0" Manufacturer="NataljaNeumann@gmx.de" UpgradeCode="2EBBD575-5697-493A-B80A-C0E62DFF10EB" Scope="perMachine">
     <MajorUpgrade DowngradeErrorMessage="A newer version of MindmapTrainer has already been installed." />
     <MediaTemplate EmbedCab="yes" />
     <Directory Id="TARGETDIR" Name="SourceDir">
@@ -280,3 +280,4 @@
     </Feature>
   </Package>
 </Wix>
+
